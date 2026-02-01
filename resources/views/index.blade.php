@@ -71,7 +71,20 @@
                         </div>
                     </div>
                     <div class="banner-text-slider">
-                        <h2 class="marquee_text"><img src="{{ asset('assets/img/home-5/star.svg') }}" alt="">We are Design Agency<img src="{{ asset('assets/img/home-5/star.svg') }}" alt="">Creative & Clean Design<img src="{{ asset('assets/img/home-5/star.svg') }}" alt="">We Help To Achieve <img src="{{ asset('assets/img/home-5/star.svg') }}" alt="">We are Design Agency<img src="{{ asset('assets/img/home-5/star.svg') }}" alt="">Creative & Clean Design<img src="{{ asset('assets/img/home-5/star.svg') }}" alt="">We Help To Achieve<img src="{{ asset('assets/img/home-5/star.svg') }}" alt="">We are Design Agency<img src="{{ asset('assets/img/home-5/star.svg') }}" alt="">Creative & Clean Design<img src="{{ asset('assets/img/home-5/star.svg') }}" alt="">We Help To Achieve <img src="{{ asset('assets/img/home-5/star.svg') }}" alt="">We are Design Agency<img src="{{ asset('assets/img/home-5/star.svg') }}" alt="">Creative & Clean Design<img src="{{ asset('assets/img/home-5/star.svg') }}" alt="">We Help To Achieve</h2>
+                        <h2 class="marquee_text">
+                            <img src="{{ asset('assets/img/home-5/star.svg') }}" alt="">Modern Websites
+                            <img src="{{ asset('assets/img/home-5/star.svg') }}" alt="">Custom Software
+                            <img src="{{ asset('assets/img/home-5/star.svg') }}" alt="">Mobile Applications 
+                            <img src="{{ asset('assets/img/home-5/star.svg') }}" alt="">Modern Websites
+                            <img src="{{ asset('assets/img/home-5/star.svg') }}" alt="">Custom Software
+                            <img src="{{ asset('assets/img/home-5/star.svg') }}" alt="">Mobile Applications 
+                            <img src="{{ asset('assets/img/home-5/star.svg') }}" alt="">Modern Websites
+                            <img src="{{ asset('assets/img/home-5/star.svg') }}" alt="">Custom Software
+                            <img src="{{ asset('assets/img/home-5/star.svg') }}" alt="">Mobile Applications 
+                            <img src="{{ asset('assets/img/home-5/star.svg') }}" alt="">Modern Websites
+                            <img src="{{ asset('assets/img/home-5/star.svg') }}" alt="">Custom Software
+                            <img src="{{ asset('assets/img/home-5/star.svg') }}" alt="">Mobile Applications 
+                        </h2>
                     </div>
                 </div>
             </div>
@@ -488,7 +501,7 @@
                             <div class="col-xl-7 col-lg-6 d-flex align-items-center wow animate fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
                                 <div class="achievement-content">
                                     <h2>#1</h2>
-                                    <h3>Best IT Agency Services And Solutions Company <span>Since <span class="year">2020.</span></span></h3>
+                                    <h3>Best IT Agency Services And Solutions Company <span>Since <span class="year">2023.</span></span></h3>
                                 </div>
                             </div>
                             <div class="col-xl-5 col-lg-6 wow animate fadeInRight" data-wow-delay="300ms" data-wow-duration="1500ms">
@@ -498,7 +511,23 @@
                             </div>
                         </div>
                         <div class="achievement-text-slider ">
-                            <h2 class="marquee_text2">Learn<span>#</span>useful information<span>#</span>from our insights<span>#</span>and<span>#</span>experience<span>#</span>together ani <span>#</span>Learn<span>#</span>useful information<span>#</span>from our insights<span>#</span>and<span>#</span>experience<span>#</span>together ani<span>#</span>Learn<span>#</span>useful information<span>#</span>from our insights<span>#</span>and<span>#</span>experience<span>#</span>together ani<span>#</span>Learn<span>#</span>useful information<span>#</span>from our insights<span>#</span>and<span>#</span>experience<span>#</span>together ani</h2>
+                            <h2 class="marquee_text2">
+                                Innovation<span>#</span>
+                                Digital Transformation<span>#</span>
+                                Cutting-Edge Technology<span>#</span>
+                                Expert Solutions<span>#</span>
+                                Future-Ready Systems<span>#</span>
+                                Innovation<span>#</span>
+                                Digital Transformation<span>#</span>
+                                Cutting-Edge Technology<span>#</span>
+                                Expert Solutions<span>#</span>
+                                Future-Ready Systems<span>#</span>
+                                Innovation<span>#</span>
+                                Digital Transformation<span>#</span>
+                                Cutting-Edge Technology<span>#</span>
+                                Expert Solutions<span>#</span>
+                                Future-Ready Systems<span>#</span>
+                            </h2>
                         </div>
                     </div>
                 </div>

@@ -45,7 +45,7 @@
                                     <i class="fas fa-map-marker-alt"></i>
                                 </div>
                                 <div class="info">
-                                    <p>House 168/170, Avenue 01, Mirpur DOHS, Dhaka Bangladesh</p>
+                                    <p>Sri Lanka</p>
                                 </div>
                             </div>
                             <div class="single-info">
@@ -53,8 +53,7 @@
                                     <i class="fas fa-phone-alt"></i>
                                 </div>
                                 <div class="info">
-                                    <a href="tel:01711111111">+880 1711 111 111</a>
-                                    <a href="tel:01811111111">+880 1811 111 111</a>
+                                    <a href="tel:+94773729462">+94 773 729 462</a>
                                 </div>
                             </div>
                             <div class="single-info">
@@ -63,7 +62,6 @@
                                 </div>
                                 <div class="info">
                                     <a href="mailto:info@nerdtechlabs.com">info@nerdtechlabs.com</a>
-                                    <a href="mailto:support@nerdtechlabs.com">support@nerdtechlabs.com</a>
                                 </div>
                             </div>
                         </div>
