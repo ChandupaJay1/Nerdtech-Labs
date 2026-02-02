@@ -63,6 +63,11 @@
                     <li class="menu-item"><a href="{{ route('project') }}" data-hover='Project'>Project</a></li>
                     <li class="menu-item"><a href="{{ route('blog') }}" data-hover='Blog'>Blog</a></li>
                     <li class="menu-item"><a href="{{ route('contact') }}" data-hover='Contact'>Contact</a></li>
+                    @guest
+                        <li class="menu-item"><a href="{{ route('login') }}" data-hover='Login'>Login</a></li>
+                    @else
+                        <li class="menu-item"><a href="{{ auth()->user()->is_admin ? route('admin.dashboard') : route('dashboard') }}" data-hover='Dashboard'>Dashboard</a></li>
+                    @endguest
                 </ul>
             </div>
         </div>

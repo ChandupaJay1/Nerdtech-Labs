@@ -61,10 +61,10 @@
                              <i class="bi bi-code-slash" style="font-size: 3rem; color: #06D889;"></i>
                         </div>
                         <div class="solution-content">
-                            <h4><a href="{{ route('service-details') }}">Web Development</a></h4>
+                            <h4><a href="{{ route('service-details', 1) }}">Web Development</a></h4>
                             <p>Web development is the process of creating websites and web applications for the internet or intranet.</p>
                             <div class="learn-btn">
-                                <a class="primary-btn8" href="{{ route('service-details') }}">
+                                <a class="primary-btn8" href="{{ route('service-details', 1) }}">
                                     Learn More
                                     <svg width="12" height="12" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M0 1H12M12 1V13M12 1L0.5 12"></path>
@@ -100,10 +100,10 @@
                             <i class="bi bi-cloud-check" style="font-size: 3rem; color: #06D889;"></i>
                         </div>
                         <div class="solution-content">
-                            <h4><a href="{{ route('service-details') }}">Cloud Solutions</a></h4>
+                            <h4><a href="{{ route('service-details', 1) }}">Cloud Solutions</a></h4>
                             <p>Cloud solutions refer to the use of cloud computing technology to provide services and solutions over the internet.</p>
                             <div class="learn-btn">
-                                <a class="primary-btn8" href="{{ route('service-details') }}">
+                                <a class="primary-btn8" href="{{ route('service-details', 1) }}">
                                     Learn More
                                     <svg width="12" height="12" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M0 1H12M12 1V13M12 1L0.5 12"></path>
@@ -139,10 +139,10 @@
                             <i class="bi bi-shield-lock" style="font-size: 3rem; color: #06D889;"></i>
                         </div>
                         <div class="solution-content">
-                            <h4><a href="{{ route('service-details') }}">Cyber Security</a></h4>
+                            <h4><a href="{{ route('service-details', 1) }}">Cyber Security</a></h4>
                             <p>Cybersecurity refers to the protection of computer systems, networks, and data from theft or unauthorized access.</p>
                             <div class="learn-btn">
-                                <a class="primary-btn8" href="{{ route('service-details') }}">
+                                <a class="primary-btn8" href="{{ route('service-details', 1) }}">
                                     Learn More
                                     <svg width="12" height="12" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M0 1H12M12 1V13M12 1L0.5 12"></path>
@@ -178,10 +178,10 @@
                             <i class="bi bi-graph-up-arrow" style="font-size: 3rem; color: #06D889;"></i>
                         </div>
                         <div class="solution-content">
-                            <h4><a href="{{ route('service-details') }}">Data Analytic</a></h4>
+                            <h4><a href="{{ route('service-details', 1) }}">Data Analytic</a></h4>
                             <p>Data analytics refers to the process of examining and interpreting large datasets to extract insights.</p>
                             <div class="learn-btn">
-                                <a class="primary-btn8" href="{{ route('service-details') }}">
+                                <a class="primary-btn8" href="{{ route('service-details', 1) }}">
                                     Learn More
                                     <svg width="12" height="12" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M0 1H12M12 1V13M12 1L0.5 12"></path>
@@ -217,10 +217,10 @@
                             <i class="bi bi-window-stack" style="font-size: 3rem; color: #06D889;"></i>
                         </div>
                         <div class="solution-content">
-                            <h4><a href="{{ route('service-details') }}">Software Development</a></h4>
+                            <h4><a href="{{ route('service-details', 1) }}">Software Development</a></h4>
                             <p>Software development is the process of creating computer software programs that perform specific tasks.</p>
                             <div class="learn-btn">
-                                <a class="primary-btn8" href="{{ route('service-details') }}">
+                                <a class="primary-btn8" href="{{ route('service-details', 1) }}">
                                     Learn More
                                     <svg width="12" height="12" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M0 1H12M12 1V13M12 1L0.5 12"></path>
@@ -256,10 +256,10 @@
                             <i class="bi bi-megaphone" style="font-size: 3rem; color: #06D889;"></i>
                         </div>
                         <div class="solution-content">
-                            <h4><a href="{{ route('service-details') }}">Digital Marketing</a></h4>
+                            <h4><a href="{{ route('service-details', 1) }}">Digital Marketing</a></h4>
                             <p>Digital marketing refers to the use of digital channels and technologies to promote products or brands.</p>
                             <div class="learn-btn">
-                                <a class="primary-btn8" href="{{ route('service-details') }}">
+                                <a class="primary-btn8" href="{{ route('service-details', 1) }}">
                                     Learn More
                                     <svg width="12" height="12" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M0 1H12M12 1V13M12 1L0.5 12"></path>

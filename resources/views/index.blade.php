@@ -10,7 +10,7 @@
                 <div class="banner-area">
                     <div class="social-area">
                         <ul>
-                            <li><a href="https://www.facebook.com/"><i class="bx bxl-facebook"></i></a></li>
+                            <li><a href="https://www.facebook.com/nerdtechlabs/"><i class="bx bxl-facebook"></i></a></li>
                             <li><a href="https://twitter.com/"><i class="bx bxl-twitter"></i></a></li>
                             <li><a href="https://www.pinterest.com/"><i class="bx bxl-pinterest-alt"></i></a></li>
                             <li><a href="https://www.instagram.com/"><i class="bx bxl-instagram"></i></a></li>
@@ -22,8 +22,8 @@
                     <div class="banner-content">
                         <div class="row">
                             <div class="col-lg-5">
-                                <p>Integer purus odio, placerat nec rhoncus in, ullamcorper nec doloroei. aptent taciti sociosqu ad litora torquent per conubia nostra, persento  
-                                    Donec lacinia placerat felis non aliquam.</p>
+                                <p>Building real-world software solutions & innovative digital products. We transform your ideas into powerful technology that drives business growth and digital transformation.
+                                    Let us help you unlock your business potential with cutting-edge web and software solutions.</p>
                                 <div class="view-btn">
                                     <a class="primary-btn7" href="{{ route('service') }}">
                                         <span class="circle2">
@@ -98,7 +98,7 @@
                                     <span>Our Values & Culture</span>
                                     <h2>Who We Are</h2>
                                 </div>
-                                <p>Morbi interdum pellentesque nunc, luctus pretium nulla luctus at. Aliquam cursus nunc arcu, condimentum efficitur tellus iaculis faucibus. Quisque gravida vel magna quis aliquam. Nam semper posuere risus, a gravida sapien tincidunt ac. Nam ac lacinia arcu.  Aliquam erat volutpat. Curabitur consectetur nisl.</p>
+                                <p>NerdTech Labs is a dynamic software development company based in Sri Lanka, serving clients both locally and remotely worldwide. We specialize in building real-world software solutions and innovative digital products that transform businesses. Our team of passionate developers and designers work together to turn your ideas into powerful technology solutions that drive success, no matter where you are.</p>
                                 <ul class="about-featue">
                                     <li>
                                         <svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
@@ -129,7 +129,7 @@
                                         Corporate Identity
                                     </li>
                                 </ul>
-                                <p>Morbi interdum pellentesque nunc, luctus pretium nulla luctus at. Aliquam cursus nunc arcu, condimentum efficitur tellus iaculis faucibus. Quisque gravida vel magna quis aliquam. Nam semper posuere risus.</p>
+                                <p>We believe in innovation, quality, and client satisfaction. Our approach combines technical expertise with creative thinking to deliver solutions that exceed expectations. Working both on-site in Sri Lanka and remotely with clients worldwide, we're committed to helping businesses of all sizes achieve their digital goals.</p>
                             </div>
                         </div>
                         <div class="col-lg-6 wow animate fadeInRight" data-wow-delay="300ms" data-wow-duration="1500ms">
@@ -138,8 +138,8 @@
                                     <img class="img-fluid" src="{{ asset('assets/img/home-5/about-img-1.png') }}" alt="">
                                 </div>
                                 <div class="about-video-area magnetic-item">
-                                    <img class="img-fluid" src="{{ asset('assets/img/home-5/about-img-2.png') }}" alt="">
-                                    <a href="https://www.youtube.com/watch?v=u31qwQUeGuM&amp;ab_channel=JoomlaTemplate"  data-fancybox="gallery" class="about-video-btn video-popup">
+                                    <img class="img-fluid" src="{{ asset('assets/img/home-5/about-img-2.png') }}" alt="" style="max-width: 350px; width: 100%; height: auto; object-fit: cover;">
+                                    <a href="https://www.youtube.com/watch?v=ZhbY1vRS6tg"  data-fancybox="gallery" class="about-video-btn video-popup">
                                         <i class="bi bi-play"></i>
                                     </a>
                                 </div>
@@ -192,10 +192,10 @@
                                     </svg>
                                 </div>
                                 <div class="solution-content">
-                                    <h4><a href="{{ route('service-details') }}">Web Development</a></h4>
+                                    <h4><a href="{{ route('service-details', 1) }}">Web Development</a></h4>
                                     <p>Web development is the process of creating websites and web applications for the internet or intranet.</p>
                                    <div class="learn-btn">
-                                    <a class="primary-btn8" href="{{ route('service-details') }}">
+                                    <a class="primary-btn8" href="{{ route('service-details', 1) }}">
                                         Learn More
                                         <svg width="12" height="12" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M0 1H12M12 1V13M12 1L0.5 12"></path>
@@ -243,10 +243,10 @@
                                     </svg>
                                 </div>
                                 <div class="solution-content">
-                                    <h4><a href="{{ route('service-details') }}">Cloud Solutions</a></h4>
+                                    <h4><a href="{{ route('service-details', 1) }}">Cloud Solutions</a></h4>
                                     <p>Cloud solutions refer to the use of cloud computing technology to provide services and solutions over the internet.</p>
                                    <div class="learn-btn">
-                                    <a class="primary-btn8" href="{{ route('service-details') }}">
+                                    <a class="primary-btn8" href="{{ route('service-details', 1) }}">
                                         Learn More
                                         <svg width="12" height="12" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M0 1H12M12 1V13M12 1L0.5 12"></path>
@@ -298,10 +298,10 @@
                                     </svg>
                                 </div>
                                 <div class="solution-content">
-                                    <h4><a href="{{ route('service-details') }}">Cyber Security</a></h4>
+                                    <h4><a href="{{ route('service-details', 1) }}">Cyber Security</a></h4>
                                     <p>Cybersecurity refers to the protection of computer systems, networks, and data from theft, damage, or unauthorized access.</p>
                                    <div class="learn-btn">
-                                    <a class="primary-btn8" href="{{ route('service-details') }}">
+                                    <a class="primary-btn8" href="{{ route('service-details', 1) }}">
                                         Learn More
                                         <svg width="12" height="12" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M0 1H12M12 1V13M12 1L0.5 12"></path>
@@ -343,10 +343,10 @@
                                     </svg>
                                 </div>
                                 <div class="solution-content">
-                                    <h4><a href="{{ route('service-details') }}">Data Analytic</a></h4>
+                                    <h4><a href="{{ route('service-details', 1) }}">Data Analytic</a></h4>
                                     <p>Data analytics refers to the process of examining and interpreting large datasets to extract insights and draw conclusions.</p>
                                    <div class="learn-btn">
-                                    <a class="primary-btn8" href="{{ route('service-details') }}">
+                                    <a class="primary-btn8" href="{{ route('service-details', 1) }}">
                                         Learn More
                                         <svg width="12" height="12" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M0 1H12M12 1V13M12 1L0.5 12"></path>
@@ -388,10 +388,10 @@
                                     </svg>
                                 </div>
                                 <div class="solution-content">
-                                    <h4><a href="{{ route('service-details') }}">Software Development</a></h4>
+                                    <h4><a href="{{ route('service-details', 1) }}">Software Development</a></h4>
                                     <p>Software development is the process of creating computer software programs that perform specific functions or tasks.</p>
                                    <div class="learn-btn">
-                                    <a class="primary-btn8" href="{{ route('service-details') }}">
+                                    <a class="primary-btn8" href="{{ route('service-details', 1) }}">
                                         Learn More
                                         <svg width="12" height="12" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M0 1H12M12 1V13M12 1L0.5 12"></path>
@@ -431,10 +431,10 @@
                                     </svg>
                                 </div>
                                 <div class="solution-content">
-                                    <h4><a href="{{ route('service-details') }}">Digital Marketing</a></h4>
+                                    <h4><a href="{{ route('service-details', 1) }}">Digital Marketing</a></h4>
                                     <p>Digital marketing refers to the use of digital channels and technologies to promote products, services, or brands.</p>
                                    <div class="learn-btn">
-                                    <a class="primary-btn8" href="{{ route('service-details') }}">
+                                    <a class="primary-btn8" href="{{ route('service-details', 1) }}">
                                         Learn More
                                         <svg width="12" height="12" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M0 1H12M12 1V13M12 1L0.5 12"></path>
@@ -457,7 +457,7 @@
                                 <h2>What We Do</h2>
                             </div>
                             <div class="section-content">
-                                <p>Morbi interdum pellentesque nunc, luctusongi pretium nulla luctus at Aliquam. </p>
+                                <p>Our proven development process ensures quality, efficiency, and successful project delivery every time.</p>
                             </div>
                         </div>
                     </div>
@@ -469,7 +469,7 @@
                                 </div>
                                 <div class="content">
                                     <h3>Research & Discovery</h3>
-                                    <p>Web development is the process offer than operdol creating otar eros augue, ultricies sedatoni quamot authol websites and web. creatingot otar erosmont augue, ultricies sed.</p>
+                                    <p>We begin by understanding your business goals, target audience, and technical requirements. Through comprehensive research and analysis, we identify the best solutions and technologies to bring your vision to life.</p>
                                 </div>
                             </div>
                         </div>
@@ -479,8 +479,8 @@
                                     <h2>02</h2>
                                 </div>
                                 <div class="content">
-                                    <h3>Industry Expertise</h3>
-                                    <p>Web development is the process offer than operdol creating otar eros augue, ultricies sedatoni quamot authol websites and web. creatingot otar erosmont augue, ultricies sed.</p>
+                                    <h3>Design & Development</h3>
+                                    <p>Our experienced team designs and develops your solution using the latest technologies and best practices. We focus on creating scalable, secure, and user-friendly applications that deliver exceptional performance.</p>
                                 </div>
                             </div>
                         </div>
@@ -490,8 +490,8 @@
                                     <h2>03</h2>
                                 </div>
                                 <div class="content">
-                                    <h3>Quality Assurance</h3>
-                                    <p>Web development is the process offer than operdol creating otar eros augue, ultricies sedatoni quamot authol websites and web. creatingot otar erosmont augue, ultricies sed.</p>
+                                    <h3>Testing & Deployment</h3>
+                                    <p>Before launch, we rigorously test every aspect of your solution to ensure it meets the highest quality standards. We then deploy your application and provide ongoing support to ensure smooth operation.</p>
                                 </div>
                             </div>
                         </div>
@@ -501,7 +501,7 @@
                             <div class="col-xl-7 col-lg-6 d-flex align-items-center wow animate fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
                                 <div class="achievement-content">
                                     <h2>#1</h2>
-                                    <h3>Best IT Agency Services And Solutions Company <span>Since <span class="year">2023.</span></span></h3>
+                                    <h3>Trusted Software Development Partner in Sri Lanka & Remotely Worldwide <span>Since <span class="year">2023.</span></span></h3>
                                 </div>
                             </div>
                             <div class="col-xl-5 col-lg-6 wow animate fadeInRight" data-wow-delay="300ms" data-wow-duration="1500ms">
@@ -542,7 +542,7 @@
                                 <h2>Our Network</h2>
                             </div>
                             <div class="section-content">
-                                <p>Morbi interdum pellentesque nunc, luctusongi pretium nulla luctus at Aliquam. </p>
+                                <p>We collaborate with leading technology partners to deliver world-class solutions to our clients.</p>
                             </div>
                         </div>
                     </div>  
@@ -578,8 +578,8 @@
                                 <span>CLIENT REVIEW</span>
                                 <h2>Happy Client</h2>
                                 <div class="testimolial-left">
-                                    <p>Integer purus odio, placerat nec rhoncus in, ullamcorperon nec doloroei. aptent taciti sociosqu ad litora
-                                        torquent pero conubia nostra persento.</p>
+                                    <p>Our clients trust us to deliver exceptional results. We take pride in building long-term partnerships
+                                        and helping businesses achieve their digital transformation goals.</p>
                                     <div class="customar-review">
                                         <h6>Review On</h6>
                                         <ul>
@@ -750,10 +750,10 @@
                                     </ul>
                                 </div>
                                 <div class="team-img">
-                                    <img class="img-fluid" src="{{ asset('assets/img/home-5/home5-team-01.png') }}" alt="">
+                                    <img class="img-fluid" src="{{ asset('assets/img/home-5/home5-team-01.jpg') }}" alt="" style="width: 100%; height: 350px; object-fit: cover; object-position: center;">
                                 </div>
                                 <div class="team-content">
-                                    <h4>Cassian Coleson</h4>
+                                    <h4>Chandupa Jayalath</h4>
                                     <span>Founder, CTO</span>
                                 </div>
                             </div>
@@ -769,10 +769,10 @@
                                     </ul>
                                 </div>
                                 <div class="team-img">
-                                    <img class="img-fluid" src="{{ asset('assets/img/home-5/home5-team-02.png') }}" alt="">
+                                    <img class="img-fluid" src="{{ asset('assets/img/home-5/home5-team-02.png') }}" alt="" style="width: 100%; height: 350px; object-fit: cover; object-position: center;">
                                 </div>
                                 <div class="team-content">
-                                    <h4>Blaise Davian</h4>
+                                    <h4>Dulanja Abeysinghe</h4>
                                     <span>Co-Founder, CEO</span>
                                 </div>
                             </div>
@@ -789,10 +789,10 @@
                                     </ul>
                                 </div>
                                 <div class="team-img">
-                                    <img class="img-fluid" src="{{ asset('assets/img/home-5/home5-team-04.png') }}" alt="">
+                                    <img class="img-fluid" src="{{ asset('assets/img/home-5/home5-team-03.png') }}" alt="" style="width: 100%; height: 350px; object-fit: cover; object-position: center;">
                                 </div>
                                 <div class="team-content">
-                                    <h4>Landry Palmer</h4>
+                                    <h4>Pathum De Saman</h4>
                                     <span>Software Engineer</span>
                                 </div>
                             </div>

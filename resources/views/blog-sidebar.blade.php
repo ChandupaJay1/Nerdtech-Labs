@@ -151,7 +151,7 @@
                         <li><a href="{{ url('service2') }}">Service 02</a></li>
                         <li><a href="{{ url('service3') }}">Service 03</a></li>
                         <li><a href="{{ url('service4') }}">Service 04</a></li>
-                        <li><a href="{{ url('service-details') }}">Service Details</a></li>
+                        <li><a href="{{ route('service-details', 1) }}">Service Details</a></li>
                     </ul>
                 </li>
                 <li class="menu-item-has-children">
@@ -159,7 +159,7 @@
                     <ul class="sub-menu">
                         <li><a href="{{ url('project') }}">Project</a></li>
                         <li><a href="{{ url('project-masonary') }}">Project Masonry</a></li>
-                     <li><a href="{{ url('project-details') }}">Project Details</a></li>
+                     <li><a href="{{ route('project-details', 1) }}">Project Details</a></li>
                     </ul>
                 </li>
                 <li class="menu-item-has-children">

@@ -51,7 +51,7 @@
                     </div>
 
                     <div class="solution-content">
-                        <h4><a href="{{ route('service-details') }}">Web Development</a></h4>
+                        <h4><a href="{{ route('service-details', 1) }}">Web Development</a></h4>
                         <p>Web development is the process of creating websites and web applications for the internet or intranet.</p>
                         <ul class="solution-feature">
                             <li>
@@ -92,7 +92,7 @@
                             </svg>
                         </div>
                         <div class="solution-content">
-                            <h4><a href="{{ route('service-details') }}">Cloud Solutions</a></h4>
+                            <h4><a href="{{ route('service-details', 1) }}">Cloud Solutions</a></h4>
                             <p>Cloud solutions refer to the use of cloud computing technology to provide services and solutions over the internet.</p>
                             <ul class="solution-feature">
                                 <li>
@@ -130,7 +130,7 @@
                             </svg>
                         </div>
                         <div class="solution-content">
-                            <h4><a href="{{ route('service-details') }}">Cyber Security</a></h4>
+                            <h4><a href="{{ route('service-details', 1) }}">Cyber Security</a></h4>
                             <p>Cybersecurity refers to the protection of computer systems, networks, and data from theft, damage, or unauthorized access.</p>
                             <ul class="solution-feature">
                                 <li>
@@ -163,7 +163,7 @@
                             </svg>
                         </div>
                         <div class="solution-content">
-                            <h4><a href="{{ route('service-details') }}">Data Analytic</a></h4>
+                            <h4><a href="{{ route('service-details', 1) }}">Data Analytic</a></h4>
                             <p>Data analytics refers to the process of examining and interpreting large datasets to extract insights and draw conclusions.</p>
                             <ul class="solution-feature">
                                 <li>
@@ -195,7 +195,7 @@
                             </svg>
                         </div>
                         <div class="solution-content">
-                            <h4><a href="{{ route('service-details') }}">Software Development</a></h4>
+                            <h4><a href="{{ route('service-details', 1) }}">Software Development</a></h4>
                             <p>Software development is the process of creating computer software programs that perform specific functions or tasks.</p>
                             <ul class="solution-feature">
                                 <li>
@@ -227,7 +227,7 @@
                             </svg>
                         </div>
                         <div class="solution-content">
-                            <h4><a href="{{ route('service-details') }}">Digital Marketing</a></h4>
+                            <h4><a href="{{ route('service-details', 1) }}">Digital Marketing</a></h4>
                             <p>Digital marketing refers to the use of digital channels and technologies to promote products, services, or brands.</p>
                             <ul class="solution-feature">
                                 <li>
