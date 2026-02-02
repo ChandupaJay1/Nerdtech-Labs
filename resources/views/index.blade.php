@@ -750,7 +750,7 @@
                                     </ul>
                                 </div>
                                 <div class="team-img">
-                                    <img class="img-fluid" src="{{ asset('assets/img/home-5/home5-team-01.jpg') }}" alt="" style="width: 100%; height: 350px; object-fit: cover; object-position: center;">
+                                    <img class="img-fluid" src="{{ asset('assets/img/home-5/home5-team-01.jpg') }}" alt="">
                                 </div>
                                 <div class="team-content">
                                     <h4>Chandupa Jayalath</h4>
@@ -769,7 +769,7 @@
                                     </ul>
                                 </div>
                                 <div class="team-img">
-                                    <img class="img-fluid" src="{{ asset('assets/img/home-5/home5-team-02.png') }}" alt="" style="width: 100%; height: 350px; object-fit: cover; object-position: center;">
+                                    <img class="img-fluid" src="{{ asset('assets/img/home-5/home5-team-02.jpeg') }}" alt="">
                                 </div>
                                 <div class="team-content">
                                     <h4>Dulanja Abeysinghe</h4>
@@ -789,7 +789,7 @@
                                     </ul>
                                 </div>
                                 <div class="team-img">
-                                    <img class="img-fluid" src="{{ asset('assets/img/home-5/home5-team-03.png') }}" alt="" style="width: 100%; height: 350px; object-fit: cover; object-position: center;">
+                                    <img class="img-fluid" src="{{ asset('assets/img/home-5/home5-team-03.png') }}" alt="">
                                 </div>
                                 <div class="team-content">
                                     <h4>Pathum De Saman</h4>

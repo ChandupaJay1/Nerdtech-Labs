@@ -20,10 +20,10 @@
                 <div class="col-12">
                     <div class="breadcrumb-wrapper">
                         <div class="breadcrumb-cnt">
-                            <span>Projects Masonary</span>
-                            <h1>"Our Complited Projects"</h1>
+                            <span>Projects Masonry</span>
+                            <h1>"Our Completed Projects"</h1>
                             <div class="breadcrumb-list">
-                                <a href="{{ route('home') }}">Home</a><img src="{{ asset('assets/img/inner-pages/breadcrumb-arrow.svg') }}" alt=""> Projects Masonary
+                                <a href="{{ route('home') }}">Home</a><img src="{{ asset('assets/img/inner-pages/breadcrumb-arrow.svg') }}" alt=""> Projects Masonry
                             </div>
                            
                         </div>
@@ -46,11 +46,17 @@
                 </div>
             </div>
             <div class="row g-4 project-items mb-55">
-                @foreach($projects as $project)
-                <div class="col-lg-{{ $loop->iteration % 3 == 0 ? '4' : ($loop->iteration % 2 == 0 ? '7' : '5') }} col-sm-6 single-item {{ Str::slug($project->category) }}">
+                @php
+                    $colPattern = [5, 7, 6, 6, 4, 4, 4];
+                @endphp
+                @foreach($projects as $index => $project)
+                @php
+                    $colSize = $colPattern[$index % count($colPattern)];
+                @endphp
+                <div class="col-lg-{{ $colSize }} col-sm-6 single-item {{ Str::slug($project->category) }}">
                     <div class="single-work magnetic-item">
                         <div class="work-img">
-                            <img class="img-fluid" src="{{ asset('storage/' . $project->image) }}" alt="{{ $project->title }}">
+                            <img class="img-fluid" src="{{ Str::startsWith($project->image, 'assets/') ? asset($project->image) : asset('storage/' . $project->image) }}" alt="{{ $project->title }}">
                         </div>
                         <div class="work-content">
                             <h3><a href="{{ route('project-details', $project->id) }}">{{ $project->title }}</a></h3>

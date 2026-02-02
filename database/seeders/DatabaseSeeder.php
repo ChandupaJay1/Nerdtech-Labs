@@ -23,5 +23,10 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('password123'),
             'is_admin' => true,
         ]);
+
+        $this->call([
+            ServiceSeeder::class,
+            ProjectSeeder::class,
+        ]);
     }
 }

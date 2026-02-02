@@ -616,7 +616,7 @@
                             <div class="swiper-slide">
                                 <div class="single-team">
                                     <div class="team-img">
-                                        <img class="img-fluid" src="{{ asset('assets/img/home-3/team-01.png') }}" alt="">
+                                        <img class="img-fluid" src="{{ asset('assets/img/home-5/home5-team-01.jpg') }}" alt="">
                                         <div class="social-area">
                                             <ul>
                                                 <li><a href="https://www.facebook.com/"><i class="bx bxl-facebook"></i></a></li>
@@ -635,7 +635,7 @@
                             <div class="swiper-slide">
                                 <div class="single-team">
                                     <div class="team-img">
-                                        <img class="img-fluid" src="{{ asset('assets/img/home-3/team-02.png') }}" alt="">
+                                        <img class="img-fluid" src="{{ asset('assets/img/home-5/home5-team-02.jpeg') }}" alt="">
                                         <div class="social-area">
                                             <ul>
                                                 <li><a href="https://www.facebook.com/"><i class="bx bxl-facebook"></i></a></li>
@@ -648,25 +648,6 @@
                                     <div class="team-content">
                                         <h5>Carter Jayden</h5>
                                         <span>Co-Founder, CEO</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="single-team">
-                                    <div class="team-img">
-                                        <img class="img-fluid" src="{{ asset('assets/img/home-3/team-03.png') }}" alt="">
-                                        <div class="social-area">
-                                            <ul>
-                                                <li><a href="https://www.facebook.com/"><i class="bx bxl-facebook"></i></a></li>
-                                                <li><a href="https://twitter.com/"><i class="bx bxl-twitter"></i></a></li>
-                                                <li><a href="https://www.pinterest.com/"><i class="bx bxl-pinterest-alt"></i></a></li>
-                                                <li><a href="https://www.instagram.com/"><i class="bx bxl-instagram"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="team-content">
-                                        <h5>Andrew Santiago</h5>
-                                        <span>Head of HR & Manager</span>
                                     </div>
                                 </div>
                             </div>

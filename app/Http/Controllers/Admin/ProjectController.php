@@ -62,6 +62,8 @@ class ProjectController extends Controller
         if ($request->hasFile('image')) {
             $imagePath = $request->file('image')->store('projects', 'public');
             $validated['image'] = $imagePath;
+        } else {
+            unset($validated['image']);
         }
 
         $project->update($validated);

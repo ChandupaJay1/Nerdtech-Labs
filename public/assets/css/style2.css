@@ -4830,6 +4830,8 @@ video {
 .home4-experts-section .single-team .team-img img {
   border-radius: 5px;
   width: 100%;
+  height: 350px;
+  object-fit: cover;
 }
 
 .home4-experts-section .single-team .team-content {
@@ -6602,6 +6604,8 @@ video {
 .home3-team-area .single-team .team-img img {
   border-radius: 5px;
   width: 100%;
+  height: 350px;
+  object-fit: cover;
 }
 
 .home3-team-area .single-team .team-content {
@@ -8208,6 +8212,9 @@ video {
 .home5-team-section .single-team .team-img img {
   border-radius: 200px 200px 0px 0px;
   transition: 0.5s;
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
 }
 
 @media (max-width: 991px) {
@@ -12854,3 +12861,130 @@ footer .footer-btm .footer-btn-content .footer-social ul li a:hover {
 }
 
 /*# sourceMappingURL=style2.css.map */
+
+/* Project Masonry Page Styles */
+
+/* Filter Menu - Unified Bar Style */
+/* Filter Menu - Unified Bar Style */
+.isotope-menu {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  /* Tighter gap */
+  margin-bottom: 55px;
+  list-style: none;
+  padding: 5px 10px;
+  /* Tighter padding */
+  background: #151515;
+  border-radius: 30px;
+  /* Less rounded to handle wrapping better */
+  width: auto;
+  max-width: 100%;
+  scrollbar-width: none;
+
+  /* Prevent overflow */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.isotope-menu li {
+  font-family: var(--font-saira);
+  font-weight: 600;
+  font-size: 13px;
+  /* Smaller text to fit more */
+  white-space: nowrap;
+  /* Prevent text wrapping */
+  text-transform: uppercase;
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: 0.35s;
+  padding: 8px 10px;
+  /* Tighter item padding */
+  border-radius: 25px;
+  background: transparent;
+  border: none;
+}
+
+.isotope-menu li.active,
+.isotope-menu li:hover {
+  background-color: var(--theme-color);
+  color: #000000;
+  /* Dark text on active */
+}
+
+/* Project Item - Ensure styling matches original */
+.single-work {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  /* More rounded corners as per screenshot */
+  margin-bottom: 30px;
+  /* Spacing */
+}
+
+.single-work .work-img {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.single-work .work-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  transition: 0.5s;
+  display: block;
+}
+
+.single-work:hover .work-img img {
+  transform: scale(1.1);
+}
+
+/* Overlay Content on Hover */
+.single-work .work-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  transition: 0.5s;
+  z-index: 1;
+  opacity: 0;
+  /* Hidden by default */
+  transform: translateY(20px);
+}
+
+.single-work:hover .work-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.single-work .work-content h3 {
+  margin-bottom: 5px;
+}
+
+.single-work .work-content h3 a {
+  font-family: var(--font-saira);
+  font-weight: 700;
+  font-size: 22px;
+  color: #FFFFFF;
+  text-transform: capitalize;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.single-work .work-content h3 a:hover {
+  color: var(--theme-color);
+}
+
+.single-work .work-content span {
+  font-family: var(--font-saira);
+  font-size: 13px;
+  color: var(--theme-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}

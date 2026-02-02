@@ -38,7 +38,7 @@
             <div class="row g-4 mb-80">
                 <div class="col-lg-12">
                     <div class="portfolio-img magnetic-item">
-                        <img class="img-fluid w-100" src="{{ asset('storage/' . $project->image) }}" alt="{{ $project->title }}">
+                        <img class="img-fluid w-100" src="{{ Str::startsWith($project->image, 'assets/') ? asset($project->image) : asset('storage/' . $project->image) }}" alt="{{ $project->title }}">
                     </div>
                 </div>
             </div>
