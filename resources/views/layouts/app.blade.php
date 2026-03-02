@@ -61,7 +61,7 @@
                     <li class="menu-item"><a href="{{ route('about') }}" data-hover='About'>About</a></li>
                     <li class="menu-item"><a href="{{ route('service') }}" data-hover='Service'>Service</a></li>
                     <li class="menu-item"><a href="{{ route('project') }}" data-hover='Project'>Project</a></li>
-                    <li class="menu-item"><a href="{{ route('blog') }}" data-hover='Blog'>Blog</a></li>
+                    <!-- <li class="menu-item"><a href="{{ route('blog') }}" data-hover='Blog'>Blog</a></li> -->
                     <li class="menu-item"><a href="{{ route('contact') }}" data-hover='Contact'>Contact</a></li>
                     @guest
                         <li class="menu-item"><a href="{{ route('login') }}" data-hover='Login'>Login</a></li>

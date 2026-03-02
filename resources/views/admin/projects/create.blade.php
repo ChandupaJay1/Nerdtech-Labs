@@ -3,35 +3,242 @@
 @section('title', 'Add New Project')
 
 @section('content')
-<div class="card p-4">
-    <form action="{{ route('admin.projects.store') }}" method="POST" enctype="multipart/form-data">
-        @csrf
-        <div class="row g-3">
-            <div class="col-md-6">
-                <label class="form-label">Project Title</label>
-                <input type="text" name="title" class="form-control" required>
-            </div>
-            <div class="col-md-6">
-                <label class="form-label">Category</label>
-                <input type="text" name="category" class="form-control" placeholder="e.g. Web Development">
-            </div>
-            <div class="col-md-12">
-                <label class="form-label">Project Image</label>
-                <input type="file" name="image" class="form-control">
-            </div>
-            <div class="col-12">
-                <label class="form-label">Short Description</label>
-                <textarea name="description" class="form-control" rows="3" required></textarea>
-            </div>
-            <div class="col-12">
-                <label class="form-label">Project Details (Optional)</label>
-                <textarea name="details" class="form-control" rows="5"></textarea>
-            </div>
-            <div class="col-12">
-                <button type="submit" class="btn btn-primary">Save Project</button>
-                <a href="{{ route('admin.projects.index') }}" class="btn btn-light border">Cancel</a>
-            </div>
-        </div>
-    </form>
+
+<div class="mb-4">
+    <a href="{{ route('admin.projects.index') }}" class="btn btn-sm btn-outline-secondary">
+        <i class="bi bi-arrow-left me-1"></i> Back to Projects
+    </a>
 </div>
+
+<div class="card">
+    <div class="card-header bg-white py-3">
+        <h5 class="mb-0 fw-bold"><i class="bi bi-plus-circle me-2 text-primary"></i>Add New Project</h5>
+    </div>
+    <div class="card-body p-4">
+        <form action="{{ route('admin.projects.store') }}" method="POST" enctype="multipart/form-data">
+            @csrf
+
+            {{-- Validation Errors --}}
+            @if($errors->any())
+                <div class="alert alert-danger mb-4">
+                    <i class="bi bi-exclamation-triangle-fill me-2"></i>
+                    <strong>Please fix the following errors:</strong>
+                    <ul class="mb-0 mt-2">
+                        @foreach($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+
+            <div class="row g-4">
+                {{-- Title --}}
+                <div class="col-md-6">
+                    <label class="form-label fw-semibold">Project Title <span class="text-danger">*</span></label>
+                    <input type="text"
+                           name="title"
+                           class="form-control @error('title') is-invalid @enderror"
+                           value="{{ old('title') }}"
+                           placeholder="e.g. E-Commerce Platform"
+                           required>
+                    @error('title')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
+                </div>
+
+                {{-- Category --}}
+                <div class="col-md-6">
+                    <label class="form-label fw-semibold">Category</label>
+                    <input type="text"
+                           name="category"
+                           class="form-control @error('category') is-invalid @enderror"
+                           value="{{ old('category') }}"
+                           placeholder="e.g. Web Development, Mobile App, AI"
+                           list="category-suggestions">
+                    <datalist id="category-suggestions">
+                        <option value="Web Development">
+                        <option value="Mobile App">
+                        <option value="Artificial Intelligence">
+                        <option value="UI/UX Design">
+                        <option value="E-Commerce">
+                        <option value="Cloud Solutions">
+                    </datalist>
+                    @error('category')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
+                    <small class="text-muted">Used as filter tag on the portfolio page</small>
+                </div>
+
+                {{-- Project URL --}}
+                <div class="col-md-4">
+                    <label class="form-label fw-semibold">Project URL</label>
+                    <input type="url"
+                           name="project_url"
+                           class="form-control @error('project_url') is-invalid @enderror"
+                           value="{{ old('project_url') }}"
+                           placeholder="https://example.com">
+                    @error('project_url')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
+                </div>
+
+                {{-- Client --}}
+                <div class="col-md-4">
+                    <label class="form-label fw-semibold">Client Name</label>
+                    <input type="text"
+                           name="client"
+                           class="form-control @error('client') is-invalid @enderror"
+                           value="{{ old('client') }}"
+                           placeholder="e.g. Acme Corp">
+                    @error('client')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
+                </div>
+
+                {{-- Duration --}}
+                <div class="col-md-3">
+                    <label class="form-label fw-semibold">Duration</label>
+                    <input type="text"
+                           name="duration"
+                           class="form-control @error('duration') is-invalid @enderror"
+                           value="{{ old('duration') }}"
+                           placeholder="e.g. 3 Months">
+                    @error('duration')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
+                </div>
+
+                {{-- Location --}}
+                <div class="col-md-3">
+                    <label class="form-label fw-semibold">Location</label>
+                    <input type="text"
+                           name="location"
+                           class="form-control @error('location') is-invalid @enderror"
+                           value="{{ old('location') }}"
+                           placeholder="e.g. Galle, Sri Lanka">
+                    @error('location')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
+                </div>
+
+                {{-- Status --}}
+                <div class="col-md-3">
+                    <label class="form-label fw-semibold">Status</label>
+                    <select name="status" class="form-select @error('status') is-invalid @enderror">
+                        <option value="Not Started" {{ old('status') == 'Not Started' ? 'selected' : '' }}>Not Started</option>
+                        <option value="Research" {{ old('status') == 'Research' ? 'selected' : '' }}>Research</option>
+                        <option value="Design" {{ old('status') == 'Design' ? 'selected' : '' }}>Design</option>
+                        <option value="Development" {{ old('status') == 'Development' ? 'selected' : '' }}>Development</option>
+                        <option value="Testing" {{ old('status') == 'Testing' ? 'selected' : '' }}>Testing</option>
+                        <option value="In Progress" {{ old('status', 'In Progress') == 'In Progress' ? 'selected' : '' }}>In Progress</option>
+                        <option value="Completed" {{ old('status') == 'Completed' ? 'selected' : '' }}>Completed</option>
+                    </select>
+                    @error('status')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
+                </div>
+
+                {{-- Progress --}}
+                <div class="col-md-3">
+                    <label class="form-label fw-semibold">Progress (%)</label>
+                    <input type="number"
+                           name="progress"
+                           class="form-control @error('progress') is-invalid @enderror"
+                           value="{{ old('progress', 100) }}"
+                           min="0"
+                           max="100">
+                    @error('progress')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
+                </div>
+
+                {{-- Image Upload --}}
+                <div class="col-12">
+                    <label class="form-label fw-semibold">Project Image</label>
+                    <div class="d-flex align-items-start gap-4 flex-wrap">
+                        {{-- Preview Box --}}
+                        <div id="preview-container"
+                             class="rounded border bg-light d-flex align-items-center justify-content-center flex-shrink-0"
+                             style="width:180px;height:120px;overflow:hidden;">
+                            <div id="preview-placeholder" class="text-center text-muted">
+                                <i class="bi bi-image fs-2 d-block mb-1"></i>
+                                <small>Preview</small>
+                            </div>
+                            <img id="preview-img" src="" alt="Preview"
+                                 style="display:none;width:100%;height:100%;object-fit:cover;">
+                        </div>
+                        {{-- Upload Input --}}
+                        <div class="flex-grow-1">
+                            <input type="file"
+                                   name="image"
+                                   id="imageInput"
+                                   class="form-control @error('image') is-invalid @enderror"
+                                   accept="image/jpeg,image/png,image/jpg,image/gif,image/webp">
+                            @error('image')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+                            <small class="text-muted d-block mt-1">
+                                Accepted: JPG, PNG, GIF, WebP — Max 2MB
+                            </small>
+                        </div>
+                    </div>
+                </div>
+
+                {{-- Short Description --}}
+                <div class="col-12">
+                    <label class="form-label fw-semibold">Short Description <span class="text-danger">*</span></label>
+                    <textarea name="description"
+                              class="form-control @error('description') is-invalid @enderror"
+                              rows="3"
+                              placeholder="Brief overview shown on the project card…"
+                              required>{{ old('description') }}</textarea>
+                    @error('description')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
+                </div>
+
+                {{-- Detailed Description --}}
+                <div class="col-12">
+                    <label class="form-label fw-semibold">Detailed Description <small class="text-muted fw-normal">(Optional)</small></label>
+                    <textarea name="details"
+                              class="form-control @error('details') is-invalid @enderror"
+                              rows="6"
+                              placeholder="Full project details shown on the project detail page…">{{ old('details') }}</textarea>
+                    @error('details')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
+                </div>
+
+                {{-- Actions --}}
+                <div class="col-12 d-flex gap-2 pt-2">
+                    <button type="submit" class="btn btn-primary px-4">
+                        <i class="bi bi-cloud-arrow-up me-1"></i> Save Project
+                    </button>
+                    <a href="{{ route('admin.projects.index') }}" class="btn btn-light border px-4">Cancel</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+@push('scripts')
+<script>
+    document.getElementById('imageInput').addEventListener('change', function () {
+        const file = this.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                document.getElementById('preview-img').src = e.target.result;
+                document.getElementById('preview-img').style.display = 'block';
+                document.getElementById('preview-placeholder').style.display = 'none';
+            };
+            reader.readAsDataURL(file);
+        } else {
+            document.getElementById('preview-img').style.display = 'none';
+            document.getElementById('preview-placeholder').style.display = 'flex';
+        }
+    });
+</script>
+@endpush
+
 @endsection

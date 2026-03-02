@@ -789,11 +789,11 @@
                                     </ul>
                                 </div>
                                 <div class="team-img">
-                                    <img class="img-fluid" src="{{ asset('assets/img/home-5/home5-team-03.png') }}" alt="">
+                                    <img class="img-fluid" src="{{ asset('assets/img/home-5/home5-team-03.jpeg') }}" alt="">
                                 </div>
                                 <div class="team-content">
                                     <h4>Pathum De Saman</h4>
-                                    <span>Software Engineer</span>
+                                    <span>Full Stack Software Engineer</span>
                                 </div>
                             </div>
                         </div>

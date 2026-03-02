@@ -84,43 +84,69 @@
                         <div class="form-tltle">
                             <h5>Make a Free Consulting</h5>
                         </div>
+                        
+                        @if(session('success'))
+                            <div class="alert alert-success mb-4" style="padding: 15px; background-color: #d4edda; border: 1px solid #c3e6cb; border-radius: 5px; color: #155724;">
+                                {{ session('success') }}
+                            </div>
+                        @endif
+
                        <div class="contact-form">
-                        <form>
+                        <form action="{{ route('contact.store') }}" method="POST">
+                            @csrf
                             <div class="row">
                                 <div class="col-md-6 mb-20">
                                     <div class="form-inner">
                                         <label>first name</label>
-                                        <input type="text">
+                                        <input type="text" name="first_name" value="{{ old('first_name') }}" required>
+                                        @error('first_name')
+                                            <span style="color: #dc3545; font-size: 12px;">{{ $message }}</span>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-20">
                                     <div class="form-inner">
                                         <label>Last name</label>
-                                        <input type="text">
+                                        <input type="text" name="last_name" value="{{ old('last_name') }}" required>
+                                        @error('last_name')
+                                            <span style="color: #dc3545; font-size: 12px;">{{ $message }}</span>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-lg-12 mb-20">
                                     <div class="form-inner">
                                         <label>Company/Organization</label>
-                                        <input type="text">      
+                                        <input type="text" name="company" value="{{ old('company') }}">      
+                                        @error('company')
+                                            <span style="color: #dc3545; font-size: 12px;">{{ $message }}</span>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-lg-12 mb-20">
                                     <div class="form-inner">
                                         <label>Email</label>
-                                        <input type="email">
+                                        <input type="email" name="email" value="{{ old('email') }}" required>
+                                        @error('email')
+                                            <span style="color: #dc3545; font-size: 12px;">{{ $message }}</span>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-lg-12 mb-20">
                                     <div class="form-inner">
                                         <label>Phone</label>
-                                        <input type="email">
+                                        <input type="tel" name="phone" value="{{ old('phone') }}" required>
+                                        @error('phone')
+                                            <span style="color: #dc3545; font-size: 12px;">{{ $message }}</span>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-lg-12 mb-20">
                                     <div class="form-inner">
                                         <label>Message</label>
-                                        <textarea></textarea>
+                                        <textarea name="message" required>{{ old('message') }}</textarea>
+                                        @error('message')
+                                            <span style="color: #dc3545; font-size: 12px;">{{ $message }}</span>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
