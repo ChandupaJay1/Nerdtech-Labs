@@ -627,7 +627,7 @@
                                         </div>
                                     </div>
                                     <div class="team-content">
-                                        <h5>Mateo Daniel</h5>
+                                        <h5>Chandupa Jayalath</h5>
                                         <span>Founder, CTO</span>
                                     </div>
                                 </div>
@@ -646,7 +646,7 @@
                                         </div>
                                     </div>
                                     <div class="team-content">
-                                        <h5>Carter Jayden</h5>
+                                        <h5>Dulanja Abeysinghe</h5>
                                         <span>Co-Founder, CEO</span>
                                     </div>
                                 </div>
@@ -654,7 +654,7 @@
                             <div class="swiper-slide">
                                 <div class="single-team">
                                     <div class="team-img">
-                                        <img class="img-fluid" src="{{ asset('assets/img/home-3/team-04.png') }}" alt="">
+                                        <img class="img-fluid" src="{{ asset('assets/img/home-5/home5-team-03.jpeg') }}" alt="">
                                         <div class="social-area">
                                             <ul>
                                                 <li><a href="https://www.facebook.com/"><i class="bx bxl-facebook"></i></a></li>
@@ -665,8 +665,8 @@
                                         </div>
                                     </div>
                                     <div class="team-content">
-                                        <h5>George Lorenzo</h5>
-                                        <span>Software Engineer</span>
+                                        <h5>Pathum De Saman</h5>
+                                        <span>Full Stack Software Engineer</span>
                                     </div>
                                 </div>
                             </div>
