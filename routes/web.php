@@ -47,6 +47,7 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(fun
     Route::get('/dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('dashboard');
     Route::resource('projects', App\Http\Controllers\Admin\ProjectController::class);
     Route::resource('services', App\Http\Controllers\Admin\ServiceController::class);
+    Route::resource('tasks', App\Http\Controllers\Admin\TaskController::class);
 });
 
 /*

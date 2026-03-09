@@ -24,7 +24,15 @@
             <tbody>
                 @foreach($services as $service)
                 <tr>
-                    <td><i class="{{ $service->icon }}"></i></td>
+                    <td>
+                        @if($service->icon && (str_contains($service->icon, '/') || str_contains($service->icon, '.')))
+                            <img src="{{ asset('storage/' . $service->icon) }}" alt="{{ $service->title }}" 
+                                style="max-height: 40px; max-width: 40px; border-radius: 4px; object-fit: contain;">
+                        @else
+                            <img src="{{ asset('assets/img/web.png') }}" alt="{{ $service->title }}" 
+                                style="max-height: 40px; max-width: 40px; border-radius: 4px; object-fit: contain;">
+                        @endif
+                    </td>
                     <td>{{ $service->title }}</td>
                     <td>{{ Str::limit($service->description, 50) }}</td>
                     <td>

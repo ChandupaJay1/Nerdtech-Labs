@@ -81,6 +81,9 @@
         <a class="nav-link {{ request()->routeIs('admin.projects.*') ? 'active' : '' }}" href="{{ route('admin.projects.index') }}">
             <i class="bi bi-briefcase"></i> Projects
         </a>
+        <a class="nav-link {{ request()->routeIs('admin.tasks.*') ? 'active' : '' }}" href="{{ route('admin.tasks.index') }}">
+            <i class="bi bi-list-task"></i> Tasks
+        </a>
         <div class="mt-auto p-4">
             <form method="POST" action="{{ route('logout') }}">
                 @csrf
@@ -98,8 +101,8 @@
     <header class="d-flex justify-content-between align-items-center mb-4">
         <h2 class="h4">@yield('title')</h2>
         <div class="user-profile">
-            <span class="me-2">Admin</span>
-            <img src="https://ui-avatars.com/api/?name=Admin&background=06D889&color=fff" class="rounded-circle" width="35" alt="Admin">
+            <span class="me-2">{{ auth()->user()->name }}</span>
+            <img src="https://ui-avatars.com/api/?name={{ urlencode(auth()->user()->name) }}&background=06D889&color=fff" class="rounded-circle" width="35" alt="{{ auth()->user()->name }}">
         </div>
     </header>
 
