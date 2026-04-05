@@ -163,11 +163,18 @@
                         @foreach($services as $service)
                         <div class="col-xl-4 col-md-6 col-sm-10 wow animate fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
                             <div class="solution-card magnetic-item">
-                                <div class="icon">
-                                    @if($service->icon && (str_contains($service->icon, '/') || str_contains($service->icon, '.')))
-                                        <img src="{{ asset('storage/' . $service->icon) }}" alt="{{ $service->title }}" style="width:60px;height:60px;object-fit:contain;">
+                                <div class="icon" style="text-align: left; margin-bottom: 20px;">
+                                    @php($card = $service->frontendCard())
+                                    @if ($card['mode'] === 'cover')
+                                        <img src="{{ $card['url'] }}" alt="{{ $service->title }}" style="width:60px;height:60px;object-fit:contain;">
+                                    @elseif ($card['mode'] === 'icon')
+                                        <img src="{{ $card['url'] }}" alt="{{ $service->title }}" style="width:60px;height:60px;object-fit:contain;">
+                                    @elseif ($card['mode'] === 'class')
+                                        <div class="d-flex align-items-start justify-content-start" style="width:100%;">
+                                            <i class="{{ $card['icon_class'] }}" style="font-size:60px;color:#06D889;line-height:1;" aria-hidden="true"></i>
+                                        </div>
                                     @else
-                                        <img src="{{ asset('assets/img/web.png') }}" alt="{{ $service->title }}" style="width:60px;height:60px;object-fit:contain;">
+                                        <img src="{{ $card['url'] }}" alt="{{ $service->title }}" style="width:60px;height:60px;object-fit:contain;">
                                     @endif
                                 </div>
                                 <div class="solution-content">
@@ -510,7 +517,7 @@
                                     </ul>
                                 </div>
                                 <div class="team-img">
-                                    <img class="img-fluid" src="{{ asset('assets/img/home-5/home5-team-02.jpeg') }}" alt="">
+                                    <img class="img-fluid" src="{{ asset('assets/img/home-5/home5-team-02.jpg') }}" alt="">
                                 </div>
                                 <div class="team-content">
                                     <h4>Dulanja Abeysinghe</h4>

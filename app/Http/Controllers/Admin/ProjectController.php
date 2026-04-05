@@ -4,139 +4,118 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Project;
+use App\Support\PublicDiskMedia;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Str;
 
 class ProjectController extends Controller
 {
-    /**
-     * Display a listing of all projects.
-     */
     public function index()
     {
-        $projects = Project::latest()->get();
+        $projects = Project::query()->latest()->get();
+
         return view('admin.projects.index', compact('projects'));
     }
 
-    /**
-     * Show the form to create a new project.
-     */
     public function create()
     {
         return view('admin.projects.create');
     }
 
-    /**
-     * Store a new project.
-     */
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'title'       => 'required|max:255',
-            'category'    => 'nullable|max:100',
-            'image'       => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
-            'project_url' => 'nullable|url|max:255',
-            'client'      => 'nullable|max:255',
-            'duration'    => 'nullable|max:255',
-            'location'    => 'nullable|max:255',
-            'status'      => 'nullable|max:255',
-            'progress'    => 'nullable|integer|min:0|max:100',
-            'description' => 'required',
-            'details'     => 'nullable',
+            'title' => 'required|string|max:255',
+            'category' => 'nullable|string|max:100',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg,webp|max:8192',
+            'project_url' => 'nullable|url|max:500',
+            'client' => 'nullable|string|max:255',
+            'duration' => 'nullable|string|max:255',
+            'location' => 'nullable|string|max:255',
+            'status' => 'nullable|string|max:255',
+            'progress' => 'nullable|integer|min:0|max:100',
+            'description' => 'required|string',
+            'details' => 'nullable|string',
         ]);
 
         if ($request->hasFile('image')) {
-            $validated['image'] = $request->file('image')->store('projects', 'public');
+            $validated['image'] = PublicDiskMedia::store($request->file('image'), 'projects');
+        } else {
+            unset($validated['image']);
         }
 
         Project::create($validated);
 
         return redirect()
             ->route('admin.projects.index')
-            ->with('success', 'Project created successfully!');
+            ->with('success', 'Project created successfully.');
     }
 
-    /**
-     * Show the edit form for a specific project.
-     */
     public function edit(string $id)
     {
         $project = Project::findOrFail($id);
+
         return view('admin.projects.edit', compact('project'));
     }
 
-    /**
-     * Update a specific project.
-     */
     public function update(Request $request, string $id)
     {
         $project = Project::findOrFail($id);
 
         $validated = $request->validate([
-            'title'        => 'required|max:255',
-            'category'     => 'nullable|max:100',
-            'image'        => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
-            'project_url'  => 'nullable|url|max:255',
-            'client'       => 'nullable|max:255',
-            'duration'    => 'nullable|max:255',
-            'location'    => 'nullable|max:255',
-            'status'      => 'nullable|max:255',
-            'progress'    => 'nullable|integer|min:0|max:100',
-            'description' => 'required',
-            'details'     => 'nullable',
+            'title' => 'required|string|max:255',
+            'category' => 'nullable|string|max:100',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg,webp|max:8192',
+            'project_url' => 'nullable|url|max:500',
+            'client' => 'nullable|string|max:255',
+            'duration' => 'nullable|string|max:255',
+            'location' => 'nullable|string|max:255',
+            'status' => 'nullable|string|max:255',
+            'progress' => 'nullable|integer|min:0|max:100',
+            'description' => 'required|string',
+            'details' => 'nullable|string',
+            'remove_image' => 'sometimes|boolean',
         ]);
 
-        // Handle image removal
-        if ($request->boolean('remove_image')) {
-            $this->deleteOldImage($project->image);
-            $validated['image'] = null;
-        }
+        $payload = [
+            'title' => $validated['title'],
+            'category' => $validated['category'] ?? null,
+            'project_url' => $validated['project_url'] ?? null,
+            'client' => $validated['client'] ?? null,
+            'duration' => $validated['duration'] ?? null,
+            'location' => $validated['location'] ?? null,
+            'status' => $validated['status'] ?? null,
+            'progress' => $validated['progress'] ?? 0,
+            'description' => $validated['description'],
+            'details' => $validated['details'] ?? null,
+        ];
 
-        // Handle new image upload
         if ($request->hasFile('image')) {
-            // Delete old image from storage if it was stored there
-            $this->deleteOldImage($project->image);
-            $validated['image'] = $request->file('image')->store('projects', 'public');
+            PublicDiskMedia::deleteIfManaged($project->image);
+            $payload['image'] = PublicDiskMedia::store($request->file('image'), 'projects');
+        } elseif ($request->boolean('remove_image')) {
+            PublicDiskMedia::deleteIfManaged($project->image);
+            $payload['image'] = null;
         } else {
-            // Keep existing image
-            unset($validated['image']);
+            $payload['image'] = $project->image;
         }
 
-        $project->update($validated);
+        $project->update($payload);
 
         return redirect()
             ->route('admin.projects.index')
-            ->with('success', 'Project updated successfully!');
+            ->with('success', 'Project updated successfully.');
     }
 
-    /**
-     * Delete a specific project.
-     */
     public function destroy(string $id)
     {
         $project = Project::findOrFail($id);
 
-        // Delete image from storage
-        $this->deleteOldImage($project->image);
+        PublicDiskMedia::deleteIfManaged($project->image);
 
         $project->delete();
 
         return redirect()
             ->route('admin.projects.index')
-            ->with('success', 'Project deleted successfully!');
-    }
-
-    /**
-     * Helper: delete image from storage if it is a storage-managed file.
-     */
-    private function deleteOldImage(?string $imagePath): void
-    {
-        if (!$imagePath) return;
-
-        // Only delete if it is a storage-managed path (not a legacy public/assets path)
-        if (!Str::startsWith($imagePath, ['public/', 'assets/'])) {
-            Storage::disk('public')->delete($imagePath);
-        }
+            ->with('success', 'Project deleted successfully.');
     }
 }

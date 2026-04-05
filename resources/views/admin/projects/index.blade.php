@@ -15,22 +15,6 @@
     </a>
 </div>
 
-{{-- Flash Messages --}}
-@if(session('success'))
-    <div class="alert alert-success alert-dismissible fade show d-flex align-items-center gap-2" role="alert">
-        <i class="bi bi-check-circle-fill"></i>
-        {{ session('success') }}
-        <button type="button" class="btn-close ms-auto" data-bs-dismiss="alert"></button>
-    </div>
-@endif
-@if(session('error'))
-    <div class="alert alert-danger alert-dismissible fade show d-flex align-items-center gap-2" role="alert">
-        <i class="bi bi-exclamation-triangle-fill"></i>
-        {{ session('error') }}
-        <button type="button" class="btn-close ms-auto" data-bs-dismiss="alert"></button>
-    </div>
-@endif
-
 {{-- Projects Table --}}
 <div class="card">
     <div class="card-body p-0">
@@ -57,15 +41,8 @@
                     <tr>
                         <td class="text-muted">{{ $project->id }}</td>
                         <td>
-                            @if($project->image)
-                                @php
-                                    $imgSrc = Str::startsWith($project->image, 'public/')
-                                        ? asset(Str::after($project->image, 'public/'))
-                                        : (Str::startsWith($project->image, 'assets/')
-                                            ? asset($project->image)
-                                            : asset('storage/' . $project->image));
-                                @endphp
-                                <img src="{{ $imgSrc }}"
+                            @if ($url = $project->imagePublicUrl())
+                                <img src="{{ $url }}"
                                      class="rounded"
                                      style="width:60px;height:45px;object-fit:cover;"
                                      alt="{{ $project->title }}">

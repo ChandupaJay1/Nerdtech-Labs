@@ -107,7 +107,7 @@
                     <div class="single-work magnetic-item">
                         <div class="work-img">
                             <a href="{{ route('project-details', $project->id) }}">
-                                <img class="img-fluid" src="{{ Str::startsWith($project->image, 'public/') ? asset(Str::after($project->image, 'public/')) : (Str::startsWith($project->image, 'assets/') ? asset($project->image) : asset('storage/' . $project->image)) }}" alt="{{ $project->title }}">
+                                <img class="img-fluid" src="{{ $project->frontendImageUrl() }}" alt="{{ $project->title }}">
                             </a>
                             @if($project->status && $project->status !== 'Completed')
                                 <div class="project-status-badge">

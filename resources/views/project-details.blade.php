@@ -38,14 +38,7 @@
             <div class="row g-4 mb-80">
                 <div class="col-lg-12">
                     <div class="portfolio-img magnetic-item">
-                        @php
-                            $imgSrc = Str::startsWith($project->image, 'public/')
-                                ? asset(Str::after($project->image, 'public/'))
-                                : (Str::startsWith($project->image, 'assets/')
-                                    ? asset($project->image)
-                                    : asset('storage/' . $project->image));
-                        @endphp
-                        <img class="img-fluid w-100" src="{{ $imgSrc }}" alt="{{ $project->title }}" style="max-height: 600px; object-fit: cover; border-radius: 20px;">
+                        <img class="img-fluid w-100" src="{{ $project->frontendImageUrl() }}" alt="{{ $project->title }}" style="max-height: 600px; object-fit: cover; border-radius: 20px;">
                     </div>
                 </div>
             </div>

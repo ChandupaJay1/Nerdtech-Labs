@@ -18,18 +18,7 @@
         <form action="{{ route('admin.projects.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
 
-            {{-- Validation Errors --}}
-            @if($errors->any())
-                <div class="alert alert-danger mb-4">
-                    <i class="bi bi-exclamation-triangle-fill me-2"></i>
-                    <strong>Please fix the following errors:</strong>
-                    <ul class="mb-0 mt-2">
-                        @foreach($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-            @endif
+            @include('admin.partials.form-errors')
 
             <div class="row g-4">
                 {{-- Title --}}
@@ -173,12 +162,12 @@
                                    name="image"
                                    id="imageInput"
                                    class="form-control @error('image') is-invalid @enderror"
-                                   accept="image/jpeg,image/png,image/jpg,image/gif,image/webp">
+                                   accept="image/jpeg,image/png,image/jpg,image/gif,image/webp,image/svg+xml">
                             @error('image')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                             <small class="text-muted d-block mt-1">
-                                Accepted: JPG, PNG, GIF, WebP — Max 2MB
+                                JPG, PNG, GIF, WebP, SVG — max 8MB
                             </small>
                         </div>
                     </div>

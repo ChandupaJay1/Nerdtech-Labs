@@ -325,7 +325,7 @@
                             </ul>
                         </div>
                         <div class="team-img">
-                            <img class="img-fluid" src="{{ asset('assets/img/home-5/home5-team-02.png') }}" alt="">
+                            <img class="img-fluid" src="{{ asset('assets/img/home-5/home5-team-02.jpg') }}" alt="">
                         </div>
                         <div class="team-content">
                             <h4>Blaise Davian</h4>

@@ -47,10 +47,15 @@
                     </div>
                     <div class="col-lg-6 wow animate fadeInRight" data-wow-delay="300ms" data-wow-duration="1500ms">
                         <div class="service-img magnetic-item">
-                            @if($service->icon && (str_contains($service->icon, '/') || str_contains($service->icon, '.')))
-                                <img class="img-fluid" src="{{ asset('storage/' . $service->icon) }}" alt="{{ $service->title }}">
+                            @php($hero = $service->frontendDetailHero())
+                            @if ($hero['mode'] === 'image')
+                                <img class="img-fluid" src="{{ $hero['url'] }}" alt="{{ $service->title }}">
+                            @elseif ($hero['mode'] === 'class')
+                                <div class="d-flex align-items-center justify-content-center rounded-3 border border-secondary border-opacity-25 py-5 px-4">
+                                    <i class="{{ $hero['icon_class'] }}" style="font-size:clamp(4rem, 12vw, 8rem);color:#06D889;line-height:1;" aria-hidden="true"></i>
+                                </div>
                             @else
-                                <img class="img-fluid" src="{{ asset('assets/img/web.png') }}" alt="{{ $service->title }}">
+                                <img class="img-fluid" src="{{ $hero['url'] }}" alt="{{ $service->title }}">
                             @endif
                         </div>
                     </div>

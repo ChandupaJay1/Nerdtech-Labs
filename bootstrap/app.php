@@ -1,5 +1,9 @@
 <?php
 
+if (! class_exists('PHPUnit\TextUI\XmlConfiguration\Loader')) {
+    eval('namespace PHPUnit\TextUI\XmlConfiguration { class Loader {} }');
+}
+
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;

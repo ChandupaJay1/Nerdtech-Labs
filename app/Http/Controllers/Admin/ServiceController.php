@@ -4,14 +4,15 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Service;
+use App\Support\PublicDiskMedia;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
 
 class ServiceController extends Controller
 {
     public function index()
     {
-        $services = Service::all();
+        $services = Service::query()->latest()->get();
+
         return view('admin.services.index', compact('services'));
     }
 
@@ -23,20 +24,35 @@ class ServiceController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'title'            => 'required|max:255',
-            'icon'             => 'nullable|image|mimes:png,jpg,jpeg,gif,svg,webp|max:2048',
-            'description'      => 'required',
-            'long_description' => 'nullable',
+            'title' => 'required|string|max:255',
+            'description' => 'required|string',
+            'long_description' => 'nullable|string',
+            'features' => 'nullable|string',
+            'icon' => 'nullable|image|mimes:png,jpg,jpeg,gif,svg,webp|max:2048',
+            'image' => 'nullable|image|mimes:png,jpg,jpeg,gif,svg,webp|max:8192',
+            'icon_class' => 'nullable|string|max:255',
         ]);
 
+        $payload = [
+            'title' => $validated['title'],
+            'description' => $validated['description'],
+            'long_description' => $validated['long_description'] ?? null,
+            'features' => $validated['features'] ?? null,
+            'icon' => null,
+            'image' => null,
+        ];
+
         if ($request->hasFile('icon')) {
-            $path = $request->file('icon')->store('services', 'public');
-            $validated['icon'] = $path;
-        } else {
-            unset($validated['icon']);
+            $payload['icon'] = PublicDiskMedia::store($request->file('icon'), 'services');
+        } elseif (! empty($validated['icon_class'])) {
+            $payload['icon'] = $validated['icon_class'];
         }
 
-        Service::create($validated);
+        if ($request->hasFile('image')) {
+            $payload['image'] = PublicDiskMedia::store($request->file('image'), 'services');
+        }
+
+        Service::create($payload);
 
         return redirect()->route('admin.services.index')->with('success', 'Service created successfully.');
     }
@@ -44,6 +60,7 @@ class ServiceController extends Controller
     public function edit(string $id)
     {
         $service = Service::findOrFail($id);
+
         return view('admin.services.edit', compact('service'));
     }
 
@@ -52,25 +69,42 @@ class ServiceController extends Controller
         $service = Service::findOrFail($id);
 
         $validated = $request->validate([
-            'title'            => 'required|max:255',
-            'icon'             => 'nullable|image|mimes:png,jpg,jpeg,gif,svg,webp|max:2048',
-            'description'      => 'required',
-            'long_description' => 'nullable',
+            'title' => 'required|string|max:255',
+            'description' => 'required|string',
+            'long_description' => 'nullable|string',
+            'features' => 'nullable|string',
+            'icon' => 'nullable|image|mimes:png,jpg,jpeg,gif,svg,webp|max:2048',
+            'image' => 'nullable|image|mimes:png,jpg,jpeg,gif,svg,webp|max:8192',
+            'icon_class' => 'nullable|string|max:255',
         ]);
 
+        $payload = [
+            'title' => $validated['title'],
+            'description' => $validated['description'],
+            'long_description' => $validated['long_description'] ?? null,
+            'features' => $validated['features'] ?? null,
+        ];
+
         if ($request->hasFile('icon')) {
-            // Delete old icon if it exists
-            if ($service->icon) {
-                Storage::disk('public')->delete($service->icon);
-            }
-            $path = $request->file('icon')->store('services', 'public');
-            $validated['icon'] = $path;
-        } else {
-            // Keep existing icon if no new file uploaded
-            unset($validated['icon']);
+            PublicDiskMedia::deleteIfManaged($service->icon);
+            $payload['icon'] = PublicDiskMedia::store($request->file('icon'), 'services');
+        } elseif ($request->filled('icon_class')) {
+            PublicDiskMedia::deleteIfManaged($service->icon);
+            $payload['icon'] = $validated['icon_class'];
+        } elseif ($request->boolean('remove_icon')) {
+            PublicDiskMedia::deleteIfManaged($service->icon);
+            $payload['icon'] = null;
         }
 
-        $service->update($validated);
+        if ($request->hasFile('image')) {
+            PublicDiskMedia::deleteIfManaged($service->image);
+            $payload['image'] = PublicDiskMedia::store($request->file('image'), 'services');
+        } elseif ($request->boolean('remove_image')) {
+            PublicDiskMedia::deleteIfManaged($service->image);
+            $payload['image'] = null;
+        }
+
+        $service->update($payload);
 
         return redirect()->route('admin.services.index')->with('success', 'Service updated successfully.');
     }
@@ -79,14 +113,11 @@ class ServiceController extends Controller
     {
         $service = Service::findOrFail($id);
 
-        if ($service->icon) {
-            Storage::disk('public')->delete($service->icon);
-        }
+        PublicDiskMedia::deleteIfManaged($service->icon);
+        PublicDiskMedia::deleteIfManaged($service->image);
 
         $service->delete();
 
         return redirect()->route('admin.services.index')->with('success', 'Service deleted successfully.');
     }
 }
-
-

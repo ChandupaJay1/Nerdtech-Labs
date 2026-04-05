@@ -19,18 +19,7 @@
             @csrf
             @method('PUT')
 
-            {{-- Validation Errors --}}
-            @if($errors->any())
-                <div class="alert alert-danger mb-4">
-                    <i class="bi bi-exclamation-triangle-fill me-2"></i>
-                    <strong>Please fix the following errors:</strong>
-                    <ul class="mb-0 mt-2">
-                        @foreach($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-            @endif
+            @include('admin.partials.form-errors')
 
             <div class="row g-4">
                 {{-- Title --}}
@@ -157,18 +146,7 @@
                 <div class="col-12">
                     <label class="form-label fw-semibold">Project Image</label>
 
-                    @php
-                        $currentImgSrc = null;
-                        if ($project->image) {
-                            if (Str::startsWith($project->image, 'public/')) {
-                                $currentImgSrc = asset(Str::after($project->image, 'public/'));
-                            } elseif (Str::startsWith($project->image, 'assets/')) {
-                                $currentImgSrc = asset($project->image);
-                            } else {
-                                $currentImgSrc = asset('storage/' . $project->image);
-                            }
-                        }
-                    @endphp
+                    @php($currentImgSrc = $project->imagePublicUrl())
 
                     <div class="d-flex align-items-start gap-4 flex-wrap">
                         {{-- Preview Box --}}
@@ -198,12 +176,12 @@
                                    name="image"
                                    id="imageInput"
                                    class="form-control @error('image') is-invalid @enderror"
-                                   accept="image/jpeg,image/png,image/jpg,image/gif,image/webp">
+                                   accept="image/jpeg,image/png,image/jpg,image/gif,image/webp,image/svg+xml">
                             @error('image')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                             <small class="text-muted d-block mt-1">
-                                Leave empty to keep the current image. Accepted: JPG, PNG, GIF, WebP — Max 2MB
+                                Leave empty to keep current. JPG, PNG, GIF, WebP, SVG — max 8MB
                             </small>
 
                             @if($project->image)

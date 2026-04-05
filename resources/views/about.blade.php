@@ -635,7 +635,7 @@
                             <div class="swiper-slide">
                                 <div class="single-team">
                                     <div class="team-img">
-                                        <img class="img-fluid" src="{{ asset('assets/img/home-5/home5-team-02.jpeg') }}" alt="">
+                                        <img class="img-fluid" src="{{ asset('assets/img/home-5/home5-team-02.jpg') }}" alt="">
                                         <div class="social-area">
                                             <ul>
                                                 <li><a href="https://www.facebook.com/"><i class="bx bxl-facebook"></i></a></li>
