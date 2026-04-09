@@ -18,8 +18,8 @@
                 <div class="col-12">
                     <div class="breadcrumb-wrapper">
                         <div class="breadcrumb-cnt">
-                            <span>About</span>
-                            <h1>"Get To Know About Softconic"</h1>
+                            <span>About Us</span>
+                            <h1>"Get To Know About Nerdtech Labs"</h1>
                             <div class="breadcrumb-list">
                                 <a href="{{ route('home') }}">Home</a><img src="{{ asset('assets/img/inner-pages/breadcrumb-arrow.svg') }}" alt=""> About
                             </div>
@@ -38,11 +38,11 @@
                 <div class="col-lg-9">
                     <div class="section-title-3 wow animate fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
                         <h2>Our Approach</h2>
-                        <p>Services are professional offerings provided by businesses to meet specific needs or solve problems for their customers. Services can range from your budject.</p>
+                        <p>We deliver innovative technology solutions designed to meet your unique business needs and drive digital transformation. From strategy to implementation, we partner with you to achieve measurable results.</p>
                     </div>
                     <div class="about-left">
                         <div class="about-img  wow animate fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
-                            <img class="img-fluid magnetic-item" src="{{ asset('assets/img/home-3/home3-about-1.png') }}" alt="">
+                            <img class="img-fluid magnetic-item" src="{{ asset('assets/img/home-5/about-img-1.png') }}" alt="About Nerdtech Labs">
                         </div>
                         <div class="about-content wow animate fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
                             <h2>Unlock the potential of your business.</h2>
@@ -51,11 +51,11 @@
                                 <ul class="about-feature">
                                 <li>
                                     <h5>Customized Solutions</h5>
-                                    <p>Services are professional w offerings provided.</p>
+                                    <p>Tailored technology solutions designed specifically for your business needs.</p>
                                 </li>
                                 <li>
-                                    <h5>Quality Reliability</h5>
-                                    <p>Services are professional w offerings provided.</p>
+                                    <h5>Quality & Reliability</h5>
+                                    <p>Enterprise-grade solutions with proven track records of success.</p>
                                 </li>
                                 </ul>
                         </div>
@@ -64,11 +64,11 @@
                 <div class="col-lg-3">
                     <div class="about-right">
                         <div class="about-img wow animate fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
-                            <img class="img-fluid magnetic-item" src="{{ asset('assets/img/home-3/home3-about-2.png') }}" alt="">
+                            <img class="img-fluid magnetic-item" src="{{ asset('assets/img/home-5/about-img-2.png') }}" alt="About Nerdtech Labs">
                         </div>
                         <div class="about-exprience d-flex align-items-center justify-content-center wow animate fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
                             <div class="exp-text">
-                                <img src="{{ asset('assets/img/home-3/rotate-text.png') }}" alt="">
+                                <img src="{{ asset('assets/img/home-5/rotate-text.png') }}" alt="">
                             </div>
                             <div class="years">
                                 <h2>10<br><span>Years</span></h2>
@@ -89,12 +89,12 @@
                         <div class="col-lg-6 ">
                             <div class="choose-title">
                                 <span>Why Choose Us</span>
-                                <h2>Unlock the potential of your business.</h2>
+                                <h2>Unlock the potential of your business with cutting-edge technology solutions.</h2>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="choose-right-img magnetic-item">
-                                <img class="img-fluid " src="{{ asset('assets/img/home-6/choose-img-1.png') }}" alt="">
+                                <img class="img-fluid " src="{{ asset('assets/img/home-5/choose-img-1.png') }}" alt="">
                             </div>
                         </div>
                     </div>
@@ -104,15 +104,15 @@
                         <div class="col-lg-7">
                             <div class="choose-left-content">
                                 <div class="vectors">
-                                    <img class="choose-vec-top-r" src="{{ asset('assets/img/home-6/choose-vec-top-r.svg') }}" alt="">
-                                    <img class="choose-vec-btm-l" src="{{ asset('assets/img/home-6/choose-vec-btm-l.svg') }}" alt="">
+                                    <img class="choose-vec-top-r" src="{{ asset('assets/img/home-5/choose-vec-top-r.svg') }}" alt="">
+                                    <img class="choose-vec-btm-l" src="{{ asset('assets/img/home-5/choose-vec-btm-l.svg') }}" alt="">
                                 </div>
                                 <div class="icon">
-                                    <img src="{{ asset('assets/img/logo.svg') }}" alt="">
+                                    <img src="{{ asset('assets/img/logo.svg') }}" alt="Nerdtech Labs">
                                 </div>
-                                <h4>Best Creative IT Agency And Solutions <br>
-                                    <span>Since 2005.</span></h4>
-                                <p>Morbi interdum pellentesque nunc, luctus pretium nullagoneq luctus at. Aliquam cursus nunc arcu, condimentum efficiturunt tellus iaculis faucibus Quisque gravida.</p>
+                                <h4>Leading IT Solutions Provider <br>
+                                    <span>Since 2020.</span></h4>
+                                <p>We specialize in delivering innovative technology solutions that help businesses transform, grow, and succeed in the digital age. Our team of experts combines technical expertise with creative thinking to solve complex challenges.</p>
                                 <div class="sl">
                                     <h2>#1</h2>
                                 </div>
@@ -134,11 +134,11 @@
                                     <li>
                                         <div class="single-feature">
                                             <div class="progress">
-                                                <h3><span class="counter">70</span>%</h3>
+                                                <h3><span class="counter">95</span>%</h3>
                                             </div>
                                             <div class="content">
-                                                <h4>Strategy</h4>
-                                                <p>Morbi interdum pellentesque nunc, luctuso pretium nullagoneq luctus at. Aliquam one cursus nunc arcu</p>
+                                                <h4>Strategy & Innovation</h4>
+                                                <p>Strategic technology consulting to align IT initiatives with business objectives</p>
                                             </div>
                                         </div>
                                     </li>
@@ -148,19 +148,19 @@
                                                 <h3><span class="counter">98</span>%</h3>
                                             </div>
                                             <div class="content">
-                                                <h4>Audience</h4>
-                                                <p>Morbi interdum pellentesque nunc, luctuso pretium nullagoneq luctus at. Aliquam one cursus nunc arcu</p>
+                                                <h4>Client Satisfaction</h4>
+                                                <p>Delivering exceptional results that exceed client expectations consistently</p>
                                             </div>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="single-feature">
                                             <div class="progress">
-                                                <h3><span class="counter">85</span>%</h3>
+                                                <h3><span class="counter">90</span>%</h3>
                                             </div>
                                             <div class="content">
-                                                <h4>Keyword</h4>
-                                                <p>Morbi interdum pellentesque nunc, luctuso pretium nullagoneq luctus at. Aliquam one cursus nunc arcu</p>
+                                                <h4>Technical Excellence</h4>
+                                                <p>Leveraging cutting-edge technologies to build scalable, robust solutions</p>
                                             </div>
                                         </div>
                                     </li>
@@ -179,8 +179,8 @@
             <div class="row g-xl-4 gy-5">
                 <div class="col-xl-3 wow animate fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
                     <div class="section-title-4">
-                        <h2>Our States</h2>
-                        <p>Maecenas euismod viverra purus, volutpat posuere mauris tristique quisokaft.</p>
+                        <h2>Our Stats</h2>
+                        <p>Numbers that demonstrate our commitment to excellence and client success.</p>
                     </div>
                 </div>
                 <div class="col-xl-9 d-flex justify-content-end">
@@ -312,98 +312,98 @@
  
     <!-- Start Trusted client section -->
     <div class="home4-trusted-client-area sec-mar">
-        <p>We take care of more than 1.5k Trusted Allies</p>
+        <p>We take care of more than 1.5k Trusted Clients</p>
         <div class="marque-wrap">
             <div class="marquee_text">
                 <div class="single-client">
-                    <img class="img-fluid" src="{{ asset('assets/img/home-4/client-01.svg') }}" alt="">
+                    <img class="img-fluid" src="{{ asset('assets/img/home-5/client-01.svg') }}" alt="">
                 </div>
                 <div class="single-client">
-                    <img class="img-fluid" src="{{ asset('assets/img/home-4/client-02.svg') }}" alt="">
+                    <img class="img-fluid" src="{{ asset('assets/img/home-5/client-02.svg') }}" alt="">
                 </div>
                 <div class="single-client">
-                    <img class="img-fluid" src="{{ asset('assets/img/home-4/client-03.svg') }}" alt="">
+                    <img class="img-fluid" src="{{ asset('assets/img/home-5/client-03.svg') }}" alt="">
                 </div>
                 <div class="single-client">
-                    <img class="img-fluid" src="{{ asset('assets/img/home-4/client-04.svg') }}" alt="">
+                    <img class="img-fluid" src="{{ asset('assets/img/home-5/client-04.svg') }}" alt="">
                 </div>
                 <div class="single-client">
-                    <img class="img-fluid" src="{{ asset('assets/img/home-4/client-05.svg') }}" alt="">
+                    <img class="img-fluid" src="{{ asset('assets/img/home-5/client-05.svg') }}" alt="">
                 </div>
                 <div class="single-client">
-                    <img class="img-fluid" src="{{ asset('assets/img/home-4/client-01.svg') }}" alt="">
+                    <img class="img-fluid" src="{{ asset('assets/img/home-5/client-01.svg') }}" alt="">
                 </div>
                 <div class="single-client">
-                    <img class="img-fluid" src="{{ asset('assets/img/home-4/client-02.svg') }}" alt="">
+                    <img class="img-fluid" src="{{ asset('assets/img/home-5/client-02.svg') }}" alt="">
                 </div>
                 <div class="single-client">
-                    <img class="img-fluid" src="{{ asset('assets/img/home-4/client-03.svg') }}" alt="">
+                    <img class="img-fluid" src="{{ asset('assets/img/home-5/client-03.svg') }}" alt="">
                 </div>
                 <div class="single-client">
-                    <img class="img-fluid" src="{{ asset('assets/img/home-4/client-04.svg') }}" alt="">
+                    <img class="img-fluid" src="{{ asset('assets/img/home-5/client-04.svg') }}" alt="">
                 </div>
                 <div class="single-client">
-                    <img class="img-fluid" src="{{ asset('assets/img/home-4/client-05.svg') }}" alt="">
+                    <img class="img-fluid" src="{{ asset('assets/img/home-5/client-05.svg') }}" alt="">
                 </div>
                 <div class="single-client">
-                    <img class="img-fluid" src="{{ asset('assets/img/home-4/client-01.svg') }}" alt="">
+                    <img class="img-fluid" src="{{ asset('assets/img/home-5/client-01.svg') }}" alt="">
                 </div>
                 <div class="single-client">
-                    <img class="img-fluid" src="{{ asset('assets/img/home-4/client-02.svg') }}" alt="">
+                    <img class="img-fluid" src="{{ asset('assets/img/home-5/client-02.svg') }}" alt="">
                 </div>
                 <div class="single-client">
-                    <img class="img-fluid" src="{{ asset('assets/img/home-4/client-03.svg') }}" alt="">
+                    <img class="img-fluid" src="{{ asset('assets/img/home-5/client-03.svg') }}" alt="">
                 </div>
                 <div class="single-client">
-                    <img class="img-fluid" src="{{ asset('assets/img/home-4/client-04.svg') }}" alt="">
+                    <img class="img-fluid" src="{{ asset('assets/img/home-5/client-04.svg') }}" alt="">
                 </div>
                 <div class="single-client">
-                    <img class="img-fluid" src="{{ asset('assets/img/home-4/client-05.svg') }}" alt="">
+                    <img class="img-fluid" src="{{ asset('assets/img/home-5/client-05.svg') }}" alt="">
                 </div>
                 <div class="single-client">
-                    <img class="img-fluid" src="{{ asset('assets/img/home-4/client-01.svg') }}" alt="">
+                    <img class="img-fluid" src="{{ asset('assets/img/home-5/client-01.svg') }}" alt="">
                 </div>
                 <div class="single-client">
-                    <img class="img-fluid" src="{{ asset('assets/img/home-4/client-02.svg') }}" alt="">
+                    <img class="img-fluid" src="{{ asset('assets/img/home-5/client-02.svg') }}" alt="">
                 </div>
                 <div class="single-client">
-                    <img class="img-fluid" src="{{ asset('assets/img/home-4/client-03.svg') }}" alt="">
+                    <img class="img-fluid" src="{{ asset('assets/img/home-5/client-03.svg') }}" alt="">
                 </div>
                 <div class="single-client">
-                    <img class="img-fluid" src="{{ asset('assets/img/home-4/client-04.svg') }}" alt="">
+                    <img class="img-fluid" src="{{ asset('assets/img/home-5/client-04.svg') }}" alt="">
                 </div>
                 <div class="single-client">
-                    <img class="img-fluid" src="{{ asset('assets/img/home-4/client-05.svg') }}" alt="">
+                    <img class="img-fluid" src="{{ asset('assets/img/home-5/client-05.svg') }}" alt="">
                 </div>
                 <div class="single-client">
-                    <img class="img-fluid" src="{{ asset('assets/img/home-4/client-01.svg') }}" alt="">
+                    <img class="img-fluid" src="{{ asset('assets/img/home-5/client-01.svg') }}" alt="">
                 </div>
                 <div class="single-client">
-                    <img class="img-fluid" src="{{ asset('assets/img/home-4/client-02.svg') }}" alt="">
+                    <img class="img-fluid" src="{{ asset('assets/img/home-5/client-02.svg') }}" alt="">
                 </div>
                 <div class="single-client">
-                    <img class="img-fluid" src="{{ asset('assets/img/home-4/client-03.svg') }}" alt="">
+                    <img class="img-fluid" src="{{ asset('assets/img/home-5/client-03.svg') }}" alt="">
                 </div>
                 <div class="single-client">
-                    <img class="img-fluid" src="{{ asset('assets/img/home-4/client-04.svg') }}" alt="">
+                    <img class="img-fluid" src="{{ asset('assets/img/home-5/client-04.svg') }}" alt="">
                 </div>
                 <div class="single-client">
-                    <img class="img-fluid" src="{{ asset('assets/img/home-4/client-05.svg') }}" alt="">
+                    <img class="img-fluid" src="{{ asset('assets/img/home-5/client-05.svg') }}" alt="">
                 </div>
                 <div class="single-client">
-                    <img class="img-fluid" src="{{ asset('assets/img/home-4/client-01.svg') }}" alt="">
+                    <img class="img-fluid" src="{{ asset('assets/img/home-5/client-01.svg') }}" alt="">
                 </div>
                 <div class="single-client">
-                    <img class="img-fluid" src="{{ asset('assets/img/home-4/client-02.svg') }}" alt="">
+                    <img class="img-fluid" src="{{ asset('assets/img/home-5/client-02.svg') }}" alt="">
                 </div>
                 <div class="single-client">
-                    <img class="img-fluid" src="{{ asset('assets/img/home-4/client-03.svg') }}" alt="">
+                    <img class="img-fluid" src="{{ asset('assets/img/home-5/client-03.svg') }}" alt="">
                 </div>
                 <div class="single-client">
-                    <img class="img-fluid" src="{{ asset('assets/img/home-4/client-04.svg') }}" alt="">
+                    <img class="img-fluid" src="{{ asset('assets/img/home-5/client-04.svg') }}" alt="">
                 </div>
                 <div class="single-client">
-                    <img class="img-fluid" src="{{ asset('assets/img/home-4/client-05.svg') }}" alt="">
+                    <img class="img-fluid" src="{{ asset('assets/img/home-5/client-05.svg') }}" alt="">
                 </div>
             </div>
         </div>
@@ -417,7 +417,7 @@
                 <div class="col-lg-12 d-flex align-items-center justify-content-between gap-4 flex-wrap">
                     <div class="section-title-3">
                         <h2>Happy Customers</h2>
-                        <p>Services are professional offerings provided by businesses to meet specific needs or solve problems for their customers. Services can range from your budject.</p>
+                        <p>Hear what our clients have to say about their experience working with Nerdtech Labs and the solutions we've delivered.</p>
                     </div>
                     <div class="swiper-btn-group">
                         <div class="swiper-btn prevbtn2">
@@ -436,47 +436,45 @@
                             <div class="swiper-slide">
                                 <div class="testimonial-card3">
                                     <div class="quate-icon">
-                                        <img src="{{ asset('assets/img/home-4/left-quote.svg') }}" alt="">
+                                        <img src="{{ asset('assets/img/home-5/left-quote.svg') }}" alt="">
                                     </div>
                                     <div class="testimonial-top">
                                         <div class="review-left">
-                                            <img src="{{ asset('assets/img/home-4/trustpilot.svg') }}" alt="">
+                                            <img src="{{ asset('assets/img/home-5/trustpilot.svg') }}" alt="">
                                         </div>
                                         <div class="review-right">
-                                            <img src="{{ asset('assets/img/home-4/trastpilot-star.svg') }}" alt="">
+                                            <img src="{{ asset('assets/img/home-5/trastpilot-star.svg') }}" alt="">
                                         </div>
                                     </div>
                                     <div class="testimonial-content">
-                                        <p>“Integer purus odio, placerat nec rhoncus in, ullamcorper nec dolor. and utoor
-                                            himenaeos. Praesent nec neque at dolor venenatis consectetur european gon
-                                            Donec lacinia placerat felis non aliquam.”</p>
+                                        <p>"Nerdtech Labs delivered an exceptional solution that exceeded our expectations. Their team was professional, responsive, and truly understood our business needs. The project was completed on time and within budget."</p>
                                     </div>
-                                    
+
                                     <div class="testimonial-btm">
                                         <div class="author-area">
                                             <div class="author-content">
-                                                <h4>Mateo Daniel</h4>
-                                                <span>CEO At atlantis.com</span>
+                                                <h4>Michael Anderson</h4>
+                                                <span>CEO at TechVentures</span>
                                             </div>
                                         </div>
                                         <div class="review-date-and-time">
-                                            <p>May 9, 2023</p> 
-                                            <span>10.30 PM</span>
+                                            <p>January 15, 2026</p>
+                                            <span>2:30 PM</span>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="author-img">
-                                    <img src="{{ asset('assets/img/home-4/h4-testi-03.png') }}" alt="">
+                                    <img src="{{ asset('assets/img/home-5/h4-testi-03.png') }}" alt="">
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="testimonial-card3">
                                     <div class="quate-icon">
-                                        <img src="{{ asset('assets/img/home-4/left-quote.svg') }}" alt="">
+                                        <img src="{{ asset('assets/img/home-5/left-quote.svg') }}" alt="">
                                     </div>
                                     <div class="testimonial-top">
                                         <div class="review-left">
-                                            <img src="{{ asset('assets/img/home-4/google.svg') }}" alt="">
+                                            <img src="{{ asset('assets/img/home-5/google.svg') }}" alt="">
                                         </div>
                                         <div class="review-right">
                                             <ul class="star">
@@ -489,72 +487,68 @@
                                         </div>
                                     </div>
                                     <div class="testimonial-content">
-                                        <p>“Integer purus odio, placerat nec rhoncus in, ullamcorper nec dolor. and utoor
-                                            himenaeos. Praesent nec neque at dolor venenatis consectetur european gon
-                                            Donec lacinia placerat felis non aliquam.”</p>
+                                        <p>"Nerdtech Labs delivered an exceptional solution that exceeded our expectations. Their team was professional, responsive, and truly understood our business needs. The project was completed on time and within budget."</p>
                                     </div>
-                                    
+
                                     <div class="testimonial-btm">
                                         <div class="author-area">
                                             <div class="author-content">
-                                                <h4>Mateo Daniel</h4>
-                                                <span>CEO At atlantis.com</span>
+                                                <h4>Michael Anderson</h4>
+                                                <span>CEO at TechVentures</span>
                                             </div>
                                         </div>
                                         <div class="review-date-and-time">
-                                            <p>May 9, 2023</p> 
-                                            <span>10.30 PM</span>
+                                            <p>January 15, 2026</p>
+                                            <span>2:30 PM</span>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="author-img">
-                                    <img src="{{ asset('assets/img/home-4/h4-testi-03.png') }}" alt="">
+                                    <img src="{{ asset('assets/img/home-5/h4-testi-03.png') }}" alt="">
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="testimonial-card3">
                                     <div class="quate-icon">
-                                        <img src="{{ asset('assets/img/home-4/left-quote.svg') }}" alt="">
+                                        <img src="{{ asset('assets/img/home-5/left-quote.svg') }}" alt="">
                                     </div>
                                     <div class="testimonial-top">
                                         <div class="review-left">
-                                            <img src="{{ asset('assets/img/home-4/trustpilot.svg') }}" alt="">
+                                            <img src="{{ asset('assets/img/home-5/trustpilot.svg') }}" alt="">
                                         </div>
                                         <div class="review-right">
-                                            <img src="{{ asset('assets/img/home-4/trastpilot-star.svg') }}" alt="">
+                                            <img src="{{ asset('assets/img/home-5/trastpilot-star.svg') }}" alt="">
                                         </div>
                                     </div>
                                     <div class="testimonial-content">
-                                        <p>“Integer purus odio, placerat nec rhoncus in, ullamcorper nec dolor. and utoor
-                                            himenaeos. Praesent nec neque at dolor venenatis consectetur european gon
-                                            Donec lacinia placerat felis non aliquam.”</p>
+                                        <p>"Nerdtech Labs delivered an exceptional solution that exceeded our expectations. Their team was professional, responsive, and truly understood our business needs. The project was completed on time and within budget."</p>
                                     </div>
-                                    
+
                                     <div class="testimonial-btm">
                                         <div class="author-area">
                                             <div class="author-content">
-                                                <h4>Mateo Daniel</h4>
-                                                <span>CEO At atlantis.com</span>
+                                                <h4>Michael Anderson</h4>
+                                                <span>CEO at TechVentures</span>
                                             </div>
                                         </div>
                                         <div class="review-date-and-time">
-                                            <p>May 9, 2023</p> 
-                                            <span>10.30 PM</span>
+                                            <p>January 15, 2026</p>
+                                            <span>2:30 PM</span>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="author-img">
-                                    <img src="{{ asset('assets/img/home-4/h4-testi-03.png') }}" alt="">
+                                    <img src="{{ asset('assets/img/home-5/h4-testi-03.png') }}" alt="">
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="testimonial-card3">
                                     <div class="quate-icon">
-                                        <img src="{{ asset('assets/img/home-4/left-quote.svg') }}" alt="">
+                                        <img src="{{ asset('assets/img/home-5/left-quote.svg') }}" alt="">
                                     </div>
                                     <div class="testimonial-top">
                                         <div class="review-left">
-                                            <img src="{{ asset('assets/img/home-4/google.svg') }}" alt="">
+                                            <img src="{{ asset('assets/img/home-5/google.svg') }}" alt="">
                                         </div>
                                         <div class="review-right">
                                             <ul class="star">
@@ -567,26 +561,24 @@
                                         </div>
                                     </div>
                                     <div class="testimonial-content">
-                                        <p>“Integer purus odio, placerat nec rhoncus in, ullamcorper nec dolor. and utoor
-                                            himenaeos. Praesent nec neque at dolor venenatis consectetur european gon
-                                            Donec lacinia placerat felis non aliquam.”</p>
+                                        <p>"Nerdtech Labs delivered an exceptional solution that exceeded our expectations. Their team was professional, responsive, and truly understood our business needs. The project was completed on time and within budget."</p>
                                     </div>
-                                    
+
                                     <div class="testimonial-btm">
                                         <div class="author-area">
                                             <div class="author-content">
-                                                <h4>Mateo Daniel</h4>
-                                                <span>CEO At atlantis.com</span>
+                                                <h4>Michael Anderson</h4>
+                                                <span>CEO at TechVentures</span>
                                             </div>
                                         </div>
                                         <div class="review-date-and-time">
-                                            <p>May 9, 2023</p> 
-                                            <span>10.30 PM</span>
+                                            <p>January 15, 2026</p>
+                                            <span>2:30 PM</span>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="author-img">
-                                    <img src="{{ asset('assets/img/home-4/h4-testi-03.png') }}" alt="">
+                                    <img src="{{ asset('assets/img/home-5/h4-testi-03.png') }}" alt="">
                                 </div>
                             </div>
                         </div>
@@ -605,7 +597,7 @@
                 <div class="col-lg-12 d-flex justify-content-center">
                     <div class="section-title-3 text-center">
                         <h2>Team Members</h2>
-                        <p>Services are professional offerings provided by businesses to meet specific needs or solve problems for their customers. Services can range from your budject.</p>
+                        <p>Meet our talented team of professionals who are passionate about delivering innovative technology solutions.</p>
                     </div>
                 </div>
             </div>  
@@ -691,7 +683,7 @@
                         <h2 class="marquee_text">We take care of your IT, So You Can Focus on Your Business.</h2>
                         <div class="contact-btn magnetic-item  wow animate fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
                             <a href="{{ route('contact') }}">
-                                Contact With Us.
+                                Get In Touch
                                 <svg width="32" height="32" viewBox="0 0 13 13" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path d="M0 1H12M12 1V13M12 1L0.5 12"></path>
@@ -720,7 +712,7 @@
                 <div class="col-lg-4 col-md-6 wow animate fadeInLeft" data-wow-delay="300ms" data-wow-duration="1500ms">
                     <div class="single-blog magnetic-item">
                         <div class="blog-img">
-                            <img class="img-fluid" src="{{ asset('assets/img/home-3/home3-blog-01.png') }}" alt="">
+                            <img class="img-fluid" src="{{ asset('assets/img/home-5/home3-blog-01.png') }}" alt="">
                             <div class="blog-tag">
                                 <a href="{{ route('blog') }}">Web development</a>
                             </div>
@@ -746,7 +738,7 @@
                                         <li><a href="https://www.pinterest.com/"><i class="bx bxl-pinterest-alt"></i></a></li>
                                         <li><a href="https://www.instagram.com/"><i class="bx bxl-instagram"></i></a></li>
                                     </ul>
-                                    <span><img src="{{ asset('assets/img/home-3/plain-icon.svg') }}" alt=""></span>
+                                    <span><img src="{{ asset('assets/img/home-5/plain-icon.svg') }}" alt=""></span>
                                 </div>
                             </div>
                         </div>
@@ -755,7 +747,7 @@
                 <div class="col-lg-4 col-md-6 wow animate fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
                     <div class="single-blog magnetic-item">
                         <div class="blog-img">
-                            <img class="img-fluid" src="{{ asset('assets/img/home-3/home3-blog-02.png') }}" alt="">
+                            <img class="img-fluid" src="{{ asset('assets/img/home-5/home3-blog-02.png') }}" alt="">
                             <div class="blog-tag">
                                 <a href="{{ route('blog') }}">Cloud solutions</a>
                             </div>
@@ -781,7 +773,7 @@
                                         <li><a href="https://www.pinterest.com/"><i class="bx bxl-pinterest-alt"></i></a></li>
                                         <li><a href="https://www.instagram.com/"><i class="bx bxl-instagram"></i></a></li>
                                     </ul>
-                                    <span><img src="{{ asset('assets/img/home-3/plain-icon.svg') }}" alt=""></span>
+                                    <span><img src="{{ asset('assets/img/home-5/plain-icon.svg') }}" alt=""></span>
                                 </div>
                             </div>
                         </div>
@@ -790,7 +782,7 @@
                 <div class="col-lg-4 col-md-6 wow animate fadeInRight" data-wow-delay="300ms" data-wow-duration="1500ms">
                     <div class="single-blog magnetic-item">
                         <div class="blog-img">
-                            <img class="img-fluid" src="{{ asset('assets/img/home-3/home3-blog-03.png') }}" alt="">
+                            <img class="img-fluid" src="{{ asset('assets/img/home-5/home3-blog-03.png') }}" alt="">
                             <div class="blog-tag">
                                 <a href="{{ route('blog') }}">Web development</a>
                             </div>
@@ -816,7 +808,7 @@
                                         <li><a href="https://www.pinterest.com/"><i class="bx bxl-pinterest-alt"></i></a></li>
                                         <li><a href="https://www.instagram.com/"><i class="bx bxl-instagram"></i></a></li>
                                     </ul>
-                                    <span><img src="{{ asset('assets/img/home-3/plain-icon.svg') }}" alt=""></span>
+                                    <span><img src="{{ asset('assets/img/home-5/plain-icon.svg') }}" alt=""></span>
                                 </div>
                             </div>
                         </div>
