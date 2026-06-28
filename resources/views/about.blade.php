@@ -36,29 +36,29 @@
         <div class="container-fluid">
             <div class="row g-lg-4 gy-5">
                 <div class="col-lg-9">
-                    <div class="section-title-3 wow animate fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+                        <div class="section-title-3 wow animate fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
                         <h2>Our Approach</h2>
-                        <p>Services are professional offerings provided by businesses to meet specific needs or solve problems for their customers. Services can range from your budject.</p>
+                        <p>We don't just build software — we solve real problems using technology. From real client projects to experimental software innovations, our mission is simple: build software that matters.</p>
                     </div>
                     <div class="about-left">
                         <div class="about-img  wow animate fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
                             <img class="img-fluid magnetic-item" src="assets/img/home-3/home3-about-1.png" alt="">
                         </div>
                         <div class="about-content wow animate fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
-                            <h2>Unlock the potential of your business.</h2>
-                            <p>We believe in delivering tailored solutions that are designed to address your unique requirements. We take the time to understand your business and provide personalized services that align with your goals.</p>
+                            <h2>Building real-world software solutions & innovative digital products.</h2>
+                            <p>At NerdTech Labs, we help businesses and startups build modern websites, custom software, and mobile applications that are fast, scalable, and built to grow your business. We turn ideas into powerful technology.</p>
                             <div class="devider"></div>
                                 <ul class="about-feature">
                                 <li>
-                                    <h5>Customized Solutions</h5>
-                                    <p>Services are professional w offerings provided.</p>
+                                    <h5>Custom Software Development</h5>
+                                    <p>Custom systems built specifically for your business needs.</p>
                                 </li>
                                 <li>
-                                    <h5>Quality Reliability</h5>
-                                    <p>Services are professional w offerings provided.</p>
+                                    <h5>Web & Mobile Applications</h5>
+                                    <p>Fast, responsive, modern websites and mobile apps.</p>
                                 </li>
                                 </ul>
-                        </div>
+                    </div>
                     </div>
                 </div>
                 <div class="col-lg-3">
@@ -87,10 +87,10 @@
                 <div class="choose-top">
                     <div class="row">
                         <div class="col-lg-6 ">
-                            <div class="choose-title">
-                                <span>Why Choose Us</span>
-                                <h2>Unlock the potential of your business.</h2>
-                            </div>
+                                <div class="choose-title">
+                                    <span>Why Choose Us</span>
+                                    <h2>We turn your ideas into powerful technology.</h2>
+                                </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="choose-right-img magnetic-item">
@@ -110,9 +110,9 @@
                                 <div class="icon">
                                     <img src="assets/img/logo.png" alt="">
                                 </div>
-                                <h4>Best Creative IT Agency And Solutions <br>
+                                <h4>Building Real-World Software Solutions <br>
                                     <span>Since 2022.</span></h4>
-                                <p>Morbi interdum pellentesque nunc, luctus pretium nullagoneq luctus at. Aliquam cursus nunc arcu, condimentum efficiturunt tellus iaculis faucibus Quisque gravida.</p>
+                                <p>At NerdTech Labs, we don't just build software — we solve real problems using technology. From custom web applications to mobile apps and cloud solutions, we are passionate about creating digital products that make a real impact for businesses and startups.</p>
                                 <div class="sl">
                                     <h2>#1</h2>
                                 </div>
@@ -137,8 +137,8 @@
                                                 <h3><span class="counter">70</span>%</h3>
                                             </div>
                                             <div class="content">
-                                                <h4>Strategy</h4>
-                                                <p>Morbi interdum pellentesque nunc, luctuso pretium nullagoneq luctus at. Aliquam one cursus nunc arcu</p>
+                                                <h4>Web Development</h4>
+                                                <p>Fast, responsive, and modern websites built with the latest technologies.</p>
                                             </div>
                                         </div>
                                     </li>
@@ -148,8 +148,8 @@
                                                 <h3><span class="counter">98</span>%</h3>
                                             </div>
                                             <div class="content">
-                                                <h4>Audience</h4>
-                                                <p>Morbi interdum pellentesque nunc, luctuso pretium nullagoneq luctus at. Aliquam one cursus nunc arcu</p>
+                                                <h4>Software Solutions</h4>
+                                                <p>Custom software systems tailored to solve your unique business challenges.</p>
                                             </div>
                                         </div>
                                     </li>
@@ -159,8 +159,8 @@
                                                 <h3><span class="counter">85</span>%</h3>
                                             </div>
                                             <div class="content">
-                                                <h4>Keyword</h4>
-                                                <p>Morbi interdum pellentesque nunc, luctuso pretium nullagoneq luctus at. Aliquam one cursus nunc arcu</p>
+                                                <h4>Cloud & Security</h4>
+                                                <p>Scalable cloud solutions and cybersecurity to protect what matters most.</p>
                                             </div>
                                         </div>
                                     </li>
@@ -179,8 +179,8 @@
             <div class="row g-xl-4 gy-5">
                 <div class="col-xl-3 wow animate fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
                     <div class="section-title-4">
-                        <h2>Our States</h2>
-                        <p>Maecenas euismod viverra purus, volutpat posuere mauris tristique quisokaft.</p>
+                        <h2>Our Stats</h2>
+                        <p>Building real-world software solutions and turning ideas into powerful technology since 2022.</p>
                     </div>
                 </div>
                 <div class="col-xl-9 d-flex justify-content-end">
@@ -417,7 +417,7 @@
                 <div class="col-lg-12 d-flex align-items-center justify-content-between gap-4 flex-wrap">
                     <div class="section-title-3">
                         <h2>Happy Customers</h2>
-                        <p>Services are professional offerings provided by businesses to meet specific needs or solve problems for their customers. Services can range from your budject.</p>
+                        <p>We take pride in delivering digital solutions that help businesses grow. Here's what our clients have to say about working with NerdTech Labs.</p>
                     </div>
                     <div class="swiper-btn-group">
                         <div class="swiper-btn prevbtn2">
@@ -447,21 +447,19 @@
                                         </div>
                                     </div>
                                     <div class="testimonial-content">
-                                        <p>“Integer purus odio, placerat nec rhoncus in, ullamcorper nec dolor. and utoor
-                                            himenaeos. Praesent nec neque at dolor venenatis consectetur european gon
-                                            Donec lacinia placerat felis non aliquam.”</p>
+                                        <p>“NerdTech Labs built our weekly fair management platform from scratch. The system handles stall bookings, invoicing, and real-time dashboards seamlessly.”</p>
                                     </div>
                                     
                                     <div class="testimonial-btm">
                                         <div class="author-area">
                                             <div class="author-content">
-                                                <h4>Mateo Daniel</h4>
-                                                <span>CEO At atlantis.com</span>
+                                                <h4>Sagaki All In One</h4>
+                                                <span>Kirindiwela Weekly Fair</span>
                                             </div>
                                         </div>
                                         <div class="review-date-and-time">
-                                            <p>May 9, 2023</p> 
-                                            <span>10.30 PM</span>
+                                            <p>2026</p> 
+                                            <span>Client Project</span>
                                         </div>
                                     </div>
                                 </div>
@@ -489,21 +487,19 @@
                                         </div>
                                     </div>
                                     <div class="testimonial-content">
-                                        <p>“Integer purus odio, placerat nec rhoncus in, ullamcorper nec dolor. and utoor
-                                            himenaeos. Praesent nec neque at dolor venenatis consectetur european gon
-                                            Donec lacinia placerat felis non aliquam.”</p>
+                                        <p>“Professional and efficient team. They delivered a modern, responsive website that perfectly represents our brand and helps us reach more customers online.”</p>
                                     </div>
                                     
                                     <div class="testimonial-btm">
                                         <div class="author-area">
                                             <div class="author-content">
-                                                <h4>Mateo Daniel</h4>
-                                                <span>CEO At atlantis.com</span>
+                                                <h4>Sagaki All In One</h4>
+                                                <span>Kirindiwela Weekly Fair</span>
                                             </div>
                                         </div>
                                         <div class="review-date-and-time">
-                                            <p>May 9, 2023</p> 
-                                            <span>10.30 PM</span>
+                                            <p>2026</p> 
+                                            <span>Client Project</span>
                                         </div>
                                     </div>
                                 </div>
@@ -525,21 +521,19 @@
                                         </div>
                                     </div>
                                     <div class="testimonial-content">
-                                        <p>“Integer purus odio, placerat nec rhoncus in, ullamcorper nec dolor. and utoor
-                                            himenaeos. Praesent nec neque at dolor venenatis consectetur european gon
-                                            Donec lacinia placerat felis non aliquam.”</p>
+                                        <p>“NerdTech Labs developed a custom tax invoice manager system that automated our entire billing process. Their attention to detail and commitment to quality is outstanding.”</p>
                                     </div>
                                     
                                     <div class="testimonial-btm">
                                         <div class="author-area">
                                             <div class="author-content">
-                                                <h4>Mateo Daniel</h4>
-                                                <span>CEO At atlantis.com</span>
+                                                <h4>Sagaki All In One</h4>
+                                                <span>Kirindiwela Weekly Fair</span>
                                             </div>
                                         </div>
                                         <div class="review-date-and-time">
-                                            <p>May 9, 2023</p> 
-                                            <span>10.30 PM</span>
+                                            <p>2026</p> 
+                                            <span>Client Project</span>
                                         </div>
                                     </div>
                                 </div>
@@ -567,21 +561,19 @@
                                         </div>
                                     </div>
                                     <div class="testimonial-content">
-                                        <p>“Integer purus odio, placerat nec rhoncus in, ullamcorper nec dolor. and utoor
-                                            himenaeos. Praesent nec neque at dolor venenatis consectetur european gon
-                                            Donec lacinia placerat felis non aliquam.”</p>
+                                        <p>“From concept to deployment, NerdTech Labs delivered a scalable and secure web platform. Their full-stack expertise and clear communication made the entire process smooth.”</p>
                                     </div>
                                     
                                     <div class="testimonial-btm">
                                         <div class="author-area">
                                             <div class="author-content">
-                                                <h4>Mateo Daniel</h4>
-                                                <span>CEO At atlantis.com</span>
+                                                <h4>Sagaki All In One</h4>
+                                                <span>Kirindiwela Weekly Fair</span>
                                             </div>
                                         </div>
                                         <div class="review-date-and-time">
-                                            <p>May 9, 2023</p> 
-                                            <span>10.30 PM</span>
+                                            <p>2026</p> 
+                                            <span>Client Project</span>
                                         </div>
                                     </div>
                                 </div>
@@ -712,7 +704,7 @@
                 <div class="col-lg-12 d-flex justify-content-center">
                     <div class="section-title-3 text-center">
                         <h2>The Latest Article</h2>
-                        <p>Services are professional offerings provided by businesses to meet specific needs or solve problems for their customers. Services can range from your budject.</p>
+                        <p>Stay updated with our latest insights on technology, software development, and digital solutions.</p>
                     </div>
                 </div>
             </div> 
