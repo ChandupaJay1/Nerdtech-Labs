@@ -71,7 +71,7 @@
                                 <img src="assets/img/home-3/rotate-text.png" alt="">
                             </div>
                             <div class="years">
-                                <h2>10<br><span>Years</span></h2>
+                                <h2>5<br><span>Years</span></h2>
                             </div>
                         </div>
                     </div>
@@ -111,7 +111,7 @@
                                     <img src="assets/img/logo.png" alt="">
                                 </div>
                                 <h4>Best Creative IT Agency And Solutions <br>
-                                    <span>Since 2005.</span></h4>
+                                    <span>Since 2022.</span></h4>
                                 <p>Morbi interdum pellentesque nunc, luctus pretium nullagoneq luctus at. Aliquam cursus nunc arcu, condimentum efficiturunt tellus iaculis faucibus Quisque gravida.</p>
                                 <div class="sl">
                                     <h2>#1</h2>
