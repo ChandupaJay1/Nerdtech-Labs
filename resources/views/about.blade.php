@@ -628,7 +628,7 @@
                                     </div>
                                     <div class="team-content">
                                         <h5>Chandupa Jayalath</h5>
-                                        <span>Founder, CTO</span>
+                                        <span>Founder</span>
                                     </div>
                                 </div>
                             </div>
@@ -647,7 +647,7 @@
                                     </div>
                                     <div class="team-content">
                                         <h5>Dulanja Abeysinghe</h5>
-                                        <span>Co-Founder, CEO</span>
+                                        <span>Co-Founder</span>
                                     </div>
                                 </div>
                             </div>
