@@ -87,7 +87,7 @@
                                 <div class="menu-container">
                                     <ul>
                                         <li><a href="{{ route('about') }}">About Us</a></li>
-                                        <li><a href="{{ route('team') }}">Our Team</a></li>
+                                        <!-- <li><a href="{{ route('team') }}">Our Team</a></li> -->
                                         <li><a href="{{ route('project') }}">All Portfolio</a></li>
                                     </ul>
                                 </div>
@@ -106,8 +106,8 @@
                                     <div class="footer-social">
                                         <ul>
                                             <li><a href="https://www.facebook.com/"><i class="bx bxl-facebook"></i></a></li>
-                                            <li><a href="https://twitter.com/"><i class="bx bxl-twitter"></i></a></li>
-                                            <li><a href="https://www.linkedin.com/"><i class="bx bxl-pinterest-alt"></i></a></li>
+                                            <!-- <li><a href="https://twitter.com/"><i class="bx bxl-twitter"></i></a></li> -->
+                                            <!-- <li><a href="https://www.linkedin.com/"><i class="bx bxl-pinterest-alt"></i></a></li> -->
                                             <li><a href="https://www.instagram.com/"><i class="bx bxl-instagram"></i></a></li>
                                         </ul>
                                     </div>

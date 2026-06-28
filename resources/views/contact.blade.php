@@ -71,9 +71,9 @@
                             <div class="blog-widget-body">
                                 <ul class="follow-list d-flex flex-row align-items-start gap-4">
                                     <li><a href="https://www.facebook.com/"><i class="bx bxl-facebook"></i></a></li>
-                                    <li><a href="https://www.twitter.com/"><i class="bx bxl-twitter"></i></a></li>
+                                    <!-- <li><a href="https://www.twitter.com/"><i class="bx bxl-twitter"></i></a></li> -->
                                     <li><a href="https://www.instagram.com/"><i class="bx bxl-instagram"></i></a></li>
-                                    <li><a href="https://www.pinterest.com/"><i class="bx bxl-pinterest"></i></a></li>
+                                    <!-- <li><a href="https://www.pinterest.com/"><i class="bx bxl-pinterest"></i></a></li> -->
                                 </ul>
                             </div>
                         </div>

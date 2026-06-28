@@ -11,8 +11,8 @@
                     <div class="social-area">
                         <ul>
                             <li><a href="https://www.facebook.com/nerdtechlabs/"><i class="bx bxl-facebook"></i></a></li>
-                            <li><a href="https://twitter.com/"><i class="bx bxl-twitter"></i></a></li>
-                            <li><a href="https://www.pinterest.com/"><i class="bx bxl-pinterest-alt"></i></a></li>
+                            <!-- <li><a href="https://twitter.com/"><i class="bx bxl-twitter"></i></a></li> -->
+                            <!-- <li><a href="https://www.pinterest.com/"><i class="bx bxl-pinterest-alt"></i></a></li> -->
                             <li><a href="https://www.instagram.com/"><i class="bx bxl-instagram"></i></a></li>
                         </ul>
                     </div>
@@ -502,7 +502,7 @@
                                 </div>
                                 <div class="team-content">
                                     <h4>Chandupa Jayalath</h4>
-                                    <span>Founder, CTO</span>
+                                    <span>Founder</span>
                                 </div>
                             </div>
                         </div>
@@ -521,7 +521,7 @@
                                 </div>
                                 <div class="team-content">
                                     <h4>Dulanja Abeysinghe</h4>
-                                    <span>Co-Founder, CEO</span>
+                                    <span>Co-Founder</span>
                                 </div>
                             </div>
                         </div>

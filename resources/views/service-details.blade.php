@@ -21,7 +21,7 @@
                     <div class="breadcrumb-wrapper">
                         <div class="breadcrumb-cnt">
                             <span>Setvices Details</span>
-                            <h1>"Software Development"</h1>
+                            <h1>Software Development</h1>
                             <div class="breadcrumb-list">
                                 <a href="{{ route('home') }}">Home</a><img src="{{ asset('assets/img/inner-pages/breadcrumb-arrow.svg') }}" alt=""> Services Details
                             </div>
