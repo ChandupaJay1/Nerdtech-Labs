@@ -249,7 +249,7 @@
                             <div class="col-xl-7 col-lg-6 d-flex align-items-center wow animate fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
                                 <div class="achievement-content">
                                     <h2>#1</h2>
-                                    <h3>Trusted Software Development Partner in Sri Lanka & Remotely Worldwide <span>Since <span class="year">2023.</span></span></h3>
+                                    <h3>Trusted Software Development Partner in Sri Lanka & Remotely Worldwide <span>Since <span class="year">2022.</span></span></h3>
                                 </div>
                             </div>
                             <div class="col-xl-5 col-lg-6 wow animate fadeInRight" data-wow-delay="300ms" data-wow-duration="1500ms">

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Project Masonry - Nerdtech Labs')
+@section('title', 'Projects - Nerdtech Labs')
 
 @section('body_class', 'home-dark2 tt-magic-cursor')
 

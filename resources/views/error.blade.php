@@ -158,7 +158,7 @@
                     <a href="#" class="drop-down">Project</a><i class="bi bi-plus dropdown-icon"></i>
                     <ul class="sub-menu">
                         <li><a href="{{ url('project') }}">Project</a></li>
-                        <li><a href="{{ url('project-masonary') }}">Project Masonry</a></li>
+                        <li><a href="{{ url('project-masonary') }}">Projects</a></li>
                      <li><a href="{{ route('project-details', 1) }}">Project Details</a></li>
                     </ul>
                 </li>
