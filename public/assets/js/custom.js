@@ -90,40 +90,39 @@
 
 
     //Isotope with image load
-    //Isotope with image load
     var $grid;
 
-    // Initialize Isotope on page load
-    $(window).on('load', function () {
+    function initIsotope() {
+        if ($(".project-items").length === 0) return;
         $grid = $(".project-items").isotope({
             itemSelector: '.single-item',
             layoutMode: 'fitRows',
-            animationOptions: {
-                duration: 750,
-                easing: 'linear',
-                queue: false,
-            }
         });
-
         $grid.imagesLoaded().progress(function () {
             $grid.isotope('layout');
         });
+    }
+
+    $(document).ready(function () {
+        initIsotope();
+    });
+
+    $(window).on('load', function () {
+        if ($grid) {
+            $grid.isotope('layout');
+        } else {
+            initIsotope();
+        }
     });
 
     $(document).on('click', '.filter-btn', function () {
+        if (!$grid) return;
 
         $(".filter-btn").removeClass("active");
         $(this).addClass("active");
 
         var selector = $(this).attr('data-filter');
-        $grid.isotope({
-            filter: selector,
-            animationOptions: {
-                duration: 750,
-                easing: 'linear',
-                queue: false,
-            }
-        });
+        $grid.isotope({ filter: selector });
 
         return false;
     });
