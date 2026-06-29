@@ -98,9 +98,6 @@
             itemSelector: '.single-item',
             layoutMode: 'fitRows',
         });
-        $grid.imagesLoaded().progress(function () {
-            $grid.isotope('layout');
-        });
     }
 
     $(document).ready(function () {
