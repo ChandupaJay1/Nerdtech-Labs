@@ -29,7 +29,7 @@ final class PublicDiskMedia
             return false;
         }
 
-        return (bool) preg_match('#^(services|projects)/#', $path);
+        return (bool) preg_match('#^(services|projects|team|partners)/#', $path);
     }
 
     public static function deleteIfManaged(?string $path): void

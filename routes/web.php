@@ -25,7 +25,10 @@ Route::get('/storage/{path}', function (string $path) {
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/about', function () {
-    return view('about');
+    $teamMembers = \App\Models\TeamMember::where('is_active', true)->orderBy('sort_order')->get();
+    $teamEnabled = \App\Models\Setting::getValue('team_section_enabled', '1');
+
+    return view('about', compact('teamMembers', 'teamEnabled'));
 })->name('about');
 
 Route::get('/service', [App\Http\Controllers\ServiceController::class, 'index'])->name('service');
@@ -48,7 +51,10 @@ Route::get('/blog-details', function () {
 Route::get('/service-details/{id}', [App\Http\Controllers\ServiceController::class, 'show'])->name('service-details');
 
 Route::get('/team', function () {
-    return view('team');
+    $teamMembers = \App\Models\TeamMember::where('is_active', true)->orderBy('sort_order')->get();
+    $teamEnabled = \App\Models\Setting::getValue('team_section_enabled', '1');
+
+    return view('team', compact('teamMembers', 'teamEnabled'));
 })->name('team');
 
 /*
@@ -61,6 +67,12 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(fun
     Route::resource('projects', App\Http\Controllers\Admin\ProjectController::class);
     Route::resource('services', App\Http\Controllers\Admin\ServiceController::class);
     Route::resource('tasks', App\Http\Controllers\Admin\TaskController::class);
+    Route::resource('team', App\Http\Controllers\Admin\TeamController::class);
+    Route::post('team/toggle-section', [App\Http\Controllers\Admin\TeamController::class, 'toggleSection'])->name('team.toggle-section');
+    Route::post('team/{id}/toggle', [App\Http\Controllers\Admin\TeamController::class, 'toggleMember'])->name('team.toggle-member');
+    Route::resource('partners', App\Http\Controllers\Admin\PartnerController::class);
+    Route::post('partners/toggle-section', [App\Http\Controllers\Admin\PartnerController::class, 'toggleSection'])->name('partners.toggle-section');
+    Route::post('partners/{id}/toggle', [App\Http\Controllers\Admin\PartnerController::class, 'togglePartner'])->name('partners.toggle-partner');
 });
 
 /*

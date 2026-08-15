@@ -2,6 +2,22 @@
 
 @section('title', 'Nerdtech Labs - Unlock your Business website')
 
+@push('css')
+<style>
+    .home5-partner-area .partner-wrap ul li img {
+        max-height: 55px;
+        width: auto;
+        filter: grayscale(100%);
+        opacity: 0.6;
+        transition: all 0.4s ease;
+    }
+    .home5-partner-area .partner-wrap ul li:hover img {
+        filter: grayscale(0%);
+        opacity: 1;
+    }
+</style>
+@endpush
+
 @section('content')
             <div class="banner-area-wrapper">
                 <div class="company-name">
@@ -281,13 +297,14 @@
                 </div>
             </div>
 
+            @if($partnersEnabled === '1' && $partners->count())
             <div class="home5-partner-area mb-130">
                 <div class="container">
                     <div class="row mb-55 wow animate fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
                         <div class="col-lg-12 d-flex align-items-center justify-content-between flex-wrap gap-2">
                             <div class="section-title-5">
                                 <span>Partnerships</span>
-                                <h2>Our Network</h2>
+                                <h2>Our Partners</h2>
                             </div>
                             <div class="section-content">
                                 <p>We collaborate with leading technology partners to deliver world-class solutions to our clients.</p>
@@ -298,24 +315,28 @@
                         <div class="col-lg-12 wow animate fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
                             <div class="partner-wrap">
                                 <ul>
-                                    <li><img src="{{ asset('assets/img/home-5/partner-01.svg') }}" alt=""></li>
-                                    <li><img src="{{ asset('assets/img/home-5/partner-02.svg') }}" alt=""></li>
-                                    <li><img src="{{ asset('assets/img/home-5/partner-03.svg') }}" alt=""></li>
-                                    <li><img src="{{ asset('assets/img/home-5/partner-04.svg') }}" alt=""></li>
-                                    <li><img src="{{ asset('assets/img/home-5/partner-05.svg') }}" alt=""></li>
-                                    <li><img src="{{ asset('assets/img/home-5/partner-06.svg') }}" alt=""></li>
-                                    <li><img src="{{ asset('assets/img/home-5/partner-07.svg') }}" alt=""></li>
-                                    <li><img src="{{ asset('assets/img/home-5/partner-08.svg') }}" alt=""></li>
-                                    <li><img src="{{ asset('assets/img/home-5/partner-09.svg') }}" alt=""></li>
-                                    <li><img src="{{ asset('assets/img/home-5/partner-10.svg') }}" alt=""></li>
-                                    <li><img src="{{ asset('assets/img/home-5/partner-11.svg') }}" alt=""></li>
-                                    <li><img src="{{ asset('assets/img/home-5/partner-12.svg') }}" alt=""></li>
+                                    @foreach($partners as $partner)
+                                    <li>
+                                        @if($partner->website)
+                                            <a href="{{ $partner->website }}" target="_blank">
+                                        @endif
+                                            @if($url = $partner->imagePublicUrl())
+                                                <img src="{{ $url }}" alt="{{ $partner->name }}">
+                                            @else
+                                                <span style="font-weight:700;color:#fff;">{{ $partner->name }}</span>
+                                            @endif
+                                        @if($partner->website)
+                                            </a>
+                                        @endif
+                                    </li>
+                                    @endforeach
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            @endif
 
             
             <div class="home5-testimonial-area mb-130">
@@ -476,6 +497,7 @@
                 </div>
             </div>
 
+            @if($teamEnabled === '1' && $teamMembers->count())
             <div class="home5-team-section mb-130">
                 <div class="container">
                     <div class="row mb-55 wow animate fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
@@ -487,67 +509,43 @@
                         </div>
                     </div>
                     <div class="row g-4 justify-content-center">
-                        <div class="col-xl-3 col-lg-4 col-sm-6 wow animate fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+                        @foreach($teamMembers as $index => $member)
+                        <div class="col-xl-3 col-lg-4 col-sm-6 wow animate fadeInUp" data-wow-delay="{{ ($index * 100 + 200) }}ms" data-wow-duration="1500ms">
                             <div class="single-team magnetic-item">
                                 <div class="social-area">
                                     <ul>
-                                        <li><a href="https://www.instagram.com/"><i class="bx bxl-instagram"></i></a></li>
-                                        <li><a href="https://www.pinterest.com/"><i class="bx bxl-pinterest-alt"></i></a></li>
-                                        <li><a href="https://twitter.com/"><i class="bx bxl-twitter"></i></a></li>
-                                        <li><a href="https://www.facebook.com/"><i class="bx bxl-facebook"></i></a></li>
+                                        @if($member->instagram)
+                                            <li><a href="{{ $member->instagram }}" target="_blank"><i class="bx bxl-instagram"></i></a></li>
+                                        @endif
+                                        @if($member->facebook)
+                                            <li><a href="{{ $member->facebook }}" target="_blank"><i class="bx bxl-facebook"></i></a></li>
+                                        @endif
+                                        @if($member->github)
+                                            <li><a href="{{ $member->github }}" target="_blank"><i class="bx bxl-github"></i></a></li>
+                                        @endif
+                                        @if($member->twitter)
+                                            <li><a href="{{ $member->twitter }}" target="_blank"><i class="bx bxl-twitter"></i></a></li>
+                                        @endif
                                     </ul>
                                 </div>
                                 <div class="team-img">
-                                    <img class="img-fluid" src="{{ asset('assets/img/home-5/home5-team-01.jpg') }}" alt="">
+                                    @if($url = $member->imagePublicUrl())
+                                        <img class="img-fluid" src="{{ $url }}" alt="{{ $member->name }}">
+                                    @else
+                                        <img class="img-fluid" src="{{ asset('assets/img/home-5/home5-team-01.jpg') }}" alt="{{ $member->name }}">
+                                    @endif
                                 </div>
                                 <div class="team-content">
-                                    <h4>Chandupa Jayalath</h4>
-                                    <span>Founder</span>
+                                    <h4>{{ $member->name }}</h4>
+                                    <span>{{ $member->position }}</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-3 col-lg-4 col-sm-6 wow animate fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
-                            <div class="single-team magnetic-item">
-                                <div class="social-area">
-                                    <ul>
-                                        <li><a href="https://www.instagram.com/"><i class="bx bxl-instagram"></i></a></li>
-                                        <li><a href="https://www.pinterest.com/"><i class="bx bxl-pinterest-alt"></i></a></li>
-                                        <li><a href="https://twitter.com/"><i class="bx bxl-twitter"></i></a></li>
-                                        <li><a href="https://www.facebook.com/"><i class="bx bxl-facebook"></i></a></li>
-                                    </ul>
-                                </div>
-                                <div class="team-img">
-                                    <img class="img-fluid" src="{{ asset('assets/img/home-5/home5-team-02.jpg') }}" alt="">
-                                </div>
-                                <div class="team-content">
-                                    <h4>Dulanja Abeysinghe</h4>
-                                    <span>Co-Founder</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-xl-3 col-lg-4 col-sm-6 wow animate fadeInUp" data-wow-delay="500ms" data-wow-duration="1500ms">
-                            <div class="single-team magnetic-item">
-                                <div class="social-area">
-                                    <ul>
-                                        <li><a href="https://www.instagram.com/"><i class="bx bxl-instagram"></i></a></li>
-                                        <li><a href="https://www.pinterest.com/"><i class="bx bxl-pinterest-alt"></i></a></li>
-                                        <li><a href="https://twitter.com/"><i class="bx bxl-twitter"></i></a></li>
-                                        <li><a href="https://www.facebook.com/"><i class="bx bxl-facebook"></i></a></li>
-                                    </ul>
-                                </div>
-                                <div class="team-img">
-                                    <img class="img-fluid" src="{{ asset('assets/img/home-5/home5-team-03.jpeg') }}" alt="">
-                                </div>
-                                <div class="team-content">
-                                    <h4>Pathum De Saman</h4>
-                                    <span>Full Stack Software Engineer</span>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
+            @endif
 
             <!-- <div class="home5-blog-area mb-130">
                 <div class="container">

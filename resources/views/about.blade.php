@@ -591,6 +591,7 @@
 
 
       <!-- Start Team section -->
+      @if($teamEnabled === '1' && $teamMembers->count())
       <div class="home3-team-area sec-mar">
         <div class="container">
             <div class="row mb-55 wow animate fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
@@ -605,63 +606,39 @@
                 <div class="col-lg-12">
                     <div class="swiper home3-team-slider">
                         <div class="swiper-wrapper">
+                            @foreach($teamMembers as $member)
                             <div class="swiper-slide">
                                 <div class="single-team">
                                     <div class="team-img">
-                                        <img class="img-fluid" src="{{ asset('assets/img/home-5/home5-team-01.jpg') }}" alt="">
+                                        @if($url = $member->imagePublicUrl())
+                                            <img class="img-fluid" src="{{ $url }}" alt="{{ $member->name }}">
+                                        @else
+                                            <img class="img-fluid" src="{{ asset('assets/img/home-5/home5-team-01.jpg') }}" alt="{{ $member->name }}">
+                                        @endif
                                         <div class="social-area">
                                             <ul>
-                                                <li><a href="https://www.facebook.com/"><i class="bx bxl-facebook"></i></a></li>
-                                                <li><a href="https://twitter.com/"><i class="bx bxl-twitter"></i></a></li>
-                                                <li><a href="https://www.pinterest.com/"><i class="bx bxl-pinterest-alt"></i></a></li>
-                                                <li><a href="https://www.instagram.com/"><i class="bx bxl-instagram"></i></a></li>
+                                                @if($member->facebook)
+                                                    <li><a href="{{ $member->facebook }}" target="_blank"><i class="bx bxl-facebook"></i></a></li>
+                                                @endif
+                                                @if($member->instagram)
+                                                    <li><a href="{{ $member->instagram }}" target="_blank"><i class="bx bxl-instagram"></i></a></li>
+                                                @endif
+                                                @if($member->github)
+                                                    <li><a href="{{ $member->github }}" target="_blank"><i class="bx bxl-github"></i></a></li>
+                                                @endif
+                                                @if($member->twitter)
+                                                    <li><a href="{{ $member->twitter }}" target="_blank"><i class="bx bxl-twitter"></i></a></li>
+                                                @endif
                                             </ul>
                                         </div>
                                     </div>
                                     <div class="team-content">
-                                        <h5>Chandupa Jayalath</h5>
-                                        <span>Founder</span>
+                                        <h5>{{ $member->name }}</h5>
+                                        <span>{{ $member->position }}</span>
                                     </div>
                                 </div>
                             </div>
-                            <div class="swiper-slide">
-                                <div class="single-team">
-                                    <div class="team-img">
-                                        <img class="img-fluid" src="{{ asset('assets/img/home-5/home5-team-02.jpg') }}" alt="">
-                                        <div class="social-area">
-                                            <ul>
-                                                <li><a href="https://www.facebook.com/"><i class="bx bxl-facebook"></i></a></li>
-                                                <li><a href="https://twitter.com/"><i class="bx bxl-twitter"></i></a></li>
-                                                <li><a href="https://www.pinterest.com/"><i class="bx bxl-pinterest-alt"></i></a></li>
-                                                <li><a href="https://www.instagram.com/"><i class="bx bxl-instagram"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="team-content">
-                                        <h5>Dulanja Abeysinghe</h5>
-                                        <span>Co-Founder</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="single-team">
-                                    <div class="team-img">
-                                        <img class="img-fluid" src="{{ asset('assets/img/home-5/home5-team-03.jpeg') }}" alt="">
-                                        <div class="social-area">
-                                            <ul>
-                                                <li><a href="https://www.facebook.com/"><i class="bx bxl-facebook"></i></a></li>
-                                                <li><a href="https://twitter.com/"><i class="bx bxl-twitter"></i></a></li>
-                                                <li><a href="https://www.pinterest.com/"><i class="bx bxl-pinterest-alt"></i></a></li>
-                                                <li><a href="https://www.instagram.com/"><i class="bx bxl-instagram"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="team-content">
-                                        <h5>Pathum De Saman</h5>
-                                        <span>Full Stack Software Engineer</span>
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
@@ -673,6 +650,7 @@
             </div>
         </div>
     </div>
+    @endif
     <!-- End Team section -->
     <!-- Start Contact section -->
     <div class="home3-contact-area sec-mar">

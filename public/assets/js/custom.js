@@ -350,8 +350,10 @@
 
 
     //HOme 3 Team slider
+    var teamSwiperEl = document.querySelector(".home3-team-slider");
+    var teamSlideCount = teamSwiperEl ? teamSwiperEl.querySelectorAll('.swiper-slide').length : 0;
     var swiper = new Swiper(".home3-team-slider", {
-        loop: true,
+        loop: teamSlideCount > 3,
         spaceBetween: 30,
         speed: 2000,
         pagination: {

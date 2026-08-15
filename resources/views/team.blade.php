@@ -294,160 +294,48 @@
     <!-- End breadcrumbs section -->
     <div class="home5-team-section sec-mar">
         <div class="container">
+            @if($teamEnabled === '1' && $teamMembers->count())
             <div class="row g-4 justify-content-center">
-                <div class="col-xl-3 col-lg-4 col-sm-6 wow animate fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+                @foreach($teamMembers as $index => $member)
+                <div class="col-xl-3 col-lg-4 col-sm-6 wow animate fadeInUp" data-wow-delay="{{ ($index * 100 + 200) }}ms" data-wow-duration="1500ms">
                     <div class="single-team magnetic-item">
                         <div class="social-area">
                             <ul>
-                                <li><a href="https://www.instagram.com/"><i class="bx bxl-instagram"></i></a></li>
-                                <li><a href="https://www.pinterest.com/"><i class="bx bxl-pinterest-alt"></i></a></li>
-                                <li><a href="https://twitter.com/"><i class="bx bxl-twitter"></i></a></li>
-                                <li><a href="https://www.facebook.com/"><i class="bx bxl-facebook"></i></a></li>
+                                @if($member->instagram)
+                                    <li><a href="{{ $member->instagram }}" target="_blank"><i class="bx bxl-instagram"></i></a></li>
+                                @endif
+                                @if($member->facebook)
+                                    <li><a href="{{ $member->facebook }}" target="_blank"><i class="bx bxl-facebook"></i></a></li>
+                                @endif
+                                @if($member->github)
+                                    <li><a href="{{ $member->github }}" target="_blank"><i class="bx bxl-github"></i></a></li>
+                                @endif
+                                @if($member->twitter)
+                                    <li><a href="{{ $member->twitter }}" target="_blank"><i class="bx bxl-twitter"></i></a></li>
+                                @endif
                             </ul>
                         </div>
                         <div class="team-img">
-                            <img class="img-fluid" src="{{ asset('assets/img/home-5/home5-team-01.png') }}" alt="">
+                            @if($url = $member->imagePublicUrl())
+                                <img class="img-fluid" src="{{ $url }}" alt="{{ $member->name }}">
+                            @else
+                                <img class="img-fluid" src="{{ asset('assets/img/home-5/home5-team-01.jpg') }}" alt="{{ $member->name }}">
+                            @endif
                         </div>
                         <div class="team-content">
-                            <h4>Cassian Coleson</h4>
-                            <span>Founder, CTO</span>
+                            <h4>{{ $member->name }}</h4>
+                            <span>{{ $member->position }}</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-3 col-lg-4 col-sm-6 wow animate fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
-                    <div class="single-team magnetic-item">
-                        <div class="social-area">
-                            <ul>
-                                <li><a href="https://www.instagram.com/"><i class="bx bxl-instagram"></i></a></li>
-                                <li><a href="https://www.pinterest.com/"><i class="bx bxl-pinterest-alt"></i></a></li>
-                                <li><a href="https://twitter.com/"><i class="bx bxl-twitter"></i></a></li>
-                                <li><a href="https://www.facebook.com/"><i class="bx bxl-facebook"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="team-img">
-                            <img class="img-fluid" src="{{ asset('assets/img/home-5/home5-team-02.jpg') }}" alt="">
-                        </div>
-                        <div class="team-content">
-                            <h4>Blaise Davian</h4>
-                            <span>Co-Founder, CEO</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-sm-6 wow animate fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
-                    <div class="single-team magnetic-item">
-                        <div class="social-area">
-                            <ul>
-                                <li><a href="https://www.instagram.com/"><i class="bx bxl-instagram"></i></a></li>
-                                <li><a href="https://www.pinterest.com/"><i class="bx bxl-pinterest-alt"></i></a></li>
-                                <li><a href="https://twitter.com/"><i class="bx bxl-twitter"></i></a></li>
-                                <li><a href="https://www.facebook.com/"><i class="bx bxl-facebook"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="team-img">
-                            <img class="img-fluid" src="{{ asset('assets/img/home-5/home5-team-03.png') }}" alt="">
-                        </div>
-                        <div class="team-content">
-                            <h4>Koen Maxton</h4>
-                            <span>Head of HR & Manager</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-sm-6 wow animate fadeInUp" data-wow-delay="500ms" data-wow-duration="1500ms">
-                    <div class="single-team magnetic-item">
-                        <div class="social-area">
-                            <ul>
-                                <li><a href="https://www.instagram.com/"><i class="bx bxl-instagram"></i></a></li>
-                                <li><a href="https://www.pinterest.com/"><i class="bx bxl-pinterest-alt"></i></a></li>
-                                <li><a href="https://twitter.com/"><i class="bx bxl-twitter"></i></a></li>
-                                <li><a href="https://www.facebook.com/"><i class="bx bxl-facebook"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="team-img">
-                            <img class="img-fluid" src="{{ asset('assets/img/home-5/home5-team-04.png') }}" alt="">
-                        </div>
-                        <div class="team-content">
-                            <h4>Landry Palmer</h4>
-                            <span>Software Engineer</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-sm-6 wow animate fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
-                    <div class="single-team magnetic-item">
-                        <div class="social-area">
-                            <ul>
-                                <li><a href="https://www.instagram.com/"><i class="bx bxl-instagram"></i></a></li>
-                                <li><a href="https://www.pinterest.com/"><i class="bx bxl-pinterest-alt"></i></a></li>
-                                <li><a href="https://twitter.com/"><i class="bx bxl-twitter"></i></a></li>
-                                <li><a href="https://www.facebook.com/"><i class="bx bxl-facebook"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="team-img">
-                            <img class="img-fluid" src="{{ asset('assets/img/home-5/home5-team-05.png') }}" alt="">
-                        </div>
-                        <div class="team-content">
-                            <h4>Mateo Jhon</h4>
-                            <span>Software Engineer</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-sm-6 wow animate fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
-                    <div class="single-team magnetic-item">
-                        <div class="social-area">
-                            <ul>
-                                <li><a href="https://www.instagram.com/"><i class="bx bxl-instagram"></i></a></li>
-                                <li><a href="https://www.pinterest.com/"><i class="bx bxl-pinterest-alt"></i></a></li>
-                                <li><a href="https://twitter.com/"><i class="bx bxl-twitter"></i></a></li>
-                                <li><a href="https://www.facebook.com/"><i class="bx bxl-facebook"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="team-img">
-                            <img class="img-fluid" src="{{ asset('assets/img/home-5/home5-team-06.png') }}" alt="">
-                        </div>
-                        <div class="team-content">
-                            <h4>Ralph Oscar</h4>
-                            <span>Software Engineer</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-sm-6 wow animate fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
-                    <div class="single-team magnetic-item">
-                        <div class="social-area">
-                            <ul>
-                                <li><a href="https://www.instagram.com/"><i class="bx bxl-instagram"></i></a></li>
-                                <li><a href="https://www.pinterest.com/"><i class="bx bxl-pinterest-alt"></i></a></li>
-                                <li><a href="https://twitter.com/"><i class="bx bxl-twitter"></i></a></li>
-                                <li><a href="https://www.facebook.com/"><i class="bx bxl-facebook"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="team-img">
-                            <img class="img-fluid" src="{{ asset('assets/img/home-5/home5-team-07.png') }}" alt="">
-                        </div>
-                        <div class="team-content">
-                            <h4>Myles Hunter</h4>
-                            <span>Software Engineer</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-sm-6 wow animate fadeInUp" data-wow-delay="500ms" data-wow-duration="1500ms">
-                    <div class="single-team magnetic-item">
-                        <div class="social-area">
-                            <ul>
-                                <li><a href="https://www.instagram.com/"><i class="bx bxl-instagram"></i></a></li>
-                                <li><a href="https://www.pinterest.com/"><i class="bx bxl-pinterest-alt"></i></a></li>
-                                <li><a href="https://twitter.com/"><i class="bx bxl-twitter"></i></a></li>
-                                <li><a href="https://www.facebook.com/"><i class="bx bxl-facebook"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="team-img">
-                            <img class="img-fluid" src="{{ asset('assets/img/home-5/home5-team-08.png') }}" alt="">
-                        </div>
-                        <div class="team-content">
-                            <h4>Aaron Jackson</h4>
-                            <span>Software Engineer</span>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
+            @else
+            <div class="text-center py-5">
+                <i class="bi bi-people fs-1 text-muted"></i>
+                <p class="text-muted mt-2">Team section coming soon.</p>
+            </div>
+            @endif
         </div>
     </div>
     <!-- Start Footer section -->

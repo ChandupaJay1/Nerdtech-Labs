@@ -85,6 +85,12 @@
         <a class="nav-link {{ request()->routeIs('admin.tasks.*') ? 'active' : '' }}" href="{{ route('admin.tasks.index') }}">
             <i class="bi bi-list-task"></i> Tasks
         </a>
+        <a class="nav-link {{ request()->routeIs('admin.team.*') ? 'active' : '' }}" href="{{ route('admin.team.index') }}">
+            <i class="bi bi-people"></i> Team
+        </a>
+        <a class="nav-link {{ request()->routeIs('admin.partners.*') ? 'active' : '' }}" href="{{ route('admin.partners.index') }}">
+            <i class="bi bi-handshake"></i> Partners
+        </a>
         <div class="mt-auto p-4">
             <form method="POST" action="{{ route('logout') }}">
                 @csrf
