@@ -15,10 +15,8 @@ class DashboardController extends Controller
         $user = \Illuminate\Support\Facades\Auth::user();
         $tasksQuery = \App\Models\Task::query();
 
-        // All users (Super Admin and regular) see tasks assigned to OTHERS in their dashboard overview
-        $tasksQuery->where('assigned_to', '!=', $user->id);
+        // Dashboard shows all tasks across the system
 
-        // Main count now only includes 'pending' or 'in_progress' tasks (excluding themselves)
         $tasksCount = (clone $tasksQuery)->whereIn('status', ['pending', 'in_progress'])->count();
         $pendingTasksCount = (clone $tasksQuery)->where('status', 'pending')->count();
         $completedTasksCount = (clone $tasksQuery)->where('status', 'completed')->count();

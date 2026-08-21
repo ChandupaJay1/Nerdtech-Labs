@@ -17,7 +17,7 @@
                 @csrf
                 @method('PUT')
                 
-                @if(auth()->user()->is_super_admin)
+                @if(auth()->user()->is_super_admin || $task->assigned_by == auth()->id())
                 <div class="mb-3">
                     <label for="title" class="form-label">Task Title <span class="text-danger">*</span></label>
                     <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" name="title" value="{{ old('title', $task->title) }}" required>
@@ -73,7 +73,7 @@
                         @enderror
                     </div>
                     
-                    @if(auth()->user()->is_super_admin)
+                    @if(auth()->user()->is_super_admin || $task->assigned_by == auth()->id())
                     <div class="col-md-6 mb-3">
                         <label for="due_date" class="form-label">Due Date</label>
                         <input type="date" class="form-control @error('due_date') is-invalid @enderror" id="due_date" name="due_date" value="{{ old('due_date', $task->due_date) }}">
@@ -88,6 +88,43 @@
                     <button type="submit" class="btn btn-primary px-4">Update Task</button>
                     <a href="{{ route('admin.tasks.index') }}" class="btn btn-light ms-2">Cancel</a>
                 </div>
+            </form>
+        </div>
+
+        <!-- Comments Section -->
+        <div class="card p-4 mt-4">
+            <h5 class="mb-4">Task Comments & Progress</h5>
+            
+            @if($task->comments->count() > 0)
+                <div class="mb-4">
+                    @foreach($task->comments as $comment)
+                        <div class="card bg-light mb-3 border-0">
+                            <div class="card-body py-2 px-3">
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    <strong class="text-primary">{{ $comment->user->name ?? 'Unknown User' }}</strong>
+                                    <small class="text-muted">{{ $comment->created_at->diffForHumans() }}</small>
+                                </div>
+                                <p class="mb-0 text-dark">{{ $comment->comment }}</p>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            @else
+                <div class="alert alert-secondary text-center">
+                    No comments yet. Add the first progress update!
+                </div>
+            @endif
+
+            <form action="{{ route('admin.tasks.comments.store', $task) }}" method="POST">
+                @csrf
+                <div class="mb-3">
+                    <label for="comment" class="form-label">Add a Comment / Progress Update</label>
+                    <textarea class="form-control @error('comment') is-invalid @enderror" id="comment" name="comment" rows="3" required placeholder="Describe what you worked on..."></textarea>
+                    @error('comment')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
+                </div>
+                <button type="submit" class="btn btn-secondary btn-sm"><i class="bi bi-chat-dots me-1"></i> Post Comment</button>
             </form>
         </div>
     </div>

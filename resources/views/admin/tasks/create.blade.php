@@ -27,7 +27,7 @@
                 <div class="mb-3">
                     <label for="assigned_to" class="form-label">Assign To <span class="text-danger">*</span></label>
                     <select class="form-select @error('assigned_to') is-invalid @enderror" id="assigned_to" name="assigned_to" required>
-                        <option value="" disabled selected>Select an Admin</option>
+                        <option value="" disabled selected>Select a User</option>
                         @foreach($admins as $admin)
                             <option value="{{ $admin->id }}" {{ old('assigned_to') == $admin->id ? 'selected' : '' }}>
                                 {{ $admin->name }} ({{ $admin->email }})

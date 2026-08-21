@@ -5,11 +5,9 @@
 @section('content')
 <div class="d-flex justify-content-between align-items-center mb-4">
     <h4 class="mb-0">Tasks Board</h4>
-    @if(auth()->user()->is_super_admin)
     <a href="{{ route('admin.tasks.create') }}" class="btn btn-primary">
         <i class="bi bi-plus-lg"></i> Assign New Task
     </a>
-    @endif
 </div>
 
 <div class="card p-4">
@@ -51,7 +49,7 @@
                             <a href="{{ route('admin.tasks.edit', $task) }}" class="btn btn-sm btn-outline-primary" title="Edit">
                                 <i class="bi bi-pencil"></i>
                             </a>
-                            @if(auth()->user()->is_super_admin)
+                            @if(auth()->user()->is_super_admin || $task->assigned_by == auth()->id())
                             <form action="{{ route('admin.tasks.destroy', $task) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this task?');">
                                 @csrf
                                 @method('DELETE')

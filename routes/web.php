@@ -64,9 +64,11 @@ Route::get('/team', function () {
 */
 Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(function () {
     Route::get('/dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('dashboard');
+    Route::resource('users', App\Http\Controllers\Admin\UserController::class);
     Route::resource('projects', App\Http\Controllers\Admin\ProjectController::class);
     Route::resource('services', App\Http\Controllers\Admin\ServiceController::class);
     Route::resource('tasks', App\Http\Controllers\Admin\TaskController::class);
+    Route::post('tasks/{task}/comments', [App\Http\Controllers\Admin\TaskCommentController::class, 'store'])->name('tasks.comments.store');
     Route::resource('team', App\Http\Controllers\Admin\TeamController::class);
     Route::post('team/toggle-section', [App\Http\Controllers\Admin\TeamController::class, 'toggleSection'])->name('team.toggle-section');
     Route::post('team/{id}/toggle', [App\Http\Controllers\Admin\TeamController::class, 'toggleMember'])->name('team.toggle-member');
@@ -81,7 +83,7 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(fun
 |--------------------------------------------------------------------------
 */
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return redirect()->route('admin.dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {

@@ -24,4 +24,9 @@ class Task extends Model
     {
         return $this->belongsTo(User::class, 'assigned_by');
     }
+
+    public function comments()
+    {
+        return $this->hasMany(TaskComment::class)->oldest();
+    }
 }

@@ -37,7 +37,7 @@
                     <i class="bi bi-list-task text-info fs-4"></i>
                 </div>
                 <div>
-                    <h6 class="text-muted mb-1">{{ auth()->user()->is_super_admin ? 'Total Active Tasks' : 'My Active Tasks' }}</h6>
+                    <h6 class="text-muted mb-1">Total Active Tasks</h6>
                     <h3 class="mb-0">{{ $tasksCount }}</h3>
                 </div>
             </div>
@@ -77,7 +77,7 @@
                     </thead>
                     <tbody>
                         @forelse($recentTasks as $task)
-                        <tr>
+                        <tr class="{{ $task->assigned_to == auth()->id() ? 'table-warning' : '' }}">
                             <td>
                                 <div class="fw-bold">{{ $task->title }}</div>
                                 <small class="text-muted text-truncate d-inline-block" style="max-width: 250px;">{{ $task->description }}</small>

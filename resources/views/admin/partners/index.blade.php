@@ -13,7 +13,7 @@
         <form action="{{ route('admin.partners.toggle-section') }}" method="POST" class="d-inline">
             @csrf
             <input type="hidden" name="enabled" value="{{ $partnersEnabled === '1' ? '0' : '1' }}">
-            <button type="submit" class="btn {{ $partnersEnabled === '1' ? 'btn-success' : 'btn-outline-secondary' }} btn-sm">
+            <button type="submit" class="btn {{ $partnersEnabled === '1' ? 'btn-success' : 'btn-outline-secondary' }}">
                 <i class="bi bi-{{ $partnersEnabled === '1' ? 'eye-fill' : 'eye-slash' }} me-1"></i>
                 Section {{ $partnersEnabled === '1' ? 'Visible' : 'Hidden' }}
             </button>

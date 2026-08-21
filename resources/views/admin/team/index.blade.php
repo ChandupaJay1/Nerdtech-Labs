@@ -14,7 +14,7 @@
         <form action="{{ route('admin.team.toggle-section') }}" method="POST" class="d-inline">
             @csrf
             <input type="hidden" name="enabled" value="{{ $teamEnabled === '1' ? '0' : '1' }}">
-            <button type="submit" class="btn {{ $teamEnabled === '1' ? 'btn-success' : 'btn-outline-secondary' }} btn-sm">
+            <button type="submit" class="btn {{ $teamEnabled === '1' ? 'btn-success' : 'btn-outline-secondary' }}">
                 <i class="bi bi-{{ $teamEnabled === '1' ? 'eye-fill' : 'eye-slash' }} me-1"></i>
                 Section {{ $teamEnabled === '1' ? 'Visible' : 'Hidden' }}
             </button>

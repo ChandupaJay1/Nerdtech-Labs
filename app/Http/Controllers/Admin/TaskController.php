@@ -20,7 +20,11 @@ class TaskController extends Controller
         if ($user->is_super_admin) {
             $tasks = Task::with(['assignee', 'assignor'])->latest()->paginate(10);
         } else {
-            $tasks = Task::with(['assignee', 'assignor'])->where('assigned_to', $user->id)->latest()->paginate(10);
+            $tasks = Task::with(['assignee', 'assignor'])
+                ->where('assigned_to', $user->id)
+                ->orWhere('assigned_by', $user->id)
+                ->latest()
+                ->paginate(10);
         }
 
         return view('admin.tasks.index', compact('tasks'));
@@ -31,11 +35,7 @@ class TaskController extends Controller
      */
     public function create()
     {
-        if (!Auth::user()->is_super_admin) {
-            abort(403, 'Unauthorized action.');
-        }
-
-        $admins = User::where('is_admin', true)->get();
+        $admins = User::all();
         return view('admin.tasks.create', compact('admins'));
     }
 
@@ -44,10 +44,6 @@ class TaskController extends Controller
      */
     public function store(Request $request)
     {
-        if (!Auth::user()->is_super_admin) {
-            abort(403, 'Unauthorized action.');
-        }
-
         $validated = $request->validate([
             'title' => 'required|string|max:255',
             'description' => 'nullable|string',
@@ -70,12 +66,12 @@ class TaskController extends Controller
     {
         $user = Auth::user();
 
-        // Check if user is super admin or if the task is assigned to them
-        if (!$user->is_super_admin && $task->assigned_to !== $user->id) {
+        // Check if user is super admin or if the task is assigned to or by them
+        if (!$user->is_super_admin && $task->assigned_to !== $user->id && $task->assigned_by !== $user->id) {
             abort(403, 'Unauthorized action.');
         }
 
-        $admins = User::where('is_admin', true)->get();
+        $admins = User::all();
         return view('admin.tasks.edit', compact('task', 'admins'));
     }
 
@@ -86,12 +82,12 @@ class TaskController extends Controller
     {
         $user = Auth::user();
 
-        if (!$user->is_super_admin && $task->assigned_to !== $user->id) {
+        if (!$user->is_super_admin && $task->assigned_to !== $user->id && $task->assigned_by !== $user->id) {
             abort(403, 'Unauthorized action.');
         }
 
-        // If super admin, allow updating all fields
-        if ($user->is_super_admin) {
+        // If super admin or the assignor, allow updating all fields
+        if ($user->is_super_admin || $task->assigned_by === $user->id) {
             $validated = $request->validate([
                 'title' => 'required|string|max:255',
                 'description' => 'nullable|string',
@@ -118,7 +114,8 @@ class TaskController extends Controller
      */
     public function destroy(Task $task)
     {
-        if (!Auth::user()->is_super_admin) {
+        $user = Auth::user();
+        if (!$user->is_super_admin && $task->assigned_by !== $user->id) {
             abort(403, 'Unauthorized action.');
         }
 
