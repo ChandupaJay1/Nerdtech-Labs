@@ -90,6 +90,13 @@
                                     @endif
                                 </button>
                             </form>
+                            <form action="{{ route('admin.licenses.destroy', $license->id) }}" method="POST" class="d-inline" onsubmit="return confirm('Are you sure you want to delete this license? This action cannot be undone.');">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-sm btn-danger ms-1">
+                                    <i class="bi bi-trash me-1"></i> Delete
+                                </button>
+                            </form>
                         </td>
                     </tr>
                     @endforeach
@@ -128,10 +135,36 @@
                         <label for="domain" class="form-label">Authorized Domain</label>
                         <input type="text" class="form-control" id="domain" name="domain" placeholder="e.g. sagaki.com" required>
                     </div>
-                    <div class="alert alert-info py-2 mb-0">
-                        <i class="bi bi-info-circle me-1"></i> License will be valid for 6 months.
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">License Expiry</label>
+                        <div class="p-3 border rounded bg-light">
+                            <div class="row g-3 align-items-end mb-3">
+                                <div class="col-md-6">
+                                    <label for="duration_value" class="form-label small">Duration</label>
+                                    <input type="number" class="form-control" id="duration_value" name="duration_value" placeholder="e.g. 6" min="1">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="duration_type" class="form-label small">Duration Type</label>
+                                    <select class="form-select" id="duration_type" name="duration_type">
+                                        <option value="days">Days</option>
+                                        <option value="months" selected>Months</option>
+                                        <option value="years">Years</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="text-center position-relative mb-3">
+                                <hr>
+                                <span class="bg-light px-2 position-absolute top-50 start-50 translate-middle text-muted small fw-bold">OR</span>
+                            </div>
+                            
+                            <div>
+                                <label for="expires_at" class="form-label small">Custom Date (Optional)</label>
+                                <input type="date" class="form-control" id="expires_at" name="expires_at">
+                                <div class="form-text" style="font-size: 0.8rem;">Select an exact expiry date if not using duration.</div>
+                            </div>
+                        </div>
                     </div>
-                </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancel</button>
                     <button type="submit" class="btn btn-primary">Generate License</button>
