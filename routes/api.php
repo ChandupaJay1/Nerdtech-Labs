@@ -7,4 +7,4 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 
-Route::post('/verify-license', [App\Http\Controllers\Api\LicenseVerificationController::class, 'verify']);
+Route::post('/validate', [App\Http\Controllers\Api\LicenseVerificationController::class, 'verify']);
