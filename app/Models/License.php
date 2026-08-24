@@ -9,7 +9,7 @@ class License extends Model
     protected $fillable = [
         'client_name',
         'project_name',
-        'license_key',
+        'domain',
         'expires_at',
         'is_active',
     ];

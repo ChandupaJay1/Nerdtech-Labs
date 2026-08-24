@@ -48,7 +48,7 @@
                     <tr>
                         <th>Client Name</th>
                         <th>Project Name</th>
-                        <th>License Key</th>
+                        <th>Authorized Domain</th>
                         <th>Expiry Date</th>
                         <th>Status</th>
                         <th class="text-end">Actions</th>
@@ -59,7 +59,7 @@
                     <tr>
                         <td><span class="fw-semibold">{{ $license->client_name }}</span></td>
                         <td>{{ $license->project_name }}</td>
-                        <td><code class="user-select-all">{{ $license->license_key }}</code></td>
+                        <td><code class="user-select-all">{{ $license->domain }}</code></td>
                         <td>
                             @if($license->expires_at)
                                 <span class="{{ $license->expires_at->isPast() ? 'text-danger' : 'text-muted' }}">
@@ -124,8 +124,12 @@
                         <label for="project_name" class="form-label">Project Name</label>
                         <input type="text" class="form-control" id="project_name" name="project_name" required>
                     </div>
+                    <div class="mb-3">
+                        <label for="domain" class="form-label">Authorized Domain</label>
+                        <input type="text" class="form-control" id="domain" name="domain" placeholder="e.g. sagaki.com" required>
+                    </div>
                     <div class="alert alert-info py-2 mb-0">
-                        <i class="bi bi-info-circle me-1"></i> License key will be auto-generated and valid for 6 months.
+                        <i class="bi bi-info-circle me-1"></i> License will be valid for 6 months.
                     </div>
                 </div>
                 <div class="modal-footer">

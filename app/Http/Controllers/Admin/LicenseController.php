@@ -20,14 +20,13 @@ class LicenseController extends Controller
         $request->validate([
             'client_name' => 'required|string|max:255',
             'project_name' => 'required|string|max:255',
+            'domain' => 'required|string|max:255|unique:licenses',
         ]);
-
-        $licenseKey = 'NDT-' . strtoupper(Str::random(4)) . '-' . strtoupper(Str::random(4)) . '-' . strtoupper(Str::random(4));
 
         License::create([
             'client_name' => $request->client_name,
             'project_name' => $request->project_name,
-            'license_key' => $licenseKey,
+            'domain' => $request->domain,
             'expires_at' => now()->addMonths(6),
             'is_active' => true,
         ]);

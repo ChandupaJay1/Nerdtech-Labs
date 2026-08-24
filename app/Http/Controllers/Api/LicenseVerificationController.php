@@ -11,10 +11,10 @@ class LicenseVerificationController extends Controller
     public function verify(Request $request)
     {
         $request->validate([
-            'license_key' => 'required|string',
+            'domain' => 'required|string',
         ]);
 
-        $license = License::where('license_key', $request->license_key)->first();
+        $license = License::where('domain', $request->domain)->first();
 
         if (!$license || !$license->is_active || ($license->expires_at && $license->expires_at->isPast())) {
             return response()->json([
