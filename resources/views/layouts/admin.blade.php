@@ -94,6 +94,9 @@
         <a class="nav-link {{ request()->routeIs('admin.partners.*') ? 'active' : '' }}" href="{{ route('admin.partners.index') }}">
             <i class="bi bi-diagram-3"></i> Partners
         </a>
+        <a class="nav-link {{ request()->routeIs('admin.licenses.*') ? 'active' : '' }}" href="{{ route('admin.licenses.index') }}">
+            <i class="bi bi-key"></i> Licenses
+        </a>
         <div class="mt-auto p-4">
             <form method="POST" action="{{ route('logout') }}">
                 @csrf

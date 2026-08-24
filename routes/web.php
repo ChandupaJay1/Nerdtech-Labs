@@ -75,6 +75,8 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(fun
     Route::resource('partners', App\Http\Controllers\Admin\PartnerController::class);
     Route::post('partners/toggle-section', [App\Http\Controllers\Admin\PartnerController::class, 'toggleSection'])->name('partners.toggle-section');
     Route::post('partners/{id}/toggle', [App\Http\Controllers\Admin\PartnerController::class, 'togglePartner'])->name('partners.toggle-partner');
+    Route::resource('licenses', App\Http\Controllers\Admin\LicenseController::class);
+    Route::post('licenses/{license}/toggle', [App\Http\Controllers\Admin\LicenseController::class, 'toggleStatus'])->name('licenses.toggle-status');
 });
 
 /*
