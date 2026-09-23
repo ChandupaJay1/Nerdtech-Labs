@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
-        <script src="https://app.secureprivacy.ai/script/6ab3a09414671a86a00afe22.js"></script>
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZTFLHV8G5"></script>
         <script>
