@@ -32,6 +32,9 @@
         },
         "files": [
             "app/helpers.php"
+        ],
+        "exclude-from-classmap": [
+            "vendor/league/flysystem/src/Local/"
         ]
     },
     "autoload-dev": {
