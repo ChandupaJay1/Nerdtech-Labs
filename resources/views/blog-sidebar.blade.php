@@ -4,6 +4,15 @@
 
 <!-- Mirrored from demo.egenslab.com/html/softconic/preview/blog-sidebar.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 31 Jan 2026 18:08:07 GMT -->
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZTFLHV8G5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-7ZTFLHV8G5');
+    </script>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
