@@ -4,7 +4,7 @@
 
 <!-- Mirrored from demo.egenslab.com/html/softconic/preview/error.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 31 Jan 2026 18:08:15 GMT -->
 <head>
-    <script src="https://app.secureprivacy.ai/script/6ab3a09414671a86a00afe22.js"></script>
+    <script type="text/javascript" src="https://app.secureprivacy.ai/script/6ab3a09414671a86a00afe22.js"></script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZTFLHV8G5"></script>
     <script>
