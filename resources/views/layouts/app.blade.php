@@ -36,6 +36,123 @@
     <!-- Title -->
     <title>@yield('title', 'Nerdtech Labs')</title>
     <link rel="icon" href="{{ asset('assets/img/letter.png') }}" type="image/png" sizes="20x20">
+    <!-- Elfsight Free Badge Suppressor -->
+    <script>
+        (function() {
+            // 1. Intercept XMLHttpRequest to rewrite Elfsight boot data before the widget initializes
+            try {
+                var origOpen = XMLHttpRequest.prototype.open;
+                var origSend = XMLHttpRequest.prototype.send;
+
+                XMLHttpRequest.prototype.open = function(method, url) {
+                    this._isElfsight = typeof url === 'string' && (url.indexOf('elfsight') !== -1 || url.indexOf('/p/boot/') !== -1);
+                    return origOpen.apply(this, arguments);
+                };
+
+                XMLHttpRequest.prototype.send = function() {
+                    if (this._isElfsight) {
+                        var xhr = this;
+                        var cleanResponse = function() {
+                            try {
+                                var raw = xhr.responseText;
+                                if (raw && raw.indexOf('display_free_link') !== -1) {
+                                    var cleaned = raw
+                                        .replace(/"display_free_link"\s*:\s*true/g, '"display_free_link":false')
+                                        .replace(/"display_free_link_remove"\s*:\s*true/g, '"display_free_link_remove":false')
+                                        .replace(/"display_elfsight_powered_by"\s*:\s*true/g, '"display_elfsight_powered_by":false')
+                                        .replace(/"hide_elfsight_logo"\s*:\s*0/g, '"hide_elfsight_logo":1');
+
+                                    Object.defineProperty(xhr, 'responseText', { get: function() { return cleaned; }, configurable: true });
+                                    Object.defineProperty(xhr, 'response', { get: function() { return cleaned; }, configurable: true });
+                                }
+                            } catch(e) {}
+                        };
+
+                        xhr.addEventListener('readystatechange', function() {
+                            if (xhr.readyState === 4) {
+                                cleanResponse();
+                            }
+                        }, true);
+
+                        var customOnload = null;
+                        Object.defineProperty(xhr, 'onload', {
+                            set: function(fn) { customOnload = fn; },
+                            get: function() {
+                                return function(ev) {
+                                    cleanResponse();
+                                    if (typeof customOnload === 'function') {
+                                        return customOnload.call(this, ev);
+                                    }
+                                };
+                            },
+                            configurable: true
+                        });
+                    }
+                    return origSend.apply(this, arguments);
+                };
+            } catch(e) {}
+
+            // 2. Intercept attachShadow to continuously purge badges inside Shadow DOM
+            try {
+                var origAttachShadow = Element.prototype.attachShadow;
+                Element.prototype.attachShadow = function(init) {
+                    var shadow = origAttachShadow.call(this, init);
+
+                    function cleanShadow() {
+                        try {
+                            var badges = shadow.querySelectorAll('a[href*="elfsight.com"], a[href*="free-widget"]');
+                            badges.forEach(function(b) {
+                                b.setAttribute('style', 'display:none!important;visibility:hidden!important;opacity:0!important;height:0!important;width:0!important;pointer-events:none!important;position:absolute!important;margin:0!important;padding:0!important;');
+                                b.style.setProperty('display', 'none', 'important');
+                                b.style.setProperty('visibility', 'hidden', 'important');
+                            });
+
+                            if (!shadow.querySelector('#elfsight-clean-style')) {
+                                var st = document.createElement('style');
+                                st.id = 'elfsight-clean-style';
+                                st.textContent = 'a[href*="elfsight.com"], a[href*="free-widget"], .eapps-widget-branding { display: none !important; visibility: hidden !important; opacity: 0 !important; height: 0 !important; width: 0 !important; pointer-events: none !important; margin: 0 !important; padding: 0 !important; }';
+                                shadow.appendChild(st);
+                            }
+                        } catch(e) {}
+                    }
+
+                    var shadowObserver = new MutationObserver(cleanShadow);
+                    shadowObserver.observe(shadow, { childList: true, subtree: true, attributes: true, attributeFilter: ['style', 'class'] });
+
+                    setTimeout(cleanShadow, 50);
+                    setTimeout(cleanShadow, 200);
+                    setTimeout(cleanShadow, 1000);
+
+                    return shadow;
+                };
+            } catch(e) {}
+
+            // 3. Recursive scanner across main DOM and all shadowRoots
+            function deepPurge(root) {
+                if (!root) return;
+                try {
+                    var badges = root.querySelectorAll('a[href*="elfsight.com"], a[href*="free-widget"]');
+                    badges.forEach(function(b) {
+                        b.setAttribute('style', 'display:none!important;visibility:hidden!important;opacity:0!important;height:0!important;width:0!important;pointer-events:none!important;position:absolute!important;margin:0!important;padding:0!important;');
+                        b.style.setProperty('display', 'none', 'important');
+                        b.style.setProperty('visibility', 'hidden', 'important');
+                    });
+
+                    var children = root.querySelectorAll('*');
+                    for (var i = 0; i < children.length; i++) {
+                        if (children[i].shadowRoot) {
+                            deepPurge(children[i].shadowRoot);
+                        }
+                    }
+                } catch(e) {}
+            }
+
+            var timer = setInterval(function() { deepPurge(document); }, 150);
+            setTimeout(function() { clearInterval(timer); }, 15000);
+            window.addEventListener('DOMContentLoaded', function() { deepPurge(document); });
+            window.addEventListener('load', function() { deepPurge(document); });
+        })();
+    </script>
     @stack('css')
 </head>
 
