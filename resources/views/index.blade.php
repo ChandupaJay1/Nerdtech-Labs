@@ -353,7 +353,7 @@
                                         <h6>Review On</h6>
                                         <ul>
                                             <li>
-                                                <a href="https://maps.app.goo.gl/abNhqC2sR7jQv6iw7" target="_blank" rel="noopener noreferrer" class="single-review">
+                                                <a href="https://maps.app.goo.gl/abNhqC2sR7jQv6iw7" target="_blank" rel="noopener noreferrer" class="single-review" title="View all reviews on Google Maps">
                                                     <div class="icon">
                                                         <img src="{{ asset('assets/img/home-5/google-1.svg') }}" alt="Google Reviews">
                                                     </div>
@@ -368,14 +368,107 @@
                                                 </a>
                                             </li>
                                         </ul>
+                                        <div class="mt-4">
+                                            <a href="https://search.google.com/local/writereview?placeid=ChIJ8wH0BMt69msAWKe0w_sqnQ" target="_blank" rel="noopener noreferrer" class="primary-btn3" style="padding: 10px 22px; font-size: 14px; display: inline-flex; align-items: center; gap: 8px;">
+                                                <i class="bi bi-pencil-square"></i> Write a Review
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-8 position-relative wow animate fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
-                            <!-- Elfsight Google Reviews | Untitled Google Reviews -->
-                            <script src="https://elfsightcdn.com/platform.js" async></script>
-                            <div class="elfsight-app-0abe135b-0a69-413b-a8e9-8c53b08153af" data-elfsight-app-lazy></div>
+                           
+                            <div class="swiper home5-testimonial-slider">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="testimonial-wrapper">
+                                            <div class="testimonial-top">
+                                                <div class="author-img">
+                                                    <img src="{{ asset('assets/img/home-5/author-img.png') }}" alt="Client Review">
+                                                </div>
+                                                <div class="review">
+                                                    <a href="https://maps.app.goo.gl/abNhqC2sR7jQv6iw7" target="_blank" rel="noopener noreferrer" title="View on Google Maps">
+                                                        <img src="{{ asset('assets/img/home-5/google-2.svg') }}" alt="Google 5-Star Review">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="testimonial-content">
+                                                <p>“NerdTech Labs built our business management and weekly fair platform from scratch. The system handles stall bookings, invoicing, and real-time operations seamlessly. Outstanding commitment and quality!”</p>
+                                            </div>
+                                            <div class="testimonial-btm">
+                                                <div class="author-content">
+                                                    <h4>Sagaki All In One</h4>
+                                                    <span>Kirindiwela Weekly Fair</span>
+                                                </div>
+                                                <div class="quote-icon">
+                                                    <img src="{{ asset('assets/img/home-5/left-quote.svg') }}" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="testimonial-wrapper">
+                                            <div class="testimonial-top">
+                                                <div class="author-img">
+                                                    <img src="{{ asset('assets/img/home-5/author-img2.png') }}" alt="Client Review">
+                                                </div>
+                                                <div class="review">
+                                                    <a href="https://maps.app.goo.gl/abNhqC2sR7jQv6iw7" target="_blank" rel="noopener noreferrer" title="View on Google Maps">
+                                                        <img src="{{ asset('assets/img/home-5/google-2.svg') }}" alt="Google 5-Star Review">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="testimonial-content">
+                                                <p>“From concept to deployment, NerdTech Labs delivered a modern, fast, and secure web platform. Their full-stack expertise, clear communication, and dedicated support made the entire project smooth and successful.”</p>
+                                            </div>
+                                            <div class="testimonial-btm">
+                                                <div class="author-content">
+                                                    <h4>Enterprise Client</h4>
+                                                    <span>Web & Cloud Solutions</span>
+                                                </div>
+                                                <div class="quote-icon">
+                                                    <img src="{{ asset('assets/img/home-5/left-quote.svg') }}" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="testimonial-wrapper">
+                                            <div class="testimonial-top">
+                                                <div class="author-img">
+                                                    <img src="{{ asset('assets/img/home-5/author-img3.png') }}" alt="Client Review">
+                                                </div>
+                                                <div class="review">
+                                                    <a href="https://maps.app.goo.gl/abNhqC2sR7jQv6iw7" target="_blank" rel="noopener noreferrer" title="View on Google Maps">
+                                                        <img src="{{ asset('assets/img/home-5/google-2.svg') }}" alt="Google 5-Star Review">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="testimonial-content">
+                                                <p>“They developed a custom tax invoice manager and inventory workflow that automated our billing process completely. Highly recommend NerdTech Labs for any custom software development!”</p>
+                                            </div>
+                                            <div class="testimonial-btm">
+                                                <div class="author-content">
+                                                    <h4>Corporate Client</h4>
+                                                    <span>Custom Software System</span>
+                                                </div>
+                                                <div class="quote-icon">
+                                                    <img src="{{ asset('assets/img/home-5/left-quote.svg') }}" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-btn-group">
+                                <div class="swiper-btn prevbtn3">
+                                    <i class="bi bi-arrow-up"></i>
+                                </div>
+                                <div class="swiper-btn nextbtn3">
+                                    <i class="bi bi-arrow-down"></i>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
