@@ -2,6 +2,33 @@
 
 @section('title', 'About Us - Nerdtech Labs')
 
+@push('css')
+<style>
+    .google-badge-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        padding: 9px 20px;
+        border-radius: 50px;
+        text-decoration: none;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .google-badge-pill:hover {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: rgba(255, 255, 255, 0.25);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+    .about-reviews-container {
+        max-width: 900px;
+        margin: 0 auto;
+        position: relative;
+    }
+</style>
+@endpush
+
 @section('content')
     <!-- Start breadcrumbs section -->
     <section class="breadcrumbs">
@@ -413,187 +440,35 @@
     <!-- Start testimonial Section -->
     <div class="home3-testimonil-area sec-mar">
         <div class="container">
-            <div class="row mb-55 wow animate fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+            <div class="row mb-50 wow animate fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
                 <div class="col-lg-12 d-flex align-items-center justify-content-between gap-4 flex-wrap">
                     <div class="section-title-3">
+                        <span style="color: var(--theme-color); font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; display: inline-block; margin-bottom: 8px;">
+                            <i class="bi bi-star-fill me-1"></i> Client Reviews
+                        </span>
                         <h2>Happy Customers</h2>
                         <p>We take pride in delivering digital solutions that help businesses grow. Here's what our clients have to say about working with NerdTech Labs.</p>
                     </div>
-                    <div class="swiper-btn-group">
-                        <div class="swiper-btn prevbtn2">
-                            <i class="bi bi-arrow-left"></i>
-                        </div>
-                        <div class="swiper-btn nextbtn2">
-                            <i class="bi bi-arrow-right"></i>
-                        </div>
+                    <div class="d-flex align-items-center gap-3 flex-wrap">
+                        <a href="https://maps.app.goo.gl/abNhqC2sR7jQv6iw7" target="_blank" rel="noopener noreferrer" class="google-badge-pill" title="View all reviews on Google Maps">
+                            <img src="{{ asset('assets/img/home-5/google-1.svg') }}" alt="Google Reviews" style="height: 22px; width: auto;">
+                            <div class="d-flex flex-column text-start">
+                                <span style="font-size: 13px; font-weight: 700; color: #fff; line-height: 1.2;">5.0 <span style="color: #ffb703;">★★★★★</span></span>
+                                <span style="font-size: 11px; color: rgba(255, 255, 255, 0.65);">Google Reviews</span>
+                            </div>
+                        </a>
+                        <a href="https://search.google.com/local/writereview?placeid=ChIJ8wH0BMt69msRhVuntMP7Kp0" target="_blank" rel="noopener noreferrer" class="primary-btn3" style="padding: 10px 22px; font-size: 14px; display: inline-flex; align-items: center; gap: 8px;">
+                            <i class="bi bi-pencil-square"></i> Write a Review
+                        </a>
                     </div>
                 </div>
             </div>    
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="swiper home3-testimonial-slider">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="testimonial-card3">
-                                    <div class="quate-icon">
-                                        <img src="{{ asset('assets/img/home-4/left-quote.svg') }}" alt="">
-                                    </div>
-                                    <div class="testimonial-top">
-                                        <div class="review-left">
-                                            <img src="{{ asset('assets/img/home-4/google.svg') }}" alt="Google Review">
-                                        </div>
-                                        <div class="review-right">
-                                            <ul class="star">
-                                                <li><i class="bi bi-star-fill"></i></li>
-                                                <li><i class="bi bi-star-fill"></i></li>
-                                                <li><i class="bi bi-star-fill"></i></li>
-                                                <li><i class="bi bi-star-fill"></i></li>
-                                                <li><i class="bi bi-star-fill"></i></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="testimonial-content">
-                                        <p>“NerdTech Labs built our weekly fair management platform from scratch. The system handles stall bookings, invoicing, and real-time dashboards seamlessly.”</p>
-                                    </div>
-                                    
-                                    <div class="testimonial-btm">
-                                        <div class="author-area">
-                                            <div class="author-content">
-                                                <h4>Sagaki All In One</h4>
-                                                <span>Kirindiwela Weekly Fair</span>
-                                            </div>
-                                        </div>
-                                        <div class="review-date-and-time">
-                                            <p>2026</p> 
-                                            <span>Client Project</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="author-img">
-                                    <img src="{{ asset('assets/img/home-4/h4-testi-03.png') }}" alt="">
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="testimonial-card3">
-                                    <div class="quate-icon">
-                                        <img src="{{ asset('assets/img/home-4/left-quote.svg') }}" alt="">
-                                    </div>
-                                    <div class="testimonial-top">
-                                        <div class="review-left">
-                                            <img src="{{ asset('assets/img/home-4/google.svg') }}" alt="Google Review">
-                                        </div>
-                                        <div class="review-right">
-                                            <ul class="star">
-                                                <li><i class="bi bi-star-fill"></i></li>
-                                                <li><i class="bi bi-star-fill"></i></li>
-                                                <li><i class="bi bi-star-fill"></i></li>
-                                                <li><i class="bi bi-star-fill"></i></li>
-                                                <li><i class="bi bi-star-fill"></i></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="testimonial-content">
-                                        <p>“Professional and efficient team. They delivered a modern, responsive website that perfectly represents our brand and helps us reach more customers online.”</p>
-                                    </div>
-                                    
-                                    <div class="testimonial-btm">
-                                        <div class="author-area">
-                                            <div class="author-content">
-                                                <h4>Enterprise Client</h4>
-                                                <span>Cloud & Web Platform</span>
-                                            </div>
-                                        </div>
-                                        <div class="review-date-and-time">
-                                            <p>2026</p> 
-                                            <span>Client Project</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="author-img">
-                                    <img src="{{ asset('assets/img/home-4/h4-testi-01.png') }}" alt="">
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="testimonial-card3">
-                                    <div class="quate-icon">
-                                        <img src="{{ asset('assets/img/home-4/left-quote.svg') }}" alt="">
-                                    </div>
-                                    <div class="testimonial-top">
-                                        <div class="review-left">
-                                            <img src="{{ asset('assets/img/home-4/google.svg') }}" alt="Google Review">
-                                        </div>
-                                        <div class="review-right">
-                                            <ul class="star">
-                                                <li><i class="bi bi-star-fill"></i></li>
-                                                <li><i class="bi bi-star-fill"></i></li>
-                                                <li><i class="bi bi-star-fill"></i></li>
-                                                <li><i class="bi bi-star-fill"></i></li>
-                                                <li><i class="bi bi-star-fill"></i></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="testimonial-content">
-                                        <p>“NerdTech Labs developed a custom tax invoice manager system that automated our entire billing process. Their attention to detail and commitment to quality is outstanding.”</p>
-                                    </div>
-                                    
-                                    <div class="testimonial-btm">
-                                        <div class="author-area">
-                                            <div class="author-content">
-                                                <h4>Corporate Solutions</h4>
-                                                <span>Custom Management System</span>
-                                            </div>
-                                        </div>
-                                        <div class="review-date-and-time">
-                                            <p>2026</p> 
-                                            <span>Client Project</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="author-img">
-                                    <img src="{{ asset('assets/img/home-4/h4-testi-02.png') }}" alt="">
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="testimonial-card3">
-                                    <div class="quate-icon">
-                                        <img src="{{ asset('assets/img/home-4/left-quote.svg') }}" alt="">
-                                    </div>
-                                    <div class="testimonial-top">
-                                        <div class="review-left">
-                                            <img src="{{ asset('assets/img/home-4/google.svg') }}" alt="Google Review">
-                                        </div>
-                                        <div class="review-right">
-                                            <ul class="star">
-                                                <li><i class="bi bi-star-fill"></i></li>
-                                                <li><i class="bi bi-star-fill"></i></li>
-                                                <li><i class="bi bi-star-fill"></i></li>
-                                                <li><i class="bi bi-star-fill"></i></li>
-                                                <li><i class="bi bi-star-fill"></i></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="testimonial-content">
-                                        <p>“From concept to deployment, NerdTech Labs delivered a scalable and secure web platform. Their full-stack expertise and clear communication made the entire process smooth.”</p>
-                                    </div>
-                                    
-                                    <div class="testimonial-btm">
-                                        <div class="author-area">
-                                            <div class="author-content">
-                                                <h4>Digital Innovations</h4>
-                                                <span>Software Engineering</span>
-                                            </div>
-                                        </div>
-                                        <div class="review-date-and-time">
-                                            <p>2026</p> 
-                                            <span>Client Project</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="author-img">
-                                    <img src="{{ asset('assets/img/home-4/h4-testi-03.png') }}" alt="">
-                                </div>
-                            </div>
-                        </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-12 wow animate fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
+                    <div class="about-reviews-container">
+                        <!-- Elfsight Google Reviews | Auto-sync Google Reviews Widget -->
+                        <script src="https://elfsightcdn.com/platform.js" async></script>
+                        <div class="elfsight-app-0abe135b-0a69-413b-a8e9-8c53b08153af" data-elfsight-app-lazy></div>
                     </div>
                 </div>
             </div> 

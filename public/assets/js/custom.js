@@ -311,44 +311,45 @@
         }
     });
     //HOme 3 Testimonial slider
-    var swiper = new Swiper(".home3-testimonial-slider", {
-        loop: true,
-        spaceBetween: 30,
-        speed: 700,
-        centeredSlides: true,
-        navigation: {
-            nextEl: ".nextbtn2",
-            prevEl: ".prevbtn2",
-        },
-        autoplay: {
-            delay: 4500,
-            disableOnInteraction: false
-        },
-        breakpoints: {
-            280: {
-                slidesPerView: 1,
+    if (document.querySelector(".home3-testimonial-slider")) {
+        var swiper = new Swiper(".home3-testimonial-slider", {
+            loop: true,
+            spaceBetween: 30,
+            speed: 700,
+            centeredSlides: true,
+            navigation: {
+                nextEl: ".nextbtn2",
+                prevEl: ".prevbtn2",
             },
-            386: {
-                slidesPerView: 1,
+            autoplay: {
+                delay: 4500,
+                disableOnInteraction: false
             },
-            576: {
-                slidesPerView: 1,
-            },
-            768: {
-                slidesPerView: 1.5,
-            },
-            992: {
-                slidesPerView: 2
-            },
-            1200: {
-                slidesPerView: 2,
-
-            },
-            1400: {
-                slidesPerView: 2
-            },
-        }
-    });
+            breakpoints: {
+                280: {
+                    slidesPerView: 1,
+                },
+                386: {
+                    slidesPerView: 1,
+                },
+                576: {
+                    slidesPerView: 1,
+                },
+                768: {
+                    slidesPerView: 1.5,
+                },
+                992: {
+                    slidesPerView: 2
+                },
+                1200: {
+                    slidesPerView: 2,
+                },
+                1400: {
+                    slidesPerView: 2
+                },
+            }
+        });
+    }
 
 
     //HOme 3 Team slider
