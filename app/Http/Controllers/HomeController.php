@@ -7,10 +7,11 @@ use App\Models\Service;
 use App\Models\TeamMember;
 use App\Models\Partner;
 use App\Models\Setting;
+use App\Services\GoogleReviewService;
 
 class HomeController extends Controller
 {
-    public function index()
+    public function index(GoogleReviewService $googleReviewService)
     {
         $services = Service::query()->latest('updated_at')->take(6)->get();
         $projects = Project::query()->latest('updated_at')->take(6)->get();
@@ -18,7 +19,16 @@ class HomeController extends Controller
         $teamEnabled = Setting::getValue('team_section_enabled', '1');
         $partners = Partner::where('is_active', true)->orderBy('sort_order')->get();
         $partnersEnabled = Setting::getValue('partners_section_enabled', '1');
+        $googleReviewsData = $googleReviewService->getReviewsData();
 
-        return view('index', compact('services', 'projects', 'teamMembers', 'teamEnabled', 'partners', 'partnersEnabled'));
+        return view('index', compact(
+            'services',
+            'projects',
+            'teamMembers',
+            'teamEnabled',
+            'partners',
+            'partnersEnabled',
+            'googleReviewsData'
+        ));
     }
 }

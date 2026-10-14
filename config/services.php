@@ -33,6 +33,10 @@ return [
             'bot_user_oauth_token' => env('SLACK_BOT_USER_OAUTH_TOKEN'),
             'channel' => env('SLACK_BOT_USER_DEFAULT_CHANNEL'),
         ],
+    'google_reviews' => [
+        'api_key' => env('GOOGLE_PLACES_API_KEY'),
+        'place_id' => env('GOOGLE_PLACE_ID'),
+        'review_url' => env('GOOGLE_REVIEW_URL', 'https://maps.app.goo.gl/abNhqC2sR7jQv6iw7'),
     ],
 
 ];
