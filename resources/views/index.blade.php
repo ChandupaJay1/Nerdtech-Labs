@@ -353,24 +353,9 @@
                                         <h6>Review On</h6>
                                         <ul>
                                             <li>
-                                                <a href="#" class="single-review">
+                                                <a href="https://www.google.com/maps/place/NerdTech+Labs+Sri+Lanka/@8.3160611,80.4165481,17z" target="_blank" rel="noopener noreferrer" class="single-review">
                                                     <div class="icon">
-                                                        <img src="{{ asset('assets/img/home-5/trustpilot-1.svg') }}" alt="">
-                                                    </div>
-                                                    <ul class="star">
-                                                        <li><i class="bi bi-star-fill"></i></li>
-                                                        <li><i class="bi bi-star-fill"></i></li>
-                                                        <li><i class="bi bi-star-fill"></i></li>
-                                                        <li><i class="bi bi-star-fill"></i></li>
-                                                        <li><i class="bi bi-star-fill"></i></li>
-                                                        <li>5.0/5.0</li>
-                                                    </ul>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="single-review">
-                                                    <div class="icon">
-                                                        <img src="{{ asset('assets/img/home-5/google-1.svg') }}" alt="">
+                                                        <img src="{{ asset('assets/img/home-5/google-1.svg') }}" alt="Google Reviews">
                                                     </div>
                                                     <ul class="star">
                                                         <li><i class="bi bi-star-fill"></i></li>
@@ -398,11 +383,13 @@
                                                     <img src="{{ asset('assets/img/home-5/author-img.png') }}" alt="">
                                                 </div>
                                                 <div class="review">
-                                                    <img src="{{ asset('assets/img/home-5/trustpilot-2.svg') }}" alt="">
+                                                    <a href="https://www.google.com/maps/place/NerdTech+Labs+Sri+Lanka/@8.3160611,80.4165481,17z" target="_blank" rel="noopener noreferrer">
+                                                        <img src="{{ asset('assets/img/home-5/google-2.svg') }}" alt="Google Review">
+                                                    </a>
                                                 </div>
                                             </div>
                                             <div class="testimonial-content">
-                                                <p>“I cannot express enough how satisfied I am with the web developmet services provided by Egens Lab. They are very good and User friendly and they work very nice and creative”</p>
+                                                <p>“I cannot express enough how satisfied I am with the web development services provided by NerdTech Labs. They are very good and User friendly and they work very nice and creative”</p>
                                             </div>
                                             <div class="testimonial-btm">
                                                 <div class="author-content">
@@ -422,11 +409,13 @@
                                                     <img src="{{ asset('assets/img/home-5/author-img2.png') }}" alt="">
                                                 </div>
                                                 <div class="review">
-                                                    <img src="{{ asset('assets/img/home-5/trustpilot-2.svg') }}" alt="">
+                                                    <a href="https://www.google.com/maps/place/NerdTech+Labs+Sri+Lanka/@8.3160611,80.4165481,17z" target="_blank" rel="noopener noreferrer">
+                                                        <img src="{{ asset('assets/img/home-5/google-2.svg') }}" alt="Google Review">
+                                                    </a>
                                                 </div>
                                             </div>
                                             <div class="testimonial-content">
-                                                <p>“I cannot express enough how satisfied I am with the web developmet services provided by Egens Lab. They are very good and User friendly and they work very nice and creative”</p>
+                                                <p>“I cannot express enough how satisfied I am with the web development services provided by NerdTech Labs. They are very good and User friendly and they work very nice and creative”</p>
                                             </div>
                                             <div class="testimonial-btm">
                                                 <div class="author-content">
@@ -446,11 +435,13 @@
                                                     <img src="{{ asset('assets/img/home-5/author-img3.png') }}" alt="">
                                                 </div>
                                                 <div class="review">
-                                                    <img src="{{ asset('assets/img/home-5/trustpilot-2.svg') }}" alt="">
+                                                    <a href="https://www.google.com/maps/place/NerdTech+Labs+Sri+Lanka/@8.3160611,80.4165481,17z" target="_blank" rel="noopener noreferrer">
+                                                        <img src="{{ asset('assets/img/home-5/google-2.svg') }}" alt="Google Review">
+                                                    </a>
                                                 </div>
                                             </div>
                                             <div class="testimonial-content">
-                                                <p>“I cannot express enough how satisfied I am with the web developmet services provided by Egens Lab. They are very good and User friendly and they work very nice and creative”</p>
+                                                <p>“I cannot express enough how satisfied I am with the web development services provided by NerdTech Labs. They are very good and User friendly and they work very nice and creative”</p>
                                             </div>
                                             <div class="testimonial-btm">
                                                 <div class="author-content">
