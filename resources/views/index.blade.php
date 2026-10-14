@@ -369,7 +369,7 @@
                                             </li>
                                         </ul>
                                         <div class="mt-4">
-                                            <a href="https://search.google.com/local/writereview?placeid=ChIJ8wH0BMt69msAWKe0w_sqnQ" target="_blank" rel="noopener noreferrer" class="primary-btn3" style="padding: 10px 22px; font-size: 14px; display: inline-flex; align-items: center; gap: 8px;">
+                                            <a href="https://maps.app.goo.gl/abNhqC2sR7jQv6iw7" target="_blank" rel="noopener noreferrer" class="primary-btn3" style="padding: 10px 22px; font-size: 14px; display: inline-flex; align-items: center; gap: 8px;">
                                                 <i class="bi bi-pencil-square"></i> Write a Review
                                             </a>
                                         </div>
