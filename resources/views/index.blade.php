@@ -15,6 +15,27 @@
         filter: grayscale(0%);
         opacity: 1;
     }
+
+    /* Hide Elfsight Free Widget Branding Badge */
+    a[href*="elfsight.com"],
+    .eapps-widget-branding,
+    div[class*="eapps-google-reviews-badge"],
+    [class*="Badge__BadgeContainer"],
+    [class*="Badge__Container"],
+    [class*="BadgeContainer"],
+    [class*="WidgetBadge"],
+    .elfsight-app-0abe135b-0a69-413b-a8e9-8c53b08153af a[href*="elfsight"],
+    .elfsight-app-0abe135b-0a69-413b-a8e9-8c53b08153af a[target="_blank"] {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+        height: 0 !important;
+        line-height: 0 !important;
+        font-size: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
 </style>
 @endpush
 
@@ -381,6 +402,42 @@
                             <!-- Elfsight Google Reviews | Auto-sync Google Reviews Widget -->
                             <script src="https://elfsightcdn.com/platform.js" async></script>
                             <div class="elfsight-app-0abe135b-0a69-413b-a8e9-8c53b08153af" data-elfsight-app-lazy></div>
+                            <script>
+                                (function() {
+                                    function hideElfsightBadge() {
+                                        // Hide and remove from standard DOM
+                                        document.querySelectorAll('a[href*="elfsight.com"], .eapps-widget-branding, [class*="eapps-google-reviews-badge"], [class*="Badge__BadgeContainer"]').forEach(function(el) {
+                                            el.style.setProperty('display', 'none', 'important');
+                                            el.style.setProperty('visibility', 'hidden', 'important');
+                                            el.remove();
+                                        });
+
+                                        // Search inside shadow root if present
+                                        document.querySelectorAll('.elfsight-app-0abe135b-0a69-413b-a8e9-8c53b08153af, [class*="elfsight-app"]').forEach(function(app) {
+                                            if (app.shadowRoot) {
+                                                app.shadowRoot.querySelectorAll('a[href*="elfsight.com"], .eapps-widget-branding, [class*="Badge"], [class*="badge"]').forEach(function(el) {
+                                                    el.style.setProperty('display', 'none', 'important');
+                                                    el.remove();
+                                                });
+                                                if (!app.shadowRoot.querySelector('#elfsight-hide-style')) {
+                                                    var style = document.createElement('style');
+                                                    style.id = 'elfsight-hide-style';
+                                                    style.textContent = 'a[href*="elfsight.com"], .eapps-widget-branding, [class*="Badge"], [class*="badge"] { display: none !important; visibility: hidden !important; height: 0 !important; margin: 0 !important; padding: 0 !important; }';
+                                                    app.shadowRoot.appendChild(style);
+                                                }
+                                            }
+                                        });
+                                    }
+
+                                    var interval = setInterval(hideElfsightBadge, 250);
+                                    setTimeout(function() { clearInterval(interval); }, 15000);
+
+                                    if (window.MutationObserver) {
+                                        var observer = new MutationObserver(hideElfsightBadge);
+                                        observer.observe(document.body, { childList: true, subtree: true });
+                                    }
+                                })();
+                            </script>
                         </div>
                     </div>
                 </div>
