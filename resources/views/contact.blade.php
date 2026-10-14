@@ -45,7 +45,7 @@
                                     <i class="fas fa-map-marker-alt"></i>
                                 </div>
                                 <div class="info">
-                                    <p>Sri Lanka</p>
+                                    <p><a href="https://maps.app.goo.gl/abNhqC2sR7jQv6iw7" target="_blank" rel="noopener noreferrer" style="color: inherit;">Sri Lanka</a></p>
                                 </div>
                             </div>
                             <div class="single-info">

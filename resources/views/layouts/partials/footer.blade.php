@@ -35,7 +35,7 @@
                                         </svg>
                                         Address
                                     </h4>
-                                    <a href="#">Sri Lanka</a>
+                                    <a href="https://maps.app.goo.gl/abNhqC2sR7jQv6iw7" target="_blank" rel="noopener noreferrer">Sri Lanka</a>
                                 </div>
                                 <div class="footer-contact mb-40">
                                     <h4>

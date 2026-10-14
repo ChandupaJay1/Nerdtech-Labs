@@ -353,7 +353,7 @@
                                         <h6>Review On</h6>
                                         <ul>
                                             <li>
-                                                <a href="https://www.google.com/maps/place/NerdTech+Labs+Sri+Lanka/@8.3160611,80.4165481,17z" target="_blank" rel="noopener noreferrer" class="single-review">
+                                                <a href="https://maps.app.goo.gl/abNhqC2sR7jQv6iw7" target="_blank" rel="noopener noreferrer" class="single-review">
                                                     <div class="icon">
                                                         <img src="{{ asset('assets/img/home-5/google-1.svg') }}" alt="Google Reviews">
                                                     </div>
@@ -383,7 +383,7 @@
                                                     <img src="{{ asset('assets/img/home-5/author-img.png') }}" alt="">
                                                 </div>
                                                 <div class="review">
-                                                    <a href="https://www.google.com/maps/place/NerdTech+Labs+Sri+Lanka/@8.3160611,80.4165481,17z" target="_blank" rel="noopener noreferrer">
+                                                    <a href="https://maps.app.goo.gl/abNhqC2sR7jQv6iw7" target="_blank" rel="noopener noreferrer">
                                                         <img src="{{ asset('assets/img/home-5/google-2.svg') }}" alt="Google Review">
                                                     </a>
                                                 </div>
@@ -409,7 +409,7 @@
                                                     <img src="{{ asset('assets/img/home-5/author-img2.png') }}" alt="">
                                                 </div>
                                                 <div class="review">
-                                                    <a href="https://www.google.com/maps/place/NerdTech+Labs+Sri+Lanka/@8.3160611,80.4165481,17z" target="_blank" rel="noopener noreferrer">
+                                                    <a href="https://maps.app.goo.gl/abNhqC2sR7jQv6iw7" target="_blank" rel="noopener noreferrer">
                                                         <img src="{{ asset('assets/img/home-5/google-2.svg') }}" alt="Google Review">
                                                     </a>
                                                 </div>
@@ -435,7 +435,7 @@
                                                     <img src="{{ asset('assets/img/home-5/author-img3.png') }}" alt="">
                                                 </div>
                                                 <div class="review">
-                                                    <a href="https://www.google.com/maps/place/NerdTech+Labs+Sri+Lanka/@8.3160611,80.4165481,17z" target="_blank" rel="noopener noreferrer">
+                                                    <a href="https://maps.app.goo.gl/abNhqC2sR7jQv6iw7" target="_blank" rel="noopener noreferrer">
                                                         <img src="{{ asset('assets/img/home-5/google-2.svg') }}" alt="Google Review">
                                                     </a>
                                                 </div>
