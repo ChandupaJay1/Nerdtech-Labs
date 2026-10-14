@@ -353,7 +353,7 @@
                                         <h6>Review On</h6>
                                         <ul>
                                             <li>
-                                                <a href="{{ config('services.google_reviews.maps_url', 'https://maps.app.goo.gl/abNhqC2sR7jQv6iw7') }}" target="_blank" rel="noopener noreferrer" class="single-review" title="View all reviews on Google Maps">
+                                                <a href="https://maps.app.goo.gl/abNhqC2sR7jQv6iw7" target="_blank" rel="noopener noreferrer" class="single-review" title="View all reviews on Google Maps">
                                                     <div class="icon">
                                                         <img src="{{ asset('assets/img/home-5/google-1.svg') }}" alt="Google Reviews">
                                                     </div>
@@ -363,13 +363,13 @@
                                                         <li><i class="bi bi-star-fill"></i></li>
                                                         <li><i class="bi bi-star-fill"></i></li>
                                                         <li><i class="bi bi-star-fill"></i></li>
-                                                        <li>{{ number_format($googleReviewsData['rating'] ?? 5.0, 1) }}/5.0 ({{ $googleReviewsData['total_reviews'] ?? 3 }})</li>
+                                                        <li>5.0/5.0</li>
                                                     </ul>
                                                 </a>
                                             </li>
                                         </ul>
                                         <div class="mt-4">
-                                            <a href="{{ config('services.google_reviews.write_review_url', 'https://search.google.com/local/writereview?placeid=ChIJ8wH0BMt69msRhVuntMP7Kp0') }}" target="_blank" rel="noopener noreferrer" class="primary-btn3" style="padding: 10px 22px; font-size: 14px; display: inline-flex; align-items: center; gap: 8px;">
+                                            <a href="https://search.google.com/local/writereview?placeid=ChIJ8wH0BMt69msRhVuntMP7Kp0" target="_blank" rel="noopener noreferrer" class="primary-btn3" style="padding: 10px 22px; font-size: 14px; display: inline-flex; align-items: center; gap: 8px;">
                                                 <i class="bi bi-pencil-square"></i> Write a Review
                                             </a>
                                         </div>
@@ -378,47 +378,9 @@
                             </div>
                         </div>
                         <div class="col-lg-8 position-relative wow animate fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
-                           
-                            <div class="swiper home5-testimonial-slider">
-                                <div class="swiper-wrapper">
-                                    @foreach($googleReviewsData['reviews'] ?? [] as $review)
-                                    <div class="swiper-slide">
-                                        <div class="testimonial-wrapper">
-                                            <div class="testimonial-top">
-                                                <div class="author-img">
-                                                    <img src="{{ $review['author_photo'] ?? asset('assets/img/home-5/author-img.png') }}" alt="{{ $review['author_name'] ?? 'Client' }}" onerror="this.src='{{ asset('assets/img/home-5/author-img.png') }}'">
-                                                </div>
-                                                <div class="review">
-                                                    <a href="{{ config('services.google_reviews.maps_url', 'https://maps.app.goo.gl/abNhqC2sR7jQv6iw7') }}" target="_blank" rel="noopener noreferrer" title="View on Google Maps">
-                                                        <img src="{{ asset('assets/img/home-5/google-2.svg') }}" alt="Google 5-Star Review">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="testimonial-content">
-                                                <p>“{{ $review['text'] }}”</p>
-                                            </div>
-                                            <div class="testimonial-btm">
-                                                <div class="author-content">
-                                                    <h4>{{ $review['author_name'] }}</h4>
-                                                    <span>{{ $review['time'] }}</span>
-                                                </div>
-                                                <div class="quote-icon">
-                                                    <img src="{{ asset('assets/img/home-5/left-quote.svg') }}" alt="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    @endforeach
-                                </div>
-                            </div>
-                            <div class="swiper-btn-group">
-                                <div class="swiper-btn prevbtn3">
-                                    <i class="bi bi-arrow-up"></i>
-                                </div>
-                                <div class="swiper-btn nextbtn3">
-                                    <i class="bi bi-arrow-down"></i>
-                                </div>
-                            </div>
+                            <!-- Elfsight Google Reviews | Auto-sync Google Reviews Widget -->
+                            <script src="https://elfsightcdn.com/platform.js" async></script>
+                            <div class="elfsight-app-0abe135b-0a69-413b-a8e9-8c53b08153af" data-elfsight-app-lazy></div>
                         </div>
                     </div>
                 </div>
