@@ -165,10 +165,11 @@
         loop: true,
         slidesPerView: 1,
         spaceBetween: 30,
-        speed: 3000,
+        speed: 800,
         effect: 'fade',
         autoplay: {
-            delay: 2500
+            delay: 4500,
+            disableOnInteraction: false
         },
         pagination: {
             el: ".swiper-pagination1",
@@ -313,14 +314,15 @@
     var swiper = new Swiper(".home3-testimonial-slider", {
         loop: true,
         spaceBetween: 30,
-        speed: 2000,
+        speed: 700,
         centeredSlides: true,
         navigation: {
             nextEl: ".nextbtn2",
             prevEl: ".prevbtn2",
         },
         autoplay: {
-            delay: 5000
+            delay: 4500,
+            disableOnInteraction: false
         },
         breakpoints: {
             280: {
@@ -355,13 +357,14 @@
     var swiper = new Swiper(".home3-team-slider", {
         loop: teamSlideCount > 3,
         spaceBetween: 30,
-        speed: 2000,
+        speed: 700,
         pagination: {
             el: ".swiper-pagination22",
             clickable: true,
         },
         autoplay: {
-            delay: 5000
+            delay: 4500,
+            disableOnInteraction: false
         },
         breakpoints: {
             280: {
@@ -393,7 +396,7 @@
     var swiper = new Swiper(".home5-testimonial-slider", {
         loop: true,
         spaceBetween: 0,
-        speed: 2000,
+        speed: 700,
         centeredSlides: true,
         // direction: "vertical",
         navigation: {
@@ -401,21 +404,23 @@
             prevEl: ".prevbtn3",
         },
         autoplay: {
-            delay: 5000
+            delay: 4500,
+            disableOnInteraction: false
         },
     });
     //HOme4 Blog slider
     var swiper = new Swiper(".home5-blog-slider", {
         loop: true,
         spaceBetween: 50,
-        speed: 2000,
+        speed: 700,
         // centeredSlides: true,
         navigation: {
             nextEl: ".nextbtn4",
             prevEl: ".prevbtn4",
         },
         autoplay: {
-            delay: 5000
+            delay: 4500,
+            disableOnInteraction: false
         },
         breakpoints: {
             280: {

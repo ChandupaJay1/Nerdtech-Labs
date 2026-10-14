@@ -436,14 +436,20 @@
                             <div class="swiper-slide">
                                 <div class="testimonial-card3">
                                     <div class="quate-icon">
-                                        <img src="assets/img/home-4/left-quote.svg" alt="">
+                                        <img src="{{ asset('assets/img/home-4/left-quote.svg') }}" alt="">
                                     </div>
                                     <div class="testimonial-top">
                                         <div class="review-left">
-                                            <img src="assets/img/home-4/trustpilot.svg" alt="">
+                                            <img src="{{ asset('assets/img/home-4/google.svg') }}" alt="Google Review">
                                         </div>
                                         <div class="review-right">
-                                            <img src="assets/img/home-4/trastpilot-star.svg" alt="">
+                                            <ul class="star">
+                                                <li><i class="bi bi-star-fill"></i></li>
+                                                <li><i class="bi bi-star-fill"></i></li>
+                                                <li><i class="bi bi-star-fill"></i></li>
+                                                <li><i class="bi bi-star-fill"></i></li>
+                                                <li><i class="bi bi-star-fill"></i></li>
+                                            </ul>
                                         </div>
                                     </div>
                                     <div class="testimonial-content">
@@ -464,17 +470,17 @@
                                     </div>
                                 </div>
                                 <div class="author-img">
-                                    <img src="assets/img/home-4/h4-testi-03.png" alt="">
+                                    <img src="{{ asset('assets/img/home-4/h4-testi-03.png') }}" alt="">
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="testimonial-card3">
                                     <div class="quate-icon">
-                                        <img src="assets/img/home-4/left-quote.svg" alt="">
+                                        <img src="{{ asset('assets/img/home-4/left-quote.svg') }}" alt="">
                                     </div>
                                     <div class="testimonial-top">
                                         <div class="review-left">
-                                            <img src="assets/img/home-4/google.svg" alt="">
+                                            <img src="{{ asset('assets/img/home-4/google.svg') }}" alt="Google Review">
                                         </div>
                                         <div class="review-right">
                                             <ul class="star">
@@ -493,8 +499,8 @@
                                     <div class="testimonial-btm">
                                         <div class="author-area">
                                             <div class="author-content">
-                                                <h4>Sagaki All In One</h4>
-                                                <span>Kirindiwela Weekly Fair</span>
+                                                <h4>Enterprise Client</h4>
+                                                <span>Cloud & Web Platform</span>
                                             </div>
                                         </div>
                                         <div class="review-date-and-time">
@@ -504,20 +510,26 @@
                                     </div>
                                 </div>
                                 <div class="author-img">
-                                    <img src="assets/img/home-4/h4-testi-03.png" alt="">
+                                    <img src="{{ asset('assets/img/home-4/h4-testi-01.png') }}" alt="">
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="testimonial-card3">
                                     <div class="quate-icon">
-                                        <img src="assets/img/home-4/left-quote.svg" alt="">
+                                        <img src="{{ asset('assets/img/home-4/left-quote.svg') }}" alt="">
                                     </div>
                                     <div class="testimonial-top">
                                         <div class="review-left">
-                                            <img src="assets/img/home-4/trustpilot.svg" alt="">
+                                            <img src="{{ asset('assets/img/home-4/google.svg') }}" alt="Google Review">
                                         </div>
                                         <div class="review-right">
-                                            <img src="assets/img/home-4/trastpilot-star.svg" alt="">
+                                            <ul class="star">
+                                                <li><i class="bi bi-star-fill"></i></li>
+                                                <li><i class="bi bi-star-fill"></i></li>
+                                                <li><i class="bi bi-star-fill"></i></li>
+                                                <li><i class="bi bi-star-fill"></i></li>
+                                                <li><i class="bi bi-star-fill"></i></li>
+                                            </ul>
                                         </div>
                                     </div>
                                     <div class="testimonial-content">
@@ -527,8 +539,8 @@
                                     <div class="testimonial-btm">
                                         <div class="author-area">
                                             <div class="author-content">
-                                                <h4>Sagaki All In One</h4>
-                                                <span>Kirindiwela Weekly Fair</span>
+                                                <h4>Corporate Solutions</h4>
+                                                <span>Custom Management System</span>
                                             </div>
                                         </div>
                                         <div class="review-date-and-time">
@@ -538,17 +550,17 @@
                                     </div>
                                 </div>
                                 <div class="author-img">
-                                    <img src="assets/img/home-4/h4-testi-03.png" alt="">
+                                    <img src="{{ asset('assets/img/home-4/h4-testi-02.png') }}" alt="">
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="testimonial-card3">
                                     <div class="quate-icon">
-                                        <img src="assets/img/home-4/left-quote.svg" alt="">
+                                        <img src="{{ asset('assets/img/home-4/left-quote.svg') }}" alt="">
                                     </div>
                                     <div class="testimonial-top">
                                         <div class="review-left">
-                                            <img src="assets/img/home-4/google.svg" alt="">
+                                            <img src="{{ asset('assets/img/home-4/google.svg') }}" alt="Google Review">
                                         </div>
                                         <div class="review-right">
                                             <ul class="star">
@@ -567,8 +579,8 @@
                                     <div class="testimonial-btm">
                                         <div class="author-area">
                                             <div class="author-content">
-                                                <h4>Sagaki All In One</h4>
-                                                <span>Kirindiwela Weekly Fair</span>
+                                                <h4>Digital Innovations</h4>
+                                                <span>Software Engineering</span>
                                             </div>
                                         </div>
                                         <div class="review-date-and-time">
@@ -578,7 +590,7 @@
                                     </div>
                                 </div>
                                 <div class="author-img">
-                                    <img src="assets/img/home-4/h4-testi-03.png" alt="">
+                                    <img src="{{ asset('assets/img/home-4/h4-testi-03.png') }}" alt="">
                                 </div>
                             </div>
                         </div>

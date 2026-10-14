@@ -6152,6 +6152,10 @@ video {
   border-radius: 50%;
 }
 
+.home3-testimonil-area .swiper-slide {
+  transition: margin-top 0.4s ease;
+}
+
 .home3-testimonil-area .swiper-slide-active {
   margin-top: -40px;
 }
