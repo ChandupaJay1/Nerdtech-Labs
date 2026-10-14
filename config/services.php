@@ -33,10 +33,14 @@ return [
             'bot_user_oauth_token' => env('SLACK_BOT_USER_OAUTH_TOKEN'),
             'channel' => env('SLACK_BOT_USER_DEFAULT_CHANNEL'),
         ],
+    ],
+
     'google_reviews' => [
-        'api_key' => env('GOOGLE_PLACES_API_KEY'),
-        'place_id' => env('GOOGLE_PLACE_ID'),
-        'review_url' => env('GOOGLE_REVIEW_URL', 'https://maps.app.goo.gl/abNhqC2sR7jQv6iw7'),
+        'api_key' => env('GOOGLE_PLACES_API_KEY', 'AIzaSyDEs1Vvg6yVZz4waM6QmYT4IKgriz05kGs'),
+        'place_id' => env('GOOGLE_PLACE_ID', 'ChIJ8wH0BMt69msRhVuntMP7Kp0'),
+        'referer' => env('GOOGLE_API_REFERER', 'https://nerdtechlabs.info'),
+        'write_review_url' => env('GOOGLE_WRITE_REVIEW_URL', 'https://search.google.com/local/writereview?placeid=ChIJ8wH0BMt69msRhVuntMP7Kp0'),
+        'maps_url' => env('GOOGLE_MAPS_URL', 'https://maps.app.goo.gl/abNhqC2sR7jQv6iw7'),
     ],
 
 ];

@@ -18,38 +18,49 @@ class GoogleReviewService
         return Cache::remember('google_reviews_cache', 86400, function () {
             $apiKey = config('services.google_reviews.api_key');
             $placeId = config('services.google_reviews.place_id');
+            $referer = config('services.google_reviews.referer', 'https://nerdtechlabs.info');
 
             if ($apiKey && $placeId) {
                 try {
-                    $response = Http::timeout(6)->get('https://maps.googleapis.com/maps/api/place/details/json', [
-                        'place_id' => $placeId,
-                        'fields' => 'name,rating,reviews,user_ratings_total',
-                        'key' => $apiKey,
-                    ]);
+                    $response = Http::timeout(8)
+                        ->withHeaders([
+                            'X-Goog-Api-Key' => $apiKey,
+                            'X-Goog-FieldMask' => 'id,displayName,rating,userRatingCount,reviews',
+                            'Referer' => $referer,
+                        ])
+                        ->get("https://places.googleapis.com/v1/places/{$placeId}");
 
-                    if ($response->successful() && ($response->json('status') === 'OK')) {
-                        $result = $response->json('result');
+                    if ($response->successful()) {
+                        $result = $response->json();
+                        $rating = (float) ($result['rating'] ?? 5.0);
+                        $totalReviews = (int) ($result['userRatingCount'] ?? 3);
 
-                        $reviews = collect($result['reviews'] ?? [])->map(function ($rev) {
-                            return [
-                                'author_name' => $rev['author_name'] ?? 'Verified Client',
-                                'author_photo' => $rev['profile_photo_url'] ?? asset('assets/img/home-5/author-img.png'),
-                                'rating' => $rev['rating'] ?? 5,
-                                'text' => $rev['text'] ?? '',
-                                'time' => $rev['relative_time_description'] ?? 'Recently',
-                            ];
-                        })->filter(fn ($r) => !empty($r['text']))->values()->all();
+                        $rawReviews = $result['reviews'] ?? [];
+                        $parsedReviews = [];
 
-                        if (!empty($reviews)) {
-                            return [
-                                'rating' => $result['rating'] ?? 5.0,
-                                'total_reviews' => $result['user_ratings_total'] ?? count($reviews),
-                                'reviews' => $reviews,
-                            ];
+                        foreach ($rawReviews as $rev) {
+                            $text = $rev['text']['text'] ?? ($rev['originalText']['text'] ?? '');
+                            if (!empty(trim($text))) {
+                                $parsedReviews[] = [
+                                    'author_name' => $rev['authorAttribution']['displayName'] ?? 'Google Reviewer',
+                                    'author_photo' => $rev['authorAttribution']['photoUri'] ?? asset('assets/img/home-5/author-img.png'),
+                                    'rating' => (int) ($rev['rating'] ?? 5),
+                                    'text' => trim($text),
+                                    'time' => $rev['relativePublishTimeDescription'] ?? 'Google Review',
+                                ];
+                            }
                         }
-                    } else {
-                        Log::warning('Google Places API returned non-OK status: ' . ($response->json('status') ?? 'Unknown'));
+
+                        $fallback = $this->getFallbackReviews();
+
+                        return [
+                            'rating' => $rating,
+                            'total_reviews' => max($totalReviews, count($parsedReviews)),
+                            'reviews' => !empty($parsedReviews) ? $parsedReviews : $fallback['reviews'],
+                        ];
                     }
+
+                    Log::warning('Google Places API returned status ' . $response->status() . ': ' . $response->body());
                 } catch (\Throwable $e) {
                     Log::warning('GoogleReviewService error: ' . $e->getMessage());
                 }
@@ -68,7 +79,7 @@ class GoogleReviewService
     {
         return [
             'rating' => 5.0,
-            'total_reviews' => 5,
+            'total_reviews' => 3,
             'reviews' => [
                 [
                     'author_name' => 'Sagaki All In One',

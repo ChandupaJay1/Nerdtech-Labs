@@ -353,7 +353,7 @@
                                         <h6>Review On</h6>
                                         <ul>
                                             <li>
-                                                <a href="{{ config('services.google_reviews.review_url', 'https://maps.app.goo.gl/abNhqC2sR7jQv6iw7') }}" target="_blank" rel="noopener noreferrer" class="single-review" title="View all reviews on Google Maps">
+                                                <a href="{{ config('services.google_reviews.maps_url', 'https://maps.app.goo.gl/abNhqC2sR7jQv6iw7') }}" target="_blank" rel="noopener noreferrer" class="single-review" title="View all reviews on Google Maps">
                                                     <div class="icon">
                                                         <img src="{{ asset('assets/img/home-5/google-1.svg') }}" alt="Google Reviews">
                                                     </div>
@@ -363,13 +363,13 @@
                                                         <li><i class="bi bi-star-fill"></i></li>
                                                         <li><i class="bi bi-star-fill"></i></li>
                                                         <li><i class="bi bi-star-fill"></i></li>
-                                                        <li>{{ number_format($googleReviewsData['rating'] ?? 5.0, 1) }}/5.0</li>
+                                                        <li>{{ number_format($googleReviewsData['rating'] ?? 5.0, 1) }}/5.0 ({{ $googleReviewsData['total_reviews'] ?? 3 }})</li>
                                                     </ul>
                                                 </a>
                                             </li>
                                         </ul>
                                         <div class="mt-4">
-                                            <a href="{{ config('services.google_reviews.review_url', 'https://maps.app.goo.gl/abNhqC2sR7jQv6iw7') }}" target="_blank" rel="noopener noreferrer" class="primary-btn3" style="padding: 10px 22px; font-size: 14px; display: inline-flex; align-items: center; gap: 8px;">
+                                            <a href="{{ config('services.google_reviews.write_review_url', 'https://search.google.com/local/writereview?placeid=ChIJ8wH0BMt69msRhVuntMP7Kp0') }}" target="_blank" rel="noopener noreferrer" class="primary-btn3" style="padding: 10px 22px; font-size: 14px; display: inline-flex; align-items: center; gap: 8px;">
                                                 <i class="bi bi-pencil-square"></i> Write a Review
                                             </a>
                                         </div>
@@ -389,7 +389,7 @@
                                                     <img src="{{ $review['author_photo'] ?? asset('assets/img/home-5/author-img.png') }}" alt="{{ $review['author_name'] ?? 'Client' }}" onerror="this.src='{{ asset('assets/img/home-5/author-img.png') }}'">
                                                 </div>
                                                 <div class="review">
-                                                    <a href="{{ config('services.google_reviews.review_url', 'https://maps.app.goo.gl/abNhqC2sR7jQv6iw7') }}" target="_blank" rel="noopener noreferrer" title="View on Google Maps">
+                                                    <a href="{{ config('services.google_reviews.maps_url', 'https://maps.app.goo.gl/abNhqC2sR7jQv6iw7') }}" target="_blank" rel="noopener noreferrer" title="View on Google Maps">
                                                         <img src="{{ asset('assets/img/home-5/google-2.svg') }}" alt="Google 5-Star Review">
                                                     </a>
                                                 </div>
